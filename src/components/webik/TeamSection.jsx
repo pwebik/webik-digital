@@ -1,0 +1,47 @@
+import React from 'react';
+
+const team = [
+  { name: 'Pryce Resma', role: 'FOUNDER · CEO', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/582ef54fb_generated_41a5756a.png' },
+  { name: 'Ray Mendoza', role: 'COO · OPERATIONS', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/dfe172bed_generated_5990c96d.png' },
+  { name: 'Xavier Gonzales', role: 'HEAD OF WEB DEVELOPMENT', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/bb2231e79_generated_78135fad.png' },
+  { name: 'Julius Parungao', role: 'CREATIVE DIRECTOR', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/3d6cc9b35_generated_c72bc79c.png' },
+  { name: '[Name TBD]', role: 'CMO · MARKETING', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/343467812_generated_68f653e7.png' },
+];
+
+export default function TeamSection() {
+  return (
+    <section className="bg-[var(--webik-cream)] py-20 lg:py-32 px-6 lg:px-12">
+      <div className="max-w-[1440px] mx-auto">
+        <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Team )</span>
+        <h2 className="font-fraunces text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
+          Five specialists. One <em className="italic">goal.</em>
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-16">
+          {team.map((member, i) => (
+            <div
+              key={i}
+              className="relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer"
+            >
+              <img
+                src={member.image}
+                alt={`${member.name} - ${member.role} at Webik Corp`}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Hover lime overlay */}
+              <div className="absolute inset-0 bg-[var(--webik-lime)]/0 group-hover:bg-[var(--webik-lime)]/20 transition-colors duration-300" />
+              {/* Gradient overlay at bottom */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--webik-dark)] via-[var(--webik-dark)]/30 to-transparent" />
+              {/* Content */}
+              <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-5">
+                <h3 className="font-fraunces text-[var(--webik-cream)] text-lg lg:text-xl font-light">{member.name}</h3>
+                <p className="text-[var(--webik-lime)] font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.15em] mt-1">{member.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
