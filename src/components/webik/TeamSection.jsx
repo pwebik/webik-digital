@@ -1,10 +1,10 @@
 import React from 'react';
 
 const team = [
-  { name: 'Pryce Resma', role: 'FOUNDER · CEO', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/582ef54fb_generated_41a5756a.png' },
-  { name: 'Ray Mendoza', role: 'COO · OPERATIONS', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/dfe172bed_generated_5990c96d.png' },
-  { name: 'Xavier Gonzales', role: 'HEAD OF WEB DEVELOPMENT', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/bb2231e79_generated_78135fad.png' },
-  { name: 'Julius Parungao', role: 'CREATIVE DIRECTOR', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/3d6cc9b35_generated_c72bc79c.png' },
+  { name: 'Pryce Resma', role: 'FOUNDER · CEO', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/3ff4696ea_IMG_0563.jpg' },
+  { name: 'Ray Mendoza', role: 'COO · OPERATIONS', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/8e9f72288_IMG_0557.jpg' },
+  { name: 'Xavier Gonzales', role: 'HEAD OF WEB DEVELOPMENT', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/560a14f4b_IMG_0554.jpg' },
+  { name: 'Julius Parungao', role: 'CREATIVE DIRECTOR', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/102dfcc8c_IMG_0553.jpg' },
   { name: '[Name TBD]', role: 'CMO · MARKETING', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/343467812_generated_68f653e7.png' },
 ];
 

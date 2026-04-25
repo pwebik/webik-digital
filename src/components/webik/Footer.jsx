@@ -16,11 +16,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[var(--webik-dark-2)] border border-[var(--webik-muted)]/20 flex items-center justify-center">
-                <span className="font-fraunces italic text-[var(--webik-lime)] text-lg font-light leading-none">W</span>
-              </div>
-              <span className="font-fraunces text-[var(--webik-cream)] text-xl font-medium tracking-tight">Webik</span>
+            <div className="flex items-center">
+              <img
+                src="https://media.base44.com/images/public/69ecce3288377cd246349884/72f22f932_Icon2.png"
+                alt="Webik Corp icon"
+                className="h-10 w-auto opacity-90"
+              />
             </div>
             <p className="text-[var(--webik-muted)] font-inter text-sm mt-4 leading-relaxed">
               Premium Digital Presence.<br />Accessible to All.

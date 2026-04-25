@@ -30,11 +30,12 @@ export default function StickyNav() {
     <nav className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[var(--webik-cream)]/90 backdrop-blur-xl shadow-sm' : 'bg-[var(--webik-cream)]'}`}>
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex items-center justify-between h-16 lg:h-20">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-full bg-[var(--webik-dark)] flex items-center justify-center group-hover:scale-105 transition-transform">
-            <span className="font-fraunces italic text-[var(--webik-lime)] text-lg font-light leading-none">W</span>
-          </div>
-          <span className="font-fraunces text-[var(--webik-dark)] text-xl font-medium tracking-tight">Webik</span>
+        <a href="#" className="flex items-center group">
+          <img
+            src="https://media.base44.com/images/public/69ecce3288377cd246349884/35800a971_Webikprimarylogo.png"
+            alt="Webik Corp"
+            className="h-8 lg:h-9 w-auto object-contain group-hover:opacity-90 transition-opacity"
+          />
         </a>
 
         {/* Desktop links */}

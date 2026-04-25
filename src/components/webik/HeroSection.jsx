@@ -4,13 +4,16 @@ import { ArrowRight } from 'lucide-react';
 export default function HeroSection() {
   return (
     <section className="relative bg-[var(--webik-cream)] overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 px-6 lg:px-12">
-      {/* Background W */}
+      {/* Background decorative W pattern */}
       <div
-        className="absolute right-[-10vw] top-[-5vw] text-[50vw] font-fraunces italic font-light leading-none select-none pointer-events-none"
-        style={{ color: 'var(--webik-lime)', opacity: 0.18 }}
+        className="absolute right-[-5vw] top-0 h-full w-[55vw] select-none pointer-events-none"
         aria-hidden="true"
       >
-        W
+        <img
+          src="https://media.base44.com/images/public/69ecce3288377cd246349884/848d53c15_Group5.png"
+          alt=""
+          className="w-full h-full object-cover object-left opacity-20"
+        />
       </div>
 
       <div className="max-w-[1440px] mx-auto relative z-10">
