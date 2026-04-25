@@ -27,7 +27,7 @@ export default function PricingSection() {
                 '48-hour rapid deployment',
                 'Built on Bricks (enterprise-grade)',
               ].map((f, i) => (
-                <li key={i} className="flex items-start gap-3 text-[var(--webik-cream)]/80 font-inter text-sm">
+                <li key={i} className="flex items-start gap-3 font-inter text-sm" style={{color: 'rgba(245,243,236,0.8)'}}>
                   <Check size={16} className="text-[var(--webik-lime)] shrink-0 mt-0.5" />
                   {f}
                 </li>

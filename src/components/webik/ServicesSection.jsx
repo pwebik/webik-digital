@@ -54,14 +54,14 @@ export default function ServicesSection() {
               key={i}
               className={`p-6 lg:p-10 ${i < services.length - 1 ? 'lg:border-r border-[var(--webik-dark-2)]' : ''} ${i > 0 ? 'border-t lg:border-t-0 border-[var(--webik-dark-2)]' : ''}`}
             >
-              <span className="text-[var(--webik-muted)] font-inter text-xs tracking-wide">SERVICE / {svc.num}</span>
-              <h3 className="font-fraunces text-[var(--webik-cream)] text-2xl lg:text-3xl font-light mt-3">{svc.title}</h3>
-              <p className="text-[var(--webik-lime)] font-mono text-[10px] sm:text-xs uppercase tracking-[0.15em] mt-2">{svc.subtitle}</p>
-              <p className="text-[var(--webik-cream)]/70 font-inter text-sm leading-relaxed mt-5">{svc.desc}</p>
+              <span className="font-inter text-xs tracking-wide" style={{color:'var(--webik-muted)'}}>SERVICE / {svc.num}</span>
+              <h3 className="font-fraunces text-2xl lg:text-3xl font-light mt-3" style={{color:'var(--webik-cream)'}}>{svc.title}</h3>
+              <p className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.15em] mt-2" style={{color:'var(--webik-lime)'}}>{svc.subtitle}</p>
+              <p className="font-inter text-sm leading-relaxed mt-5" style={{color:'rgba(245,243,236,0.7)'}}>{svc.desc}</p>
               <ul className="mt-6 space-y-2.5">
                 {svc.features.map((f, fi) => (
-                  <li key={fi} className="flex items-start gap-2.5 text-[var(--webik-cream)]/80 font-inter text-sm">
-                    <span className="text-[var(--webik-lime)] text-xs mt-1 shrink-0">+</span>
+                  <li key={fi} className="flex items-start gap-2.5 font-inter text-sm" style={{color:'rgba(245,243,236,0.8)'}}>
+                    <span className="text-xs mt-1 shrink-0" style={{color:'var(--webik-lime)'}}>+</span>
                     {f}
                   </li>
                 ))}
