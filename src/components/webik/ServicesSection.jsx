@@ -1,4 +1,5 @@
 import React from 'react';
+import GrainOverlay from './GrainOverlay';
 
 const services = [
   {
@@ -41,8 +42,9 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="bg-[var(--webik-dark)] py-20 lg:py-32 px-6 lg:px-12">
-      <div className="max-w-[1440px] mx-auto">
+    <section id="services" className="relative bg-[var(--webik-dark)] py-20 lg:py-32 px-6 lg:px-12">
+      <GrainOverlay />
+      <div className="max-w-[1440px] mx-auto relative z-10">
         <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Services )</span>
         <h2 className="font-fraunces text-[var(--webik-cream)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4 max-w-[700px]">
           Built like a <em className="italic">partnership.</em> Priced like a subscription.

@@ -1,10 +1,12 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import GrainOverlay from './GrainOverlay';
 
 export default function FinalCTA() {
   return (
-    <section id="book" className="bg-[var(--webik-dark)] py-24 lg:py-40 px-6 lg:px-12 text-center">
-      <div className="max-w-[900px] mx-auto">
+    <section id="book" className="relative bg-[var(--webik-dark)] py-24 lg:py-40 px-6 lg:px-12 text-center">
+      <GrainOverlay />
+      <div className="max-w-[900px] mx-auto relative z-10">
         <h2 className="font-fraunces font-light text-[var(--webik-cream)] text-[10vw] sm:text-[8vw] lg:text-[6vw] leading-[0.95]">
           Ready to launch your{' '}
           <em className="italic">

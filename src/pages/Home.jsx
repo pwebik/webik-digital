@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import ScrollProgress from '../components/webik/ScrollProgress';
 import AnnouncementBar from '../components/webik/AnnouncementBar';
 import StickyNav from '../components/webik/StickyNav';
 import HeroSection from '../components/webik/HeroSection';
@@ -45,6 +46,7 @@ export default function Home() {
       '--webik-cream-2': '#EBE8DD',
       '--webik-muted': '#6B7560',
     }}>
+      <ScrollProgress />
       <AnnouncementBar />
       <StickyNav />
       <HeroSection />

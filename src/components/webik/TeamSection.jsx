@@ -27,10 +27,13 @@ export default function TeamSection() {
                 src={member.image}
                 alt={`${member.name} - ${member.role} at Webik Corp`}
                 loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-[400ms] group-hover:scale-105"
+                style={{ filter: 'grayscale(40%)', transition: 'filter 0.4s ease, transform 0.5s ease' }}
+                onMouseEnter={e => e.currentTarget.style.filter = 'grayscale(0%)'}
+                onMouseLeave={e => e.currentTarget.style.filter = 'grayscale(40%)'}
               />
               {/* Hover lime overlay */}
-              <div className="absolute inset-0 bg-[var(--webik-lime)]/0 group-hover:bg-[var(--webik-lime)]/20 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-[var(--webik-lime)]/0 group-hover:bg-[var(--webik-lime)]/10 transition-colors duration-300" />
               {/* Gradient overlay at bottom */}
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--webik-dark)] via-[var(--webik-dark)]/30 to-transparent" />
               {/* Content */}
