@@ -17,7 +17,7 @@ export default function AnnouncementBar() {
 
   return (
     <div className="bg-[var(--webik-dark)] overflow-hidden py-2.5 relative">
-      <div className="flex animate-marquee whitespace-nowrap">
+      <div className="flex items-center animate-marquee whitespace-nowrap">
         {marqueeContent}{marqueeContent}{marqueeContent}{marqueeContent}
       </div>
     </div>
