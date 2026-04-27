@@ -7,16 +7,16 @@ const portfolioItems = [
     category: 'E-COMMERCE',
     tags: 'Shopify · Web Design · Web Development',
     link: 'https://webikdigital.com/portolios/imitation-book/',
-    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/278dcc613_generated_e738f046.png',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/80984f361_generated_image.png',
     initial: 'IB',
   },
   {
-    name: 'BitLyft',
+    name: 'BitLyft Cybersecurity',
     year: '2025',
     category: 'TECH',
     tags: 'Web Design · Web Development',
     link: 'https://webikdigital.com/portolios/bitlyft/',
-    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/b81930732_generated_04b180b1.png',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/79b3b38ef_generated_image.png',
     initial: 'BL',
   },
   {
@@ -25,7 +25,7 @@ const portfolioItems = [
     category: 'INDUSTRIAL',
     tags: 'Web Design · Web Development · Real Estate',
     link: 'https://webikdigital.com/portolios/biosis-designs/',
-    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/e657f2b70_generated_5c04f6eb.png',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/72a560d3f_generated_image.png',
     initial: 'BD',
   },
   {
@@ -34,8 +34,17 @@ const portfolioItems = [
     category: 'BUSINESS',
     tags: 'Web Design · Web Development',
     link: 'https://webikdigital.com/portolios/the-genesis-company/',
-    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/56e5d6252_generated_bf42b44c.png',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/a37516163_generated_image.png',
     initial: 'GC',
+  },
+  {
+    name: 'Go Relocation PH',
+    year: '2025',
+    category: 'SERVICES',
+    tags: 'Web Design · Web Development · Consultancy',
+    link: 'https://gorelocationph.com',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/9470d6e4b_generated_image.png',
+    initial: 'GR',
   },
 ];
 
@@ -48,7 +57,7 @@ export default function PortfolioSection() {
           Real clients. Real <em className="italic">results.</em>
         </h2>
 
-        <div className="grid sm:grid-cols-2 gap-x-10 gap-y-16 mt-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-x-10 gap-y-16 mt-16">
           {portfolioItems.map((item, i) => (
             <a
               key={i}
