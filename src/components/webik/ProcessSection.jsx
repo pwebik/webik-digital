@@ -9,26 +9,38 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="bg-[var(--webik-cream)] py-20 lg:py-32 px-6 lg:px-12">
+    <section className="bg-[var(--webik-cream-2)] py-20 lg:py-32 px-6 lg:px-12">
       <div className="max-w-[1440px] mx-auto">
         <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Process )</span>
         <h2 className="font-fraunces text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
-          AI-accelerated. Human-perfected.
+          AI-accelerated. <em className="italic">Human-perfected.</em>
         </h2>
 
         <div className="mt-16 relative">
           {/* Connecting line (desktop) */}
-          <div className="hidden lg:block absolute top-10 left-10 right-10 h-px bg-[var(--webik-cream-2)]" />
+          <div
+            className="hidden lg:block absolute top-10 left-10 right-10 h-px opacity-20"
+            style={{ background: 'linear-gradient(to right, transparent, var(--webik-dark) 10%, var(--webik-dark) 90%, transparent)' }}
+          />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
             {steps.map((step, i) => (
-              <div key={i} className="relative">
-                <div className="w-20 h-20 rounded-full border-2 border-[var(--webik-dark)] flex items-center justify-center bg-[var(--webik-cream)] relative z-10">
+              <div key={i} className="relative group">
+                {/* Circle — rotates and fills lime on hover, matching Claude */}
+                <div
+                  className="w-20 h-20 rounded-full flex items-center justify-center relative z-10 transition-all duration-300 group-hover:-rotate-[8deg]"
+                  style={{
+                    background: 'var(--webik-cream)',
+                    border: '1px solid rgba(14,26,10,0.15)',
+                  }}
+                  onMouseEnter={e => e.currentTarget.style.background = 'var(--webik-lime)'}
+                  onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-cream)'}
+                >
                   <span className="font-fraunces italic text-2xl text-[var(--webik-dark)] font-light">{step.num}</span>
                 </div>
                 <div className="mt-5">
-                  <span className="text-[var(--webik-lime)] font-mono text-[10px] uppercase tracking-[0.2em] bg-[var(--webik-dark)] px-2.5 py-1 rounded-full inline-block">{step.day}</span>
-                  <h3 className="font-fraunces text-[var(--webik-dark)] text-xl font-light mt-3">{step.title}</h3>
+                  <span className="text-[var(--webik-muted)] font-mono text-[10px] uppercase tracking-[0.15em]">{step.day}</span>
+                  <h3 className="font-fraunces text-[var(--webik-dark)] text-xl font-light mt-2">{step.title}</h3>
                   <p className="text-[var(--webik-muted)] font-inter text-sm leading-relaxed mt-2">{step.desc}</p>
                 </div>
               </div>

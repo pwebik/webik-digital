@@ -50,20 +50,39 @@ export default function ServicesSection() {
           Built like a <em className="italic">partnership.</em> Priced like a subscription.
         </h2>
 
-        <div className="grid lg:grid-cols-3 gap-0 mt-16">
+        {/* Grid with 1px gap borders like Claude */}
+        <div
+          className="grid lg:grid-cols-3 mt-16"
+          style={{ gap: '1px', background: 'rgba(245,243,236,0.12)', border: '1px solid rgba(245,243,236,0.12)' }}
+        >
           {services.map((svc, i) => (
             <div
               key={i}
-              className={`p-6 lg:p-10 ${i < services.length - 1 ? 'lg:border-r border-[var(--webik-dark-2)]' : ''} ${i > 0 ? 'border-t lg:border-t-0 border-[var(--webik-dark-2)]' : ''}`}
+              className="p-8 lg:p-12 transition-colors duration-300 cursor-default"
+              style={{ background: 'var(--webik-dark)' }}
+              onMouseEnter={e => e.currentTarget.style.background = 'var(--webik-dark-2)'}
+              onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-dark)'}
             >
-              <span className="font-inter text-xs tracking-wide" style={{color:'var(--webik-muted)'}}>SERVICE / {svc.num}</span>
-              <h3 className="font-fraunces text-2xl lg:text-3xl font-light mt-3" style={{color:'var(--webik-cream)'}}>{svc.title}</h3>
-              <p className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.15em] mt-2" style={{color:'var(--webik-lime)'}}>{svc.subtitle}</p>
-              <p className="font-inter text-sm leading-relaxed mt-5" style={{color:'rgba(245,243,236,0.7)'}}>{svc.desc}</p>
-              <ul className="mt-6 space-y-2.5">
+              <span className="font-mono text-[11px] tracking-[0.15em]" style={{ color: 'var(--webik-lime)' }}>SERVICE / {svc.num}</span>
+              <h3
+                className="font-fraunces font-light italic mt-24 lg:mt-28 leading-none tracking-tight"
+                style={{ color: 'var(--webik-cream)', fontSize: 'clamp(32px,3.5vw,44px)', letterSpacing: '-0.03em' }}
+              >
+                {svc.title}
+              </h3>
+              <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.1em] mt-3 mb-6" style={{ color: 'var(--webik-lime)' }}>{svc.subtitle}</p>
+              <p className="font-inter text-sm leading-relaxed mb-6" style={{ color: 'rgba(245,243,236,0.75)' }}>{svc.desc}</p>
+              <ul
+                className="border-t pt-5"
+                style={{ borderColor: 'rgba(245,243,236,0.12)' }}
+              >
                 {svc.features.map((f, fi) => (
-                  <li key={fi} className="flex items-start gap-2.5 font-inter text-sm" style={{color:'rgba(245,243,236,0.8)'}}>
-                    <span className="text-xs mt-1 shrink-0" style={{color:'var(--webik-lime)'}}>+</span>
+                  <li
+                    key={fi}
+                    className="flex items-start gap-2.5 font-inter text-sm py-2.5 border-b"
+                    style={{ color: 'rgba(245,243,236,0.85)', borderColor: 'rgba(245,243,236,0.12)' }}
+                  >
+                    <span className="shrink-0 font-semibold" style={{ color: 'var(--webik-lime)' }}>+</span>
                     {f}
                   </li>
                 ))}

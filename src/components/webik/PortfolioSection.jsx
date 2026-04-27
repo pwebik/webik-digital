@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
 
 const portfolioItems = [
   {
@@ -9,7 +8,7 @@ const portfolioItems = [
     tags: 'Shopify · Web Design · Web Development',
     link: 'https://webikdigital.com/portolios/imitation-book/',
     image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/278dcc613_generated_e738f046.png',
-    initial: 'I',
+    initial: 'IB',
   },
   {
     name: 'BitLyft',
@@ -18,7 +17,7 @@ const portfolioItems = [
     tags: 'Web Design · Web Development',
     link: 'https://webikdigital.com/portolios/bitlyft/',
     image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/b81930732_generated_04b180b1.png',
-    initial: 'B',
+    initial: 'BL',
   },
   {
     name: 'Biosis Designs',
@@ -27,7 +26,7 @@ const portfolioItems = [
     tags: 'Web Design · Web Development · Real Estate',
     link: 'https://webikdigital.com/portolios/biosis-designs/',
     image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/e657f2b70_generated_5c04f6eb.png',
-    initial: 'B',
+    initial: 'BD',
   },
   {
     name: 'The Genesis Company',
@@ -36,7 +35,7 @@ const portfolioItems = [
     tags: 'Web Design · Web Development',
     link: 'https://webikdigital.com/portolios/the-genesis-company/',
     image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/56e5d6252_generated_bf42b44c.png',
-    initial: 'G',
+    initial: 'GC',
   },
 ];
 
@@ -49,36 +48,53 @@ export default function PortfolioSection() {
           Real clients. Real <em className="italic">results.</em>
         </h2>
 
-        <div className="grid sm:grid-cols-2 gap-6 lg:gap-8 mt-16">
+        <div className="grid sm:grid-cols-2 gap-x-10 gap-y-16 mt-16">
           {portfolioItems.map((item, i) => (
             <a
               key={i}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group block ${i % 2 === 1 ? 'lg:mt-[60px]' : ''}`}
+              className={`group block transition-transform duration-[400ms] ${i % 2 === 1 ? 'lg:mt-[60px]' : ''}`}
+              style={{ transitionTimingFunction: 'cubic-bezier(0.2,0.8,0.2,1)' }}
+              onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-6px)'}
+              onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
             >
-              <div className="relative overflow-hidden rounded-xl bg-[var(--webik-dark)] aspect-[4/3]">
+              {/* Image container */}
+              <div
+                className="relative overflow-hidden rounded-sm aspect-[4/3] mb-6 flex items-center justify-center"
+                style={{ background: 'var(--webik-dark)' }}
+              >
                 <img
                   src={item.image}
                   alt={`${item.name} portfolio project by Webik Corp - ${item.tags}`}
                   loading="lazy"
                   className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
-                <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[var(--webik-lime)] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <ArrowUpRight size={18} className="text-[var(--webik-dark)]" />
+                {/* Fallback initial overlay when no image */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                  <div
+                    className="w-16 h-16 rounded-full flex items-center justify-center"
+                    style={{ background: 'var(--webik-lime)' }}
+                  >
+                    <span className="font-fraunces italic font-bold text-2xl" style={{ color: 'var(--webik-dark)' }}>
+                      ↗
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div className="mt-4">
-                <div className="flex items-center gap-3">
-                  <h3 className="font-fraunces text-[var(--webik-dark)] text-xl lg:text-2xl font-light">{item.name}</h3>
-                  <span className="text-[var(--webik-muted)] font-inter text-xs">— {item.year}</span>
-                </div>
-                <div className="flex items-center gap-2 mt-1">
-                  <span className="text-[var(--webik-lime)] font-mono text-[10px] uppercase tracking-[0.15em] bg-[var(--webik-dark)] px-2 py-0.5 rounded-full">{item.category}</span>
-                  <span className="text-[var(--webik-muted)] font-inter text-xs">{item.tags}</span>
-                </div>
+
+              {/* Meta */}
+              <div className="flex items-center justify-between mb-2">
+                <span className="font-mono text-[11px] uppercase tracking-[0.15em]" style={{ color: 'var(--webik-muted)' }}>
+                  {item.year} / {item.category}
+                </span>
+                <span className="font-mono text-[11px]" style={{ color: 'var(--webik-muted)' }}>↗</span>
               </div>
+              <h3 className="font-fraunces text-[var(--webik-dark)] text-2xl lg:text-3xl font-light tracking-tight" style={{ letterSpacing: '-0.02em' }}>
+                {item.name}
+              </h3>
+              <p className="font-inter text-sm mt-1" style={{ color: 'var(--webik-muted)' }}>{item.tags}</p>
             </a>
           ))}
         </div>
