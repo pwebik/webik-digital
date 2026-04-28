@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const portfolioItems = [
   {
@@ -6,7 +7,8 @@ const portfolioItems = [
     year: '2025',
     category: 'E-COMMERCE',
     tags: 'Shopify · Web Design · Web Development',
-    link: 'https://webikdigital.com/portolios/imitation-book/',
+    link: '/work/imitation-book',
+    internal: true,
     image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/80984f361_generated_image.png',
     initial: 'IB',
   },
@@ -15,7 +17,8 @@ const portfolioItems = [
     year: '2025',
     category: 'TECH',
     tags: 'Web Design · Web Development',
-    link: 'https://webikdigital.com/portolios/bitlyft/',
+    link: '/work/bitlyft',
+    internal: true,
     image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/79b3b38ef_generated_image.png',
     initial: 'BL',
   },
@@ -24,7 +27,8 @@ const portfolioItems = [
     year: '2025',
     category: 'INDUSTRIAL',
     tags: 'Web Design · Web Development · Real Estate',
-    link: 'https://webikdigital.com/portolios/biosis-designs/',
+    link: '/work/biosis-designs',
+    internal: true,
     image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/72a560d3f_generated_image.png',
     initial: 'BD',
   },
@@ -33,7 +37,8 @@ const portfolioItems = [
     year: '2025',
     category: 'BUSINESS',
     tags: 'Web Design · Web Development',
-    link: 'https://webikdigital.com/portolios/the-genesis-company/',
+    link: '/work/the-genesis-company',
+    internal: true,
     image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/a37516163_generated_image.png',
     initial: 'GC',
   },
@@ -43,6 +48,7 @@ const portfolioItems = [
     category: 'SERVICES',
     tags: 'Web Design · Web Development · Consultancy',
     link: 'https://gorelocationph.com',
+    internal: false,
     image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/9470d6e4b_generated_image.png',
     initial: 'GR',
   },
@@ -58,54 +64,48 @@ export default function PortfolioSection() {
         </h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-x-10 gap-y-16 mt-16">
-          {portfolioItems.map((item, i) => (
-            <a
-              key={i}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`group block transition-transform duration-[400ms] ${i % 2 === 1 ? 'lg:mt-[60px]' : ''}`}
-              style={{ transitionTimingFunction: 'cubic-bezier(0.2,0.8,0.2,1)' }}
-              onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-6px)'}
-              onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
-            >
-              {/* Image container */}
-              <div
-                className="relative overflow-hidden rounded-sm aspect-[4/3] mb-6 flex items-center justify-center"
-                style={{ background: 'var(--webik-dark)' }}
-              >
-                <img
-                  src={item.image}
-                  alt={`${item.name} portfolio project by Webik Corp - ${item.tags}`}
-                  loading="lazy"
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                />
-                {/* Fallback initial overlay when no image */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                  <div
-                    className="w-16 h-16 rounded-full flex items-center justify-center"
-                    style={{ background: 'var(--webik-lime)' }}
-                  >
-                    <span className="font-fraunces italic font-bold text-2xl" style={{ color: 'var(--webik-dark)' }}>
-                      ↗
-                    </span>
+          {portfolioItems.map((item, i) => {
+            const cardContent = (
+              <>
+                {/* Image container */}
+                <div
+                  className="relative overflow-hidden rounded-sm aspect-[4/3] mb-6 flex items-center justify-center"
+                  style={{ background: 'var(--webik-dark)' }}
+                >
+                  <img
+                    src={item.image}
+                    alt={`${item.name} portfolio project by Webik Corp - ${item.tags}`}
+                    loading="lazy"
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ background: 'var(--webik-lime)' }}>
+                      <span className="font-fraunces italic font-bold text-2xl" style={{ color: 'var(--webik-dark)' }}>↗</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+                {/* Meta */}
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.15em]" style={{ color: 'var(--webik-muted)' }}>{item.year} / {item.category}</span>
+                  <span className="font-mono text-[11px]" style={{ color: 'var(--webik-muted)' }}>↗</span>
+                </div>
+                <h3 className="font-fraunces text-[var(--webik-dark)] text-2xl lg:text-3xl font-light tracking-tight" style={{ letterSpacing: '-0.02em' }}>{item.name}</h3>
+                <p className="font-inter text-sm mt-1" style={{ color: 'var(--webik-muted)' }}>{item.tags}</p>
+              </>
+            );
 
-              {/* Meta */}
-              <div className="flex items-center justify-between mb-2">
-                <span className="font-mono text-[11px] uppercase tracking-[0.15em]" style={{ color: 'var(--webik-muted)' }}>
-                  {item.year} / {item.category}
-                </span>
-                <span className="font-mono text-[11px]" style={{ color: 'var(--webik-muted)' }}>↗</span>
-              </div>
-              <h3 className="font-fraunces text-[var(--webik-dark)] text-2xl lg:text-3xl font-light tracking-tight" style={{ letterSpacing: '-0.02em' }}>
-                {item.name}
-              </h3>
-              <p className="font-inter text-sm mt-1" style={{ color: 'var(--webik-muted)' }}>{item.tags}</p>
-            </a>
-          ))}
+            const sharedProps = {
+              key: i,
+              className: `group block transition-transform duration-[400ms] ${i % 2 === 1 ? 'lg:mt-[60px]' : ''}`,
+              style: { transitionTimingFunction: 'cubic-bezier(0.2,0.8,0.2,1)' },
+              onMouseEnter: e => e.currentTarget.style.transform = 'translateY(-6px)',
+              onMouseLeave: e => e.currentTarget.style.transform = 'translateY(0)',
+            };
+
+            return item.internal
+              ? <Link {...sharedProps} to={item.link}>{cardContent}</Link>
+              : <a {...sharedProps} href={item.link} target="_blank" rel="noopener noreferrer">{cardContent}</a>;
+          })}
         </div>
       </div>
     </section>
