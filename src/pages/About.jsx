@@ -70,7 +70,7 @@ export default function About() {
             <div>
               <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( Our Story )</span>
               <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
-                Born in Cebu.<br />Built for <span style={{ color: 'var(--webik-lime)', WebkitTextStroke: '1px var(--webik-dark)' }}>everyone.</span>
+                Born in Cebu.<br />Built for <span style={{ color: 'var(--webik-lime)' }}>everyone.</span>
               </h2>
               <div className="mt-8 space-y-5 font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-dark)' }}>
                 <p>
@@ -115,7 +115,7 @@ export default function About() {
             <div className="order-1 lg:order-2">
               <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( The Team )</span>
               <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
-                Small team.<br /><span style={{ color: 'var(--webik-lime)', WebkitTextStroke: '1px var(--webik-dark)' }}>Big output.</span>
+                Small team.<br /><span style={{ color: 'var(--webik-lime)' }}>Big output.</span>
               </h2>
               <p className="mt-6 font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-dark)' }}>
                 We're a focused team of 5 specialists — designers, developers, and strategists — based entirely in Cebu City. No outsourcing, no offshoring. When you work with Webik, you work with the people who actually build your site.

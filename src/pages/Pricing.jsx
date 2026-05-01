@@ -232,7 +232,7 @@ export default function Pricing() {
         <div className="max-w-[1440px] mx-auto">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( Included in Every Build )</span>
           <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
-            Not just a website — a <span style={{ color: 'var(--webik-lime)', WebkitTextStroke: '1px var(--webik-dark)' }}>digital foundation.</span>
+            Not just a website — a <span style={{ color: 'var(--webik-lime)' }}>digital foundation.</span>
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px mt-14" style={{ background: 'var(--webik-cream-2)' }}>
             {[

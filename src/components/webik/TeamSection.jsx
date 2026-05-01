@@ -14,7 +14,7 @@ export default function TeamSection() {
       <div className="max-w-[1440px] mx-auto">
         <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Team )</span>
         <h2 className="font-grotesk text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
-          Five specialists. One <span style={{ color: 'var(--webik-lime)', WebkitTextStroke: '1px var(--webik-dark)' }}>goal.</span>
+          Five specialists. One <span style={{ color: 'var(--webik-lime)' }}>goal.</span>
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-16">

@@ -141,7 +141,7 @@ export default function Services() {
         <div className="max-w-[1440px] mx-auto">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( How It Works )</span>
           <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
-            From first call to live site — in <span style={{ color: 'var(--webik-lime)', WebkitTextStroke: '1px var(--webik-dark)' }}>days,</span> not months.
+            From first call to live site — in <span style={{ color: 'var(--webik-lime)' }}>days,</span> not months.
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px mt-14" style={{ background: 'var(--webik-cream-2)' }}>
             {process.map((step, i) => (
@@ -152,7 +152,7 @@ export default function Services() {
                 onMouseEnter={e => e.currentTarget.style.background = 'var(--webik-cream-2)'}
                 onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-cream)'}
               >
-                <span className="font-fraunces italic font-light text-5xl" style={{ color: 'var(--webik-lime)', WebkitTextStroke: '1px var(--webik-dark)' }}>{step.num}</span>
+                <span className="font-fraunces italic font-light text-5xl" style={{ color: 'var(--webik-lime)' }}>{step.num}</span>
                 <h3 className="font-inter font-semibold text-base mt-6" style={{ color: 'var(--webik-dark)' }}>{step.title}</h3>
                 <p className="font-mono text-[10px] uppercase tracking-[0.15em] mt-1" style={{ color: 'var(--webik-muted)' }}>{step.duration}</p>
                 <p className="font-inter text-sm leading-relaxed mt-3" style={{ color: 'var(--webik-muted)' }}>{step.desc}</p>

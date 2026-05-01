@@ -44,7 +44,7 @@ export default function FAQSection() {
       <div className="max-w-[900px] mx-auto">
         <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( FAQ )</span>
         <h2 className="font-grotesk text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
-          Things people ask before <span style={{ color: 'var(--webik-lime)', WebkitTextStroke: '1px var(--webik-dark)' }}>they sign.</span>
+          Things people ask before <span style={{ color: 'var(--webik-lime)' }}>they sign.</span>
         </h2>
 
         <div className="mt-12 lg:mt-16 divide-y divide-[var(--webik-cream-2)]">
