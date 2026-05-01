@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import CaseStudy from './pages/CaseStudy';
 import Contact from './pages/Contact';
@@ -40,6 +41,8 @@ const AuthenticatedApp = () => {
 
   // Render the main app
   return (
+    <>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/work/:slug" element={<CaseStudy />} />
@@ -51,6 +54,7 @@ const AuthenticatedApp = () => {
       <Route path="/faq" element={<FAQ />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
+    </>
   );
 };
 
