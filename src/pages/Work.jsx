@@ -49,7 +49,7 @@ const portfolioItems = [
     tags: 'Web Design · Web Development · Consultancy',
     link: 'https://gorelocationph.com',
     internal: false,
-    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/e56bca33e_generated_image.png',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/9470d6e4b_generated_image.png',
   },
 ];
 
