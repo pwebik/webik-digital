@@ -11,7 +11,7 @@ export const caseStudies = {
     scope: 'Shopify · Web Design · Web Development · Branding',
     liveUrl: 'https://imitationbook.com',
     liveDomain: 'WWW.IMITATIONBOOK.COM',
-    mockupUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/73f4338f7_Imitationbook-mockup-1024708.png',
+    mockupUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/2f0607804_Macbook_Air_M2_Mockup_2-2-1-1024x768.png',
     thumbnailUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/80984f361_generated_image.png',
     brief: [
       'Twin Cities Speech Therapy Publishing was founded by a mom and licensed speech-language pathologist with a passion for making communication easier — and more fun — for little ones.',
