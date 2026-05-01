@@ -40,7 +40,7 @@ export default function HeroSection() {
       {/* Background decorative W pattern */}
       <div
         ref={wRef}
-        className="absolute right-[-5vw] top-0 h-full w-[55vw] select-none pointer-events-none"
+        className="absolute right-[-5vw] top-[20%] h-full w-[55vw] select-none pointer-events-none"
         aria-hidden="true"
         style={{ opacity: 0 }}
       >
