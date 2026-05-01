@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const socialLinks = [
-  { label: 'Facebook', abbr: 'FB', href: '#' },
-  { label: 'Instagram', abbr: 'IG', href: '#' },
-  { label: 'LinkedIn', abbr: 'IN', href: '#' },
+  { label: 'Facebook', abbr: 'FB', href: 'https://www.facebook.com/p/Webik-Digital-61577379911344/' },
+  { label: 'Instagram', abbr: 'IG', href: 'https://www.instagram.com/webik.digital' },
+  { label: 'LinkedIn', abbr: 'IN', href: 'https://www.linkedin.com/company/webik-digital' },
   { label: 'TikTok', abbr: 'TT', href: '#' },
   { label: 'YouTube', abbr: 'YT', href: '#' },
   { label: 'X', abbr: 'X', href: '#' },
