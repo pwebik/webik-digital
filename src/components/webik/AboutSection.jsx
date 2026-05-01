@@ -43,7 +43,7 @@ export default function AboutSection() {
                   ${i < 2 ? 'border-b border-[var(--webik-cream-2)]' : ''}
                 `}
               >
-                <span className="font-fraunces font-light text-5xl sm:text-6xl lg:text-[72px] text-[var(--webik-dark)] leading-none">
+                <span className="font-grotesk font-light text-5xl sm:text-6xl lg:text-[72px] text-[var(--webik-dark)] leading-none">
                   <span className="text-[var(--webik-lime)]">{stat.number.charAt(0)}</span>
                   {stat.number.slice(1)}
                 </span>

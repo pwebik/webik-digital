@@ -12,7 +12,7 @@ const items = [
 export default function TrustStrip() {
   const content = items.map((item, i) => (
     <React.Fragment key={i}>
-      <span className="text-[var(--webik-cream)] font-fraunces italic text-xl sm:text-2xl lg:text-[28px] whitespace-nowrap">{item}</span>
+      <span className="text-[var(--webik-cream)] font-grotesk text-xl sm:text-2xl lg:text-[28px] whitespace-nowrap">{item}</span>
       <span className="text-[var(--webik-lime)] text-lg mx-5">✦</span>
     </React.Fragment>
   ));

@@ -88,7 +88,7 @@ export default function CaseStudyNav() {
               key={link.href}
               to={link.href}
               onClick={() => setMobileOpen(false)}
-              className="font-fraunces italic font-light text-5xl sm:text-6xl leading-tight transition-all duration-200"
+              className="font-grotesk font-light text-5xl sm:text-6xl leading-tight transition-all duration-200"
               style={{
                 color: 'var(--webik-cream)',
                 opacity: mobileOpen ? 1 : 0,

@@ -71,7 +71,7 @@ export default function HeroSection() {
         {/* Headline */}
         <h1 ref={line2Ref} className="font-grotesk font-light leading-[0.92] text-[var(--webik-dark)] text-[12vw] sm:text-[9vw] lg:text-[7.5vw] xl:text-[6.5vw] max-w-[1100px]">
           Premium digital presence,{' '}
-          <em className="not-italic font-fraunces italic">accessible</em>{' '}
+          <span style={{ color: 'var(--webik-lime)' }}>accessible</span>{' '}
           <span className="relative inline-block">
             to all.
             <span className="absolute bottom-[0.08em] left-0 right-0 h-[0.3em] bg-[var(--webik-lime)] -z-10 rounded-sm"></span>

@@ -174,7 +174,7 @@ export default function StickyNav() {
           <div className="w-full text-center">
             <button
               onClick={() => setMobileWorkOpen(v => !v)}
-              className="font-fraunces italic font-light text-5xl sm:text-6xl leading-tight flex items-center gap-3 mx-auto transition-colors"
+              className="font-grotesk font-light text-5xl sm:text-6xl leading-tight flex items-center gap-3 mx-auto transition-colors"
               style={{ color: 'var(--webik-cream)' }}
               onMouseEnter={e => e.currentTarget.style.color = 'var(--webik-lime)'}
               onMouseLeave={e => e.currentTarget.style.color = mobileWorkOpen ? 'var(--webik-lime)' : 'var(--webik-cream)'}
@@ -205,7 +205,7 @@ export default function StickyNav() {
                 key={link.href}
                 to={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="font-fraunces italic font-light text-5xl sm:text-6xl leading-tight transition-all duration-200"
+                className="font-grotesk font-light text-5xl sm:text-6xl leading-tight transition-all duration-200"
                 style={{
                   color: 'var(--webik-cream)',
                   opacity: mobileOpen ? 1 : 0,
@@ -222,7 +222,7 @@ export default function StickyNav() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleAnchorClick(e, link.href)}
-                className="font-fraunces italic font-light text-5xl sm:text-6xl leading-tight transition-all duration-200"
+                className="font-grotesk font-light text-5xl sm:text-6xl leading-tight transition-all duration-200"
                 style={{
                   color: 'var(--webik-cream)',
                   opacity: mobileOpen ? 1 : 0,

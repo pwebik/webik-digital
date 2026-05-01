@@ -95,14 +95,14 @@ export default function CaseStudy() {
 
             {/* Title */}
             <h1
-              className="font-fraunces font-light italic leading-[0.92] tracking-tight"
+              className="font-grotesk font-light leading-[0.92] tracking-tight"
               style={{ color: 'var(--webik-cream)', fontSize: 'clamp(52px, 9vw, 140px)', letterSpacing: '-0.04em' }}
             >
               {project.title}
             </h1>
 
             {/* Subtitle */}
-            <p className="mt-6 font-fraunces italic text-xl lg:text-2xl font-light" style={{ color: 'var(--webik-lime)', maxWidth: 680 }}>
+            <p className="mt-6 font-grotesk text-xl lg:text-2xl font-light" style={{ color: 'var(--webik-lime)', maxWidth: 680 }}>
               {project.subtitle}
             </p>
 
@@ -179,7 +179,7 @@ export default function CaseStudy() {
             <div className="grid lg:grid-cols-3 gap-12 lg:gap-20">
               <div className="cs-reveal">
                 <p className="font-mono text-[11px] uppercase tracking-[0.2em] mb-4" style={{ color: 'var(--webik-lime)', background: 'rgba(200,240,72,0.1)', border: '1px solid rgba(200,240,72,0.25)', display: 'inline-block', padding: '4px 12px', borderRadius: 99 }}>02 / THE APPROACH</p>
-                <h2 className="font-fraunces font-light italic text-3xl lg:text-4xl mt-6 leading-tight" style={{ color: 'var(--webik-cream)' }}>Our strategic decisions.</h2>
+                <h2 className="font-grotesk font-light text-3xl lg:text-4xl mt-6 leading-tight" style={{ color: 'var(--webik-cream)' }}>Our strategic decisions.</h2>
               </div>
               <div className="lg:col-span-2 space-y-px" style={{ background: 'rgba(245,243,236,0.08)' }}>
                 {project.approach.map((item, i) => (
@@ -187,7 +187,7 @@ export default function CaseStudy() {
                     onMouseEnter={e => e.currentTarget.style.background = 'var(--webik-dark-2)'}
                     onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-dark)'}
                   >
-                    <span className="font-fraunces italic text-5xl font-light leading-none shrink-0 w-16" style={{ color: 'var(--webik-lime)' }}>{item.num}</span>
+                    <span className="font-grotesk text-5xl font-light leading-none shrink-0 w-16" style={{ color: 'var(--webik-lime)' }}>{item.num}</span>
                     <div>
                       <h3 className="font-inter font-semibold text-base" style={{ color: 'var(--webik-cream)' }}>{item.title}</h3>
                       <p className="font-inter text-sm mt-1.5 leading-relaxed" style={{ color: 'rgba(245,243,236,0.65)' }}>{item.desc}</p>
@@ -212,7 +212,7 @@ export default function CaseStudy() {
               onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-dark)'}
             >
               <p
-                className="font-fraunces italic font-light leading-none tracking-tight transition-colors duration-500 group-hover:[color:var(--webik-dark)]"
+                className="font-grotesk font-light leading-none tracking-tight transition-colors duration-500 group-hover:[color:var(--webik-dark)]"
                 style={{ color: 'var(--webik-cream)', fontSize: 'clamp(28px, 5vw, 72px)', letterSpacing: '-0.03em' }}
               >
                 {project.liveDomain} →
@@ -230,7 +230,7 @@ export default function CaseStudy() {
             <div className="grid lg:grid-cols-3 gap-12 lg:gap-20">
               <div className="cs-reveal">
                 <p className="font-mono text-[11px] uppercase tracking-[0.2em] mb-4" style={{ color: 'var(--webik-lime)', background: 'var(--webik-dark)', display: 'inline-block', padding: '4px 12px', borderRadius: 99 }}>03 / BRAND SYSTEM</p>
-                <h2 className="font-fraunces font-light italic text-3xl lg:text-4xl mt-6 leading-tight" style={{ color: 'var(--webik-dark)' }}>Typography & palette.</h2>
+                <h2 className="font-grotesk font-light text-3xl lg:text-4xl mt-6 leading-tight" style={{ color: 'var(--webik-dark)' }}>Typography & palette.</h2>
               </div>
               <div className="lg:col-span-2 space-y-8">
                 {/* Typography Panel */}
@@ -238,7 +238,7 @@ export default function CaseStudy() {
                   <p className="font-mono text-[10px] uppercase tracking-[0.2em] mb-6" style={{ color: 'var(--webik-muted)' }}>Typography</p>
                   <div className="flex flex-col lg:flex-row gap-8 items-start">
                     <div className="shrink-0">
-                      <p className="font-fraunces italic font-light" style={{ fontSize: 120, lineHeight: 1, color: 'var(--webik-dark)' }}>Aa</p>
+                      <p className="font-grotesk font-light" style={{ fontSize: 120, lineHeight: 1, color: 'var(--webik-dark)' }}>Aa</p>
                       <p className="font-inter font-semibold text-sm mt-3" style={{ color: 'var(--webik-dark)' }}>{project.typography.primary}</p>
                       <p className="font-inter text-xs mt-1" style={{ color: 'var(--webik-muted)' }}>Display / {project.typography.body} Body</p>
                     </div>
@@ -273,7 +273,7 @@ export default function CaseStudy() {
           <div className="max-w-[1440px] mx-auto relative z-10">
             <div className="cs-reveal mb-14">
               <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Page Tour )</span>
-              <h2 className="font-fraunces font-light italic text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-cream)' }}>Inside the build.</h2>
+              <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-cream)' }}>Inside the build.</h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px" style={{ background: 'rgba(245,243,236,0.1)' }}>
               {project.pageTour.map((page, i) => (
@@ -286,7 +286,7 @@ export default function CaseStudy() {
                 >
                   <span className="font-mono text-[10px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>{page.label}</span>
                   <div>
-                    <h3 className="font-fraunces italic font-light text-4xl lg:text-5xl mt-auto leading-tight" style={{ color: 'var(--webik-cream)', letterSpacing: '-0.03em' }}>{page.name}</h3>
+                    <h3 className="font-grotesk font-light text-4xl lg:text-5xl mt-auto leading-tight" style={{ color: 'var(--webik-cream)', letterSpacing: '-0.03em' }}>{page.name}</h3>
                     <p className="font-inter text-sm mt-4 leading-relaxed" style={{ color: 'rgba(245,243,236,0.65)' }}>{page.desc}</p>
                   </div>
                 </div>
@@ -301,7 +301,7 @@ export default function CaseStudy() {
             <div className="grid lg:grid-cols-3 gap-12 lg:gap-20">
               <div className="cs-reveal">
                 <p className="font-mono text-[11px] uppercase tracking-[0.2em] mb-4" style={{ color: 'var(--webik-lime)', background: 'var(--webik-dark)', display: 'inline-block', padding: '4px 12px', borderRadius: 99 }}>04 / UNDER THE HOOD</p>
-                <h2 className="font-fraunces font-light italic text-3xl lg:text-4xl mt-6 leading-tight" style={{ color: 'var(--webik-dark)' }}>Built with purpose.</h2>
+                <h2 className="font-grotesk font-light text-3xl lg:text-4xl mt-6 leading-tight" style={{ color: 'var(--webik-dark)' }}>Built with purpose.</h2>
               </div>
               <div className="lg:col-span-2 cs-reveal cs-reveal-delay-1">
                 <p className="font-mono text-[10px] uppercase tracking-[0.15em] mb-4" style={{ color: 'var(--webik-muted)' }}>Tech Stack & Services</p>
@@ -336,7 +336,7 @@ export default function CaseStudy() {
         {project.quote && (
           <section className="py-20 lg:py-28 px-6 lg:px-12" style={{ background: 'var(--webik-lime)' }}>
             <div className="max-w-[900px] mx-auto text-center cs-reveal">
-              <p className="font-fraunces italic font-light text-3xl lg:text-5xl leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>
+              <p className="font-grotesk font-light text-3xl lg:text-5xl leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>
                 "{project.quote.text}"
               </p>
               <div className="mt-10">
@@ -362,7 +362,7 @@ export default function CaseStudy() {
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{ background: 'radial-gradient(circle at 30% 50%, rgba(200,240,72,0.08), transparent 60%)' }} />
                 <p className="font-mono text-[11px] uppercase tracking-[0.2em] mb-6" style={{ color: 'var(--webik-lime)' }}>NEXT PROJECT →</p>
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-                  <h2 className="font-fraunces italic font-light leading-tight" style={{ color: 'var(--webik-cream)', fontSize: 'clamp(36px, 6vw, 96px)', letterSpacing: '-0.04em' }}>
+                  <h2 className="font-grotesk font-light leading-tight" style={{ color: 'var(--webik-cream)', fontSize: 'clamp(36px, 6vw, 96px)', letterSpacing: '-0.04em' }}>
                     {nextProject.title}
                   </h2>
                   <span className="inline-flex items-center px-4 py-1.5 rounded-full shrink-0" style={{ background: 'rgba(200,240,72,0.12)', border: '1px solid rgba(200,240,72,0.25)' }}>
@@ -379,7 +379,7 @@ export default function CaseStudy() {
           <GrainOverlay />
           <div className="absolute inset-0 pointer-events-none z-[2]" style={{ background: 'radial-gradient(circle at 30% 50%, rgba(200,240,72,0.12), transparent 50%), radial-gradient(circle at 70% 50%, rgba(200,240,72,0.06), transparent 50%)' }} />
           <div className="max-w-[900px] mx-auto relative z-10 cs-reveal">
-            <h2 className="font-fraunces font-light leading-[0.95] tracking-tight" style={{ color: 'var(--webik-cream)', fontSize: 'clamp(36px, 6vw, 96px)', letterSpacing: '-0.04em' }}>
+            <h2 className="font-grotesk font-light leading-[0.95] tracking-tight" style={{ color: 'var(--webik-cream)', fontSize: 'clamp(36px, 6vw, 96px)', letterSpacing: '-0.04em' }}>
               Want results like this?<br />Let's build your <em className="italic" style={{ color: 'var(--webik-lime)' }}>digital presence.</em>
             </h2>
             <p className="mt-6 lg:mt-8 font-inter text-base lg:text-lg leading-relaxed max-w-[520px] mx-auto" style={{ color: 'rgba(245,243,236,0.7)' }}>

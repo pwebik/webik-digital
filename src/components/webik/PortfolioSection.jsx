@@ -80,7 +80,7 @@ export default function PortfolioSection() {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                     <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ background: 'var(--webik-lime)' }}>
-                      <span className="font-fraunces italic font-bold text-2xl" style={{ color: 'var(--webik-dark)' }}>↗</span>
+                      <span className="font-grotesk font-bold text-2xl" style={{ color: 'var(--webik-dark)' }}>↗</span>
                     </div>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ export default function PortfolioSection() {
                   <span className="font-mono text-[11px] uppercase tracking-[0.15em]" style={{ color: 'var(--webik-muted)' }}>{item.year} / {item.category}</span>
                   <span className="font-mono text-[11px]" style={{ color: 'var(--webik-muted)' }}>↗</span>
                 </div>
-                <h3 className="font-fraunces text-[var(--webik-dark)] text-2xl lg:text-3xl font-light tracking-tight" style={{ letterSpacing: '-0.02em' }}>{item.name}</h3>
+                <h3 className="font-grotesk text-[var(--webik-dark)] text-2xl lg:text-3xl font-light tracking-tight" style={{ letterSpacing: '-0.02em' }}>{item.name}</h3>
                 <p className="font-inter text-sm mt-1" style={{ color: 'var(--webik-muted)' }}>{item.tags}</p>
               </>
             );

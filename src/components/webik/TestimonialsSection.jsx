@@ -43,13 +43,13 @@ export default function TestimonialsSection() {
             >
               {/* Big quote mark like Claude */}
               <div
-                className="font-fraunces italic font-light leading-none mb-4"
+                className="font-grotesk font-light leading-none mb-4"
                 style={{ fontSize: '80px', lineHeight: '0.6', color: 'var(--webik-lime)', height: '36px' }}
               >
                 "
               </div>
               <p
-                className="font-fraunces font-light text-lg lg:text-xl leading-[1.45] tracking-tight flex-1 mb-8"
+                className="font-grotesk font-light text-lg lg:text-xl leading-[1.45] tracking-tight flex-1 mb-8"
                 style={{ color: 'var(--webik-cream)', letterSpacing: '-0.01em' }}
               >
                 {t.quote}
@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
                 style={{ borderColor: 'rgba(245,243,236,0.12)' }}
               >
                 <div
-                  className="w-11 h-11 rounded-full flex items-center justify-center shrink-0 font-fraunces font-bold text-lg"
+                  className="w-11 h-11 rounded-full flex items-center justify-center shrink-0 font-grotesk font-bold text-lg"
                   style={{ background: 'var(--webik-lime)', color: 'var(--webik-dark)' }}
                 >
                   {t.initial}
