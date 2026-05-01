@@ -5,7 +5,7 @@ const team = [
   { name: 'Ray Mendoza', role: 'COO · OPERATIONS', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/102dfcc8c_IMG_0553.jpg' },
   { name: 'Xavier Gonzales', role: 'HEAD OF WEB DEVELOPMENT', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/8e9f72288_IMG_0557.jpg' },
   { name: 'Julius Parungao', role: 'CREATIVE DIRECTOR', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/3ff4696ea_IMG_0563.jpg' },
-  { name: '[Name TBD]', role: 'CMO · MARKETING', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/343467812_generated_68f653e7.png' },
+  { name: 'Allaiah Divina', role: 'CMO · MARKETING', image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/343467812_generated_68f653e7.png' },
 ];
 
 export default function TeamSection() {
