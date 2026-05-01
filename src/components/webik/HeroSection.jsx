@@ -47,7 +47,7 @@ export default function HeroSection() {
         <img
           src="https://media.base44.com/images/public/69ecce3288377cd246349884/848d53c15_Group5.png"
           alt=""
-          className="w-full h-full object-cover object-left"
+          className="w-full h-full object-contain object-right"
         />
       </div>
 
