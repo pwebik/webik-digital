@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import StickyNav from '@/components/webik/StickyNav';
 import Footer from '@/components/webik/Footer';
 import GrainOverlay from '@/components/webik/GrainOverlay';
+import FinalCTA from '@/components/webik/FinalCTA';
 
 const stats = [
   { number: '5', label: 'Specialists' },
@@ -32,10 +32,10 @@ export default function About() {
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( About Webik )</span>
           <h1
-            className="font-fraunces font-light italic leading-[0.92] tracking-tight mt-6"
+            className="font-grotesk font-light leading-[0.92] tracking-tight mt-6"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(48px, 8vw, 120px)', letterSpacing: '-0.04em' }}
           >
-            We exist to end<br />the impossible <em style={{ color: 'var(--webik-lime)' }}>choice.</em>
+            We exist to end<br />the impossible <span style={{ color: 'var(--webik-lime)' }}>choice.</span>
           </h1>
           <p className="mt-8 font-inter text-base lg:text-lg leading-relaxed max-w-[580px]" style={{ color: 'rgba(245,243,236,0.7)' }}>
             Most Cebu SMEs are stuck between a ₱50,000 agency gamble or a freelancer who ghosts them. We built a third option.
@@ -69,8 +69,8 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div>
               <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( Our Story )</span>
-              <h2 className="font-fraunces font-light italic text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
-                Born in Cebu.<br />Built for everyone.
+              <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
+                Born in Cebu.<br />Built for <span style={{ color: 'var(--webik-lime)', WebkitTextStroke: '1px var(--webik-dark)' }}>everyone.</span>
               </h2>
               <div className="mt-8 space-y-5 font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-dark)' }}>
                 <p>
@@ -114,8 +114,8 @@ export default function About() {
             </div>
             <div className="order-1 lg:order-2">
               <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( The Team )</span>
-              <h2 className="font-fraunces font-light italic text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
-                Small team.<br /><em style={{ color: 'var(--webik-lime)', WebkitTextStroke: '1px var(--webik-dark)' }}>Big output.</em>
+              <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
+                Small team.<br /><span style={{ color: 'var(--webik-lime)', WebkitTextStroke: '1px var(--webik-dark)' }}>Big output.</span>
               </h2>
               <p className="mt-6 font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-dark)' }}>
                 We're a focused team of 5 specialists — designers, developers, and strategists — based entirely in Cebu City. No outsourcing, no offshoring. When you work with Webik, you work with the people who actually build your site.
@@ -133,7 +133,7 @@ export default function About() {
         <GrainOverlay />
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Our Values )</span>
-          <h2 className="font-fraunces font-light italic text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-cream)', letterSpacing: '-0.03em' }}>
+          <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-cream)', letterSpacing: '-0.03em' }}>
             What we stand for.
           </h2>
           <div className="grid sm:grid-cols-2 gap-px mt-14" style={{ background: 'rgba(245,243,236,0.1)' }}>
@@ -154,27 +154,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 lg:py-28 px-6 lg:px-12 text-center" style={{ background: 'var(--webik-cream)' }}>
-        <div className="max-w-[720px] mx-auto">
-          <h2 className="font-fraunces font-light italic text-4xl lg:text-5xl leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
-            Want to work with us?
-          </h2>
-          <p className="mt-5 font-inter text-base leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
-            Free 15-minute discovery call. No pressure — just a conversation about your business.
-          </p>
-          <Link
-            to="/contact"
-            className="mt-8 inline-flex items-center gap-2 px-8 py-4 rounded-full font-inter font-medium text-sm transition-all duration-300"
-            style={{ background: 'var(--webik-dark)', color: 'var(--webik-cream)' }}
-            onMouseEnter={e => e.currentTarget.style.background = 'var(--webik-dark-2)'}
-            onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-dark)'}
-          >
-            Book a 15-min discovery call →
-          </Link>
-        </div>
-      </section>
-
+      <FinalCTA />
       <Footer />
     </div>
   );

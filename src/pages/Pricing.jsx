@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { Check, Loader2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import StickyNav from '@/components/webik/StickyNav';
+import FinalCTA from '@/components/webik/FinalCTA';
 import Footer from '@/components/webik/Footer';
 import GrainOverlay from '@/components/webik/GrainOverlay';
 
@@ -99,10 +100,10 @@ export default function Pricing() {
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Pricing )</span>
           <h1
-            className="font-fraunces font-light italic leading-[0.92] tracking-tight mt-6"
+            className="font-grotesk font-light leading-[0.92] tracking-tight mt-6"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(48px, 8vw, 120px)', letterSpacing: '-0.04em' }}
           >
-            Lower risk.<br />Higher <em style={{ color: 'var(--webik-lime)' }}>partnership.</em>
+            Lower risk.<br />Higher <span style={{ color: 'var(--webik-lime)' }}>partnership.</span>
           </h1>
           <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
             <p className="font-inter text-base lg:text-lg leading-relaxed max-w-[500px]" style={{ color: 'rgba(245,243,236,0.7)' }}>
@@ -230,8 +231,8 @@ export default function Pricing() {
       <section className="py-20 lg:py-28 px-6 lg:px-12" style={{ background: 'var(--webik-cream)' }}>
         <div className="max-w-[1440px] mx-auto">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( Included in Every Build )</span>
-          <h2 className="font-fraunces font-light italic text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
-            Not just a website — a digital foundation.
+          <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
+            Not just a website — a <span style={{ color: 'var(--webik-lime)', WebkitTextStroke: '1px var(--webik-dark)' }}>digital foundation.</span>
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px mt-14" style={{ background: 'var(--webik-cream-2)' }}>
             {[
@@ -263,7 +264,7 @@ export default function Pricing() {
         <GrainOverlay />
         <div className="max-w-[900px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Pricing FAQ )</span>
-          <h2 className="font-fraunces font-light italic text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-cream)', letterSpacing: '-0.03em' }}>
+          <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-cream)', letterSpacing: '-0.03em' }}>
             Common questions.
           </h2>
           <div className="mt-12 divide-y" style={{ borderColor: 'rgba(245,243,236,0.1)' }}>
@@ -274,6 +275,7 @@ export default function Pricing() {
         </div>
       </section>
 
+      <FinalCTA />
       <Footer />
     </div>
   );

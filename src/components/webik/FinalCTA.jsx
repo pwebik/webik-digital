@@ -28,9 +28,9 @@ export default function FinalCTA() {
         >
           Ready to launch<br />
           your{' '}
-          <em className="italic" style={{ color: 'var(--webik-lime)' }}>
+          <span style={{ color: 'var(--webik-lime)' }}>
             digital presence?
-          </em>
+          </span>
         </h2>
 
         <p className="mt-6 lg:mt-8 font-inter text-base lg:text-lg leading-relaxed max-w-[560px] mx-auto" style={{ color: 'rgba(245,243,236,0.7)' }}>

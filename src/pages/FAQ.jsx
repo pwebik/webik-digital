@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import StickyNav from '@/components/webik/StickyNav';
 import Footer from '@/components/webik/Footer';
+import { Link } from 'react-router-dom';
 import GrainOverlay from '@/components/webik/GrainOverlay';
+import FinalCTA from '@/components/webik/FinalCTA';
 
 const faqCategories = [
   {
@@ -112,10 +113,10 @@ export default function FAQ() {
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( FAQ )</span>
           <h1
-            className="font-fraunces font-light italic leading-[0.92] tracking-tight mt-6"
+            className="font-grotesk font-light leading-[0.92] tracking-tight mt-6"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(48px, 8vw, 120px)', letterSpacing: '-0.04em' }}
           >
-            Things people ask<br />before they <em style={{ color: 'var(--webik-lime)' }}>sign.</em>
+            Things people ask<br />before they <span style={{ color: 'var(--webik-lime)' }}>sign.</span>
           </h1>
           <p className="mt-8 font-inter text-base lg:text-lg leading-relaxed max-w-[520px]" style={{ color: 'rgba(245,243,236,0.7)' }}>
             Honest answers to the real questions. If you don't see yours here, just ask.
@@ -150,7 +151,7 @@ export default function FAQ() {
             <div className="lg:col-span-3 space-y-16">
               {faqCategories.map((cat, ci) => (
                 <div key={ci} id={`cat-${ci}`}>
-                  <h2 className="font-fraunces font-light italic text-3xl lg:text-4xl leading-tight mb-8" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>
+                  <h2 className="font-grotesk font-light text-3xl lg:text-4xl leading-tight mb-8" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>
                     {cat.category}
                   </h2>
                   <div>
@@ -165,28 +166,7 @@ export default function FAQ() {
         </div>
       </section>
 
-      {/* Still have questions */}
-      <section className="relative py-20 lg:py-28 px-6 lg:px-12 text-center" style={{ background: 'var(--webik-dark)' }}>
-        <GrainOverlay />
-        <div className="max-w-[680px] mx-auto relative z-10">
-          <h2 className="font-fraunces font-light italic text-4xl lg:text-5xl leading-tight" style={{ color: 'var(--webik-cream)', letterSpacing: '-0.03em' }}>
-            Still have questions?
-          </h2>
-          <p className="mt-5 font-inter text-base leading-relaxed" style={{ color: 'rgba(245,243,236,0.65)' }}>
-            Book a free 15-minute call. We'll answer everything and give you an honest take on whether Webik is the right fit.
-          </p>
-          <Link
-            to="/contact"
-            className="mt-8 inline-flex items-center gap-2 px-8 py-4 rounded-full font-inter font-medium text-sm transition-all duration-300"
-            style={{ background: 'var(--webik-lime)', color: 'var(--webik-dark)' }}
-            onMouseEnter={e => { e.currentTarget.style.background = 'var(--webik-cream)'; }}
-            onMouseLeave={e => { e.currentTarget.style.background = 'var(--webik-lime)'; }}
-          >
-            Book a 15-min discovery call →
-          </Link>
-        </div>
-      </section>
-
+      <FinalCTA />
       <Footer />
     </div>
   );

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import StickyNav from '@/components/webik/StickyNav';
 import Footer from '@/components/webik/Footer';
 import GrainOverlay from '@/components/webik/GrainOverlay';
+import FinalCTA from '@/components/webik/FinalCTA';
 
 const services = [
   {
@@ -82,10 +82,10 @@ export default function Services() {
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Services )</span>
           <h1
-            className="font-fraunces font-light italic leading-[0.92] tracking-tight mt-6"
+            className="font-grotesk font-light leading-[0.92] tracking-tight mt-6"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(48px, 8vw, 120px)', letterSpacing: '-0.04em' }}
           >
-            Built like a <em style={{ color: 'var(--webik-lime)' }}>partnership.</em><br />Priced like a subscription.
+            Built like a <span style={{ color: 'var(--webik-lime)' }}>partnership.</span><br />Priced like a subscription.
           </h1>
           <p className="mt-8 font-inter text-base lg:text-lg leading-relaxed max-w-[580px]" style={{ color: 'rgba(245,243,236,0.7)' }}>
             Every service we offer is designed for one thing: your long-term digital success — not just a beautiful website.
@@ -140,8 +140,8 @@ export default function Services() {
       <section className="py-20 lg:py-28 px-6 lg:px-12" style={{ background: 'var(--webik-cream)' }}>
         <div className="max-w-[1440px] mx-auto">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( How It Works )</span>
-          <h2 className="font-fraunces font-light italic text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
-            From first call to live site — in days, not months.
+          <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
+            From first call to live site — in <span style={{ color: 'var(--webik-lime)', WebkitTextStroke: '1px var(--webik-dark)' }}>days,</span> not months.
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px mt-14" style={{ background: 'var(--webik-cream-2)' }}>
             {process.map((step, i) => (
@@ -162,27 +162,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 lg:py-28 px-6 lg:px-12 text-center" style={{ background: 'var(--webik-lime)' }}>
-        <div className="max-w-[720px] mx-auto">
-          <h2 className="font-fraunces font-light italic text-4xl lg:text-5xl leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
-            Ready to get started?
-          </h2>
-          <p className="mt-5 font-inter text-base leading-relaxed" style={{ color: 'rgba(14,26,10,0.65)' }}>
-            Book a free 15-minute discovery call. We'll figure out what you need and give you an honest recommendation.
-          </p>
-          <Link
-            to="/contact"
-            className="mt-8 inline-flex items-center gap-2 px-8 py-4 rounded-full font-inter font-medium text-sm transition-all duration-300"
-            style={{ background: 'var(--webik-dark)', color: 'var(--webik-cream)' }}
-            onMouseEnter={e => e.currentTarget.style.background = 'var(--webik-dark-2)'}
-            onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-dark)'}
-          >
-            Book a 15-min discovery call →
-          </Link>
-        </div>
-      </section>
-
+      <FinalCTA />
       <Footer />
     </div>
   );
