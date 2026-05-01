@@ -46,8 +46,8 @@ export default function ServicesSection() {
       <GrainOverlay />
       <div className="max-w-[1440px] mx-auto relative z-10">
         <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Services )</span>
-        <h2 className="font-fraunces text-[var(--webik-cream)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4 max-w-[700px]">
-          Built like a <em className="italic">partnership.</em> Priced like a subscription.
+        <h2 className="font-grotesk text-[var(--webik-cream)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4 max-w-[700px]">
+          Built like a <em className="font-fraunces italic">partnership.</em> Priced like a subscription.
         </h2>
 
         {/* Grid with 1px gap borders like Claude */}

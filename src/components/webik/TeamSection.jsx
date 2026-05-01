@@ -13,8 +13,8 @@ export default function TeamSection() {
     <section className="bg-[var(--webik-cream)] py-20 lg:py-32 px-6 lg:px-12">
       <div className="max-w-[1440px] mx-auto">
         <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Team )</span>
-        <h2 className="font-fraunces text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
-          Five specialists. One <em className="italic">goal.</em>
+        <h2 className="font-grotesk text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
+          Five specialists. One <em className="font-fraunces italic">goal.</em>
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-16">

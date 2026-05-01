@@ -29,8 +29,8 @@ export default function TestimonialsSection() {
     <section className="bg-[var(--webik-lime)] py-20 lg:py-32 px-6 lg:px-12">
       <div className="max-w-[1440px] mx-auto">
         <span className="text-[var(--webik-dark)]/60 text-xs font-mono uppercase tracking-[0.2em]">( Testimonials )</span>
-        <h2 className="font-fraunces text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
-          Don't take it from <em className="italic">us.</em>
+        <h2 className="font-grotesk text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
+          Don't take it from <em className="font-fraunces italic">us.</em>
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">

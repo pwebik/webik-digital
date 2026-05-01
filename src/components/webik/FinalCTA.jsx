@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import GrainOverlay from './GrainOverlay';
 
 export default function FinalCTA() {
@@ -18,7 +19,7 @@ export default function FinalCTA() {
 
       <div className="max-w-[900px] mx-auto relative z-10">
         <h2
-          className="font-fraunces font-light leading-[0.95] tracking-tight"
+          className="font-grotesk font-light leading-[0.95] tracking-tight"
           style={{
             color: 'var(--webik-cream)',
             fontSize: 'clamp(48px, 8vw, 128px)',
@@ -36,8 +37,8 @@ export default function FinalCTA() {
           Free 15-minute discovery call. No pressure, no pitch deck — just a conversation about whether we're the right partner for your business.
         </p>
 
-        <a
-          href="[CALENDLY_URL_PLACEHOLDER]"
+        <Link
+          to="/contact"
           className="mt-10 lg:mt-14 inline-flex items-center gap-3 px-10 py-5 rounded-full font-inter font-medium text-base transition-all duration-300 group"
           style={{
             background: 'var(--webik-lime)',
@@ -57,7 +58,7 @@ export default function FinalCTA() {
         >
           Book a 15-min discovery call
           <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-        </a>
+        </Link>
       </div>
     </section>
   );

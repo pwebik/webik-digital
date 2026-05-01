@@ -6,6 +6,7 @@ module.exports = {
   	extend: {
   		fontFamily: {
   			fraunces: ['var(--font-fraunces)'],
+  			grotesk: ['var(--font-grotesk)'],
   			inter: ['var(--font-inter)'],
   			mono: ['var(--font-mono)'],
   		},

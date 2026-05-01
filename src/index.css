@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Host+Grotesk:ital,wght@0,300..900;1,300..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -14,6 +14,7 @@
     --webik-muted: #6B7560;
 
     --font-fraunces: 'Fraunces', 'Georgia', serif;
+    --font-grotesk: 'Host Grotesk', 'system-ui', sans-serif;
     --font-inter: 'Inter Tight', 'system-ui', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
 

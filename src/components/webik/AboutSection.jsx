@@ -14,7 +14,7 @@ export default function AboutSection() {
         {/* Section label */}
         <div className="mb-12 lg:mb-16">
           <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( About )</span>
-          <h2 className="font-fraunces text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
+          <h2 className="font-grotesk text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
             Meet Webik
           </h2>
         </div>

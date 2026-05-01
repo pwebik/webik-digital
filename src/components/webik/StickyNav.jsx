@@ -129,12 +129,12 @@ export default function StickyNav() {
 
           {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-4">
-            <a
-              href="[CALENDLY_URL_PLACEHOLDER]"
+            <Link
+              to="/contact"
               className="hidden sm:inline-flex bg-[var(--webik-dark)] text-[var(--webik-cream)] px-5 py-2.5 rounded-full text-sm font-inter font-medium hover:bg-[var(--webik-dark-2)] transition-colors"
             >
-              Book a call
-            </a>
+              Book a 15-min discovery call
+            </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="lg:hidden w-10 h-10 flex items-center justify-center text-[var(--webik-dark)] z-[60] relative"
@@ -209,13 +209,13 @@ export default function StickyNav() {
           ))}
         </nav>
 
-        <a
-          href="[CALENDLY_URL_PLACEHOLDER]"
+        <Link
+          to="/contact"
           className="mb-12 inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-inter font-semibold"
           style={{ backgroundColor: 'var(--webik-lime)', color: 'var(--webik-dark)' }}
         >
-          Book a call
-        </a>
+          Book a 15-min discovery call
+        </Link>
       </div>
     </>
   );

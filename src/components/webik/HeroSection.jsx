@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function HeroSection() {
   const wRef = useRef(null);
@@ -68,7 +69,7 @@ export default function HeroSection() {
         </div>
 
         {/* Headline */}
-        <h1 ref={line2Ref} className="font-fraunces font-light leading-[0.92] text-[var(--webik-dark)] text-[12vw] sm:text-[9vw] lg:text-[7.5vw] xl:text-[6.5vw] max-w-[1100px]">
+        <h1 ref={line2Ref} className="font-grotesk font-light leading-[0.92] text-[var(--webik-dark)] text-[12vw] sm:text-[9vw] lg:text-[7.5vw] xl:text-[6.5vw] max-w-[1100px]">
           Premium digital presence,{' '}
           <em className="not-italic font-fraunces italic">accessible</em>{' '}
           <span className="relative inline-block">
@@ -84,13 +85,13 @@ export default function HeroSection() {
 
         {/* CTAs */}
         <div ref={ctaRef} className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <a
-            href="[CALENDLY_URL_PLACEHOLDER]"
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-2 bg-[var(--webik-dark)] text-[var(--webik-cream)] px-7 py-3.5 rounded-full text-sm font-inter font-medium hover:bg-[var(--webik-dark-2)] transition-colors group"
           >
             Book a 15-min discovery call
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
           <a
             href="#work"
             className="text-[var(--webik-dark)] font-inter text-sm font-medium hover:text-[var(--webik-muted)] transition-colors"
