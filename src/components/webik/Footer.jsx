@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const socialLinks = [
   { label: 'Facebook', abbr: 'FB', href: '#' },
@@ -45,13 +46,13 @@ export default function Footer() {
             <h4 className="text-[var(--webik-cream)] font-inter text-sm font-semibold uppercase tracking-wider mb-5">Company</h4>
             <ul className="space-y-3">
               {[
-                { label: 'About', href: '#about' },
-                { label: 'Portfolio', href: '#work' },
-                { label: 'Pricing', href: '#pricing' },
-                { label: 'Contact', href: '#book' },
+                { label: 'About', to: '/#about' },
+                { label: 'Portfolio', to: '/work' },
+                { label: 'Pricing', to: '/#pricing' },
+                { label: 'Contact', to: '/contact' },
               ].map(l => (
                 <li key={l.label}>
-                  <a href={l.href} className="text-[var(--webik-muted)] hover:text-[var(--webik-cream)] font-inter text-sm transition-colors">{l.label}</a>
+                  <Link to={l.to} className="text-[var(--webik-muted)] hover:text-[var(--webik-cream)] font-inter text-sm transition-colors">{l.label}</Link>
                 </li>
               ))}
             </ul>
