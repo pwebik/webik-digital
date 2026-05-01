@@ -45,7 +45,7 @@ export default function Contact() {
             className="font-grotesk font-light leading-[0.95] mt-4 tracking-tight"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(44px, 8vw, 112px)', letterSpacing: '-0.04em' }}
           >
-            Book a <em className="font-fraunces italic">15-min</em><br />discovery call.
+            Book a <span style={{ color: 'var(--webik-lime)' }}>15-min</span><br />discovery call.
           </h1>
           <p className="mt-6 font-inter text-base lg:text-lg leading-relaxed max-w-[520px]" style={{ color: 'rgba(245,243,236,0.65)' }}>
             No pressure, no pitch deck — just an honest conversation about your goals and whether we're the right fit.

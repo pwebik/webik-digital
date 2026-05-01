@@ -117,7 +117,7 @@ export default function Work() {
                     />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                       <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ background: 'var(--webik-lime)' }}>
-                        <span className="font-fraunces italic font-bold text-2xl" style={{ color: 'var(--webik-dark)' }}>↗</span>
+                        <span className="font-grotesk font-bold text-2xl" style={{ color: 'var(--webik-dark)' }}>↗</span>
                       </div>
                     </div>
                   </div>

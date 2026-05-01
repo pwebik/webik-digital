@@ -26,8 +26,8 @@ export default function About() {
       {/* Hero */}
       <section className="relative py-24 lg:py-36 px-6 lg:px-12 overflow-hidden" style={{ background: 'var(--webik-dark)' }}>
         <GrainOverlay />
-        <div className="absolute right-[-5vw] top-0 h-full w-[55vw] select-none pointer-events-none" aria-hidden="true" style={{ opacity: 0.12 }}>
-          <img src="https://media.base44.com/images/public/69ecce3288377cd246349884/848d53c15_Group5.png" alt="" className="w-full h-full object-cover object-left" style={{ filter: 'invert(1)' }} />
+        <div className="absolute right-[-5vw] top-[20%] h-full w-[55vw] select-none pointer-events-none" aria-hidden="true" style={{ opacity: 0.12 }}>
+          <img src="https://media.base44.com/images/public/69ecce3288377cd246349884/848d53c15_Group5.png" alt="" className="w-full h-full object-contain object-right" style={{ filter: 'invert(1)' }} />
         </div>
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( About Webik )</span>
@@ -92,7 +92,7 @@ export default function About() {
                 style={{ boxShadow: '0 32px 64px rgba(14,26,10,0.18)' }}
               />
               <div className="absolute -bottom-6 -left-6 hidden lg:block rounded-xl px-6 py-4" style={{ background: 'var(--webik-lime)' }}>
-                <p className="font-fraunces italic font-light text-2xl" style={{ color: 'var(--webik-dark)' }}>SEC-Registered</p>
+                <p className="font-grotesk font-light text-2xl" style={{ color: 'var(--webik-dark)' }}>SEC-Registered</p>
                 <p className="font-mono text-[11px] uppercase tracking-wider mt-1" style={{ color: 'rgba(14,26,10,0.6)' }}>Philippines Corporation</p>
               </div>
             </div>
@@ -145,7 +145,7 @@ export default function About() {
                 onMouseEnter={e => e.currentTarget.style.background = 'var(--webik-dark-2)'}
                 onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-dark)'}
               >
-                <span className="font-fraunces italic text-5xl font-light" style={{ color: 'var(--webik-lime)' }}>{v.num}</span>
+                <span className="font-grotesk text-5xl font-light" style={{ color: 'var(--webik-lime)' }}>{v.num}</span>
                 <h3 className="font-inter font-semibold text-lg mt-4" style={{ color: 'var(--webik-cream)' }}>{v.title}</h3>
                 <p className="font-inter text-sm leading-relaxed mt-2" style={{ color: 'rgba(245,243,236,0.65)' }}>{v.desc}</p>
               </div>

@@ -76,8 +76,8 @@ export default function Services() {
       {/* Hero */}
       <section className="relative py-24 lg:py-36 px-6 lg:px-12 overflow-hidden" style={{ background: 'var(--webik-dark)' }}>
         <GrainOverlay />
-        <div className="absolute right-[-5vw] top-0 h-full w-[55vw] select-none pointer-events-none" aria-hidden="true" style={{ opacity: 0.12 }}>
-          <img src="https://media.base44.com/images/public/69ecce3288377cd246349884/848d53c15_Group5.png" alt="" className="w-full h-full object-cover object-left" style={{ filter: 'invert(1)' }} />
+        <div className="absolute right-[-5vw] top-[20%] h-full w-[55vw] select-none pointer-events-none" aria-hidden="true" style={{ opacity: 0.12 }}>
+          <img src="https://media.base44.com/images/public/69ecce3288377cd246349884/848d53c15_Group5.png" alt="" className="w-full h-full object-contain object-right" style={{ filter: 'invert(1)' }} />
         </div>
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Services )</span>
@@ -110,7 +110,7 @@ export default function Services() {
                   <span className="font-mono text-[11px] tracking-[0.15em]" style={{ color: 'var(--webik-lime)' }}>SERVICE / {svc.num}</span>
                 </div>
                 <h3
-                  className="font-fraunces font-light italic mt-10 leading-none tracking-tight"
+                  className="font-grotesk font-light mt-10 leading-none tracking-tight"
                   style={{ color: 'var(--webik-cream)', fontSize: 'clamp(32px, 3.5vw, 48px)', letterSpacing: '-0.03em' }}
                 >
                   {svc.title}
@@ -152,7 +152,7 @@ export default function Services() {
                 onMouseEnter={e => e.currentTarget.style.background = 'var(--webik-cream-2)'}
                 onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-cream)'}
               >
-                <span className="font-fraunces italic font-light text-5xl" style={{ color: 'var(--webik-lime)' }}>{step.num}</span>
+                <span className="font-grotesk font-light text-5xl" style={{ color: 'var(--webik-lime)' }}>{step.num}</span>
                 <h3 className="font-inter font-semibold text-base mt-6" style={{ color: 'var(--webik-dark)' }}>{step.title}</h3>
                 <p className="font-mono text-[10px] uppercase tracking-[0.15em] mt-1" style={{ color: 'var(--webik-muted)' }}>{step.duration}</p>
                 <p className="font-inter text-sm leading-relaxed mt-3" style={{ color: 'var(--webik-muted)' }}>{step.desc}</p>

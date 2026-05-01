@@ -74,7 +74,7 @@ export default function CaseStudy() {
         <section className="relative overflow-hidden pt-20 pb-28 lg:pt-28 lg:pb-40 px-6 lg:px-12" style={{ background: 'var(--webik-dark)' }}>
           <GrainOverlay />
           {/* Background W */}
-          <div className="absolute right-[-5vw] top-0 h-full w-[55vw] select-none pointer-events-none" aria-hidden="true" style={{ opacity: 0.18 }}>
+          <div className="absolute right-[-5vw] top-[20%] h-full w-[55vw] select-none pointer-events-none" aria-hidden="true" style={{ opacity: 0.18 }}>
             <img src="https://media.base44.com/images/public/69ecce3288377cd246349884/848d53c15_Group5.png" alt="" className="w-full h-full object-cover object-left" style={{ filter: 'invert(1)' }} />
           </div>
 
