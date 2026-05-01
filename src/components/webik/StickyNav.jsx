@@ -7,6 +7,7 @@ const workItems = [
   { label: 'BitLyft Cybersecurity', slug: 'bitlyft', tag: 'Tech' },
   { label: 'Biosis Designs', slug: 'biosis-designs', tag: 'Architecture' },
   { label: 'The Genesis Company', slug: 'the-genesis-company', tag: 'Business' },
+  { label: 'Go Relocation PH', slug: 'go-relocation-ph', tag: 'Services' },
 ];
 
 const navLinks = [

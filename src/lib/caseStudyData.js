@@ -218,9 +218,62 @@ export const caseStudies = {
       role: 'Director of Client Value, The Genesis Company',
     },
   },
+
+  'go-relocation-ph': {
+    slug: 'go-relocation-ph',
+    index: 4,
+    breadcrumb: 'WEBIK / WORK / 05 — GO RELOCATION PH',
+    title: 'Go Relocation PH',
+    subtitle: 'Your structured path to life in the Philippines.',
+    category: 'SERVICES · CONSULTANCY',
+    client: 'Go Relocation Philippines, Cebu',
+    year: '2025',
+    scope: 'Web Design · Web Development · Consultancy',
+    liveUrl: 'https://gorelocationph.com',
+    liveDomain: 'WWW.GORELOCATIONPH.COM',
+    mockupUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/9470d6e4b_generated_image.png',
+    thumbnailUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/9470d6e4b_generated_image.png',
+    brief: [
+      'Go Relocation Philippines is a professional consultancy helping foreign nationals navigate the complex journey of relocating to the Philippines — covering visas, settlement, and real estate.',
+      'They needed a website that projected structured authority and calm expertise, while making it easy for anxious expats to take the next step.',
+    ],
+    approach: [
+      { num: '01', title: 'Clarity for a complex process', desc: 'Relocation is stressful. We structured the site to answer the biggest anxieties first — visa pathways, cost of living, what to expect.' },
+      { num: '02', title: 'Three-division architecture', desc: 'The site reflects their three service pillars — Visa & Immigration, Relocation Support, and Real Estate — each with its own clear entry point.' },
+      { num: '03', title: 'Trust through accreditation', desc: 'Government accreditations (PRA, PRC, DHSUD) are prominently displayed to signal legitimacy to skeptical international clients.' },
+      { num: '04', title: 'Conversion without pressure', desc: 'Dual CTAs — a free call and a paid planning session — let visitors self-select at their own comfort level.' },
+    ],
+    pageTour: [
+      { name: 'Home', label: 'PAGE 01', desc: 'Your structured path to life in the Philippines — clarity, compliance, and long-term planning.' },
+      { name: 'Services', label: 'PAGE 02', desc: 'Three divisions covering visa, settlement, and real estate for foreign nationals.' },
+      { name: 'Contact', label: 'PAGE 03', desc: 'Book a free or paid consultation to start your relocation journey with expert guidance.' },
+    ],
+    typography: {
+      primary: 'Inter',
+      body: 'Inter',
+      specimen: 'Aa',
+      scale: [
+        { label: 'H1', size: '64px' },
+        { label: 'H2', size: '42px' },
+        { label: 'H3', size: '32px' },
+        { label: 'H4', size: '24px' },
+        { label: 'Body', size: '16px' },
+      ],
+    },
+    palette: [
+      { name: 'Forest Night', hex: '#1A3328', rgb: 'R26 G51 B40' },
+      { name: 'Deep Green', hex: '#2D5A3D', rgb: 'R45 G90 B61' },
+      { name: 'Lime Accent', hex: '#7DC439', rgb: 'R125 G196 B57' },
+      { name: 'Pure White', hex: '#FFFFFF', rgb: 'R255 G255 B255' },
+      { name: 'Light Gray', hex: '#F5F5F5', rgb: 'R245 G245 B245' },
+      { name: 'Charcoal', hex: '#1A1A1A', rgb: 'R26 G26 B26' },
+    ],
+    techStack: ['WordPress', 'Bricks Builder', 'Custom Development', 'GitHub Deployment', 'SEO + AEO Schema'],
+    quote: null,
+  },
 };
 
-export const slugOrder = ['imitation-book', 'bitlyft', 'biosis-designs', 'the-genesis-company'];
+export const slugOrder = ['imitation-book', 'bitlyft', 'biosis-designs', 'the-genesis-company', 'go-relocation-ph'];
 
 export function getNextProject(currentSlug) {
   const idx = slugOrder.indexOf(currentSlug);
