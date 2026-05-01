@@ -11,7 +11,7 @@ export const caseStudies = {
     scope: 'Shopify · Web Design · Web Development · Branding',
     liveUrl: 'https://imitationbook.com',
     liveDomain: 'WWW.IMITATIONBOOK.COM',
-    mockupUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/80984f361_generated_image.png',
+    mockupUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/73f4338f7_Imitationbook-mockup-1024708.png',
     thumbnailUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/80984f361_generated_image.png',
     brief: [
       'Twin Cities Speech Therapy Publishing was founded by a mom and licensed speech-language pathologist with a passion for making communication easier — and more fun — for little ones.',
@@ -65,7 +65,7 @@ export const caseStudies = {
     scope: 'Web Design · Web Development · Brand System',
     liveUrl: 'https://bitlyft.com',
     liveDomain: 'WWW.BITLYFT.COM',
-    mockupUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/79b3b38ef_generated_image.png',
+    mockupUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/320477d11_BitLyft-mockup-1024x708.png',
     thumbnailUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/79b3b38ef_generated_image.png',
     brief: [
       'BitLyft is a leading managed security service provider, dedicated to delivering mid-sized organizations with high-touch, personalized cybersecurity solutions.',
@@ -118,7 +118,7 @@ export const caseStudies = {
     scope: 'Web Design · Web Development · Brand Implementation',
     liveUrl: 'https://biosisdesigns.com',
     liveDomain: 'WWW.BIOSISDESIGNS.COM',
-    mockupUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/72a560d3f_generated_image.png',
+    mockupUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/04413f1f7_Biosys-mockup-1536x1062.png',
     thumbnailUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/72a560d3f_generated_image.png',
     brief: [
       'Biosis Designs redefines architectural design by combining visionary thinking and technical precision to deliver spaces that resonate.',
@@ -172,7 +172,7 @@ export const caseStudies = {
     scope: 'Web Design · Web Development · Brand System',
     liveUrl: 'https://thegenesiscompany.com',
     liveDomain: 'WWW.THEGENESISCOMPANY.COM',
-    mockupUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/a37516163_generated_image.png',
+    mockupUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/da528b25d_Genesis-mockup-1024x708.png',
     thumbnailUrl: 'https://media.base44.com/images/public/69ecce3288377cd246349884/a37516163_generated_image.png',
     brief: [
       'The Genesis Company is a strategic partner coordinating growth strategy across all aspects of your business — passionate about creating better stories for the brands they serve and the communities they impact.',
