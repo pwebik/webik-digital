@@ -2,12 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const socialLinks = [
-  { label: 'Facebook', abbr: 'FB', href: 'https://www.facebook.com/p/Webik-Digital-61577379911344/' },
-  { label: 'Instagram', abbr: 'IG', href: 'https://www.instagram.com/webik.digital' },
-  { label: 'LinkedIn', abbr: 'IN', href: 'https://www.linkedin.com/company/webik-digital' },
-  { label: 'TikTok', abbr: 'TT', href: '#' },
-  { label: 'YouTube', abbr: 'YT', href: '#' },
-  { label: 'X', abbr: 'X', href: '#' },
+  { label: 'Facebook', href: 'https://www.facebook.com/p/Webik-Digital-61577379911344/', icon: 'https://cdn.simpleicons.org/facebook/ffffff' },
+  { label: 'Instagram', href: 'https://www.instagram.com/webik.digital', icon: 'https://cdn.simpleicons.org/instagram/ffffff' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/webik-digital', icon: 'https://cdn.simpleicons.org/linkedin/ffffff' },
 ];
 
 export default function Footer() {
@@ -30,12 +27,14 @@ export default function Footer() {
             <div className="flex gap-2 mt-6">
               {socialLinks.map(s => (
                 <a
-                  key={s.abbr}
+                  key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="w-9 h-9 rounded-full border border-[var(--webik-muted)]/30 flex items-center justify-center text-[var(--webik-muted)] hover:text-[var(--webik-lime)] hover:border-[var(--webik-lime)]/50 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full border border-[var(--webik-muted)]/30 flex items-center justify-center hover:border-[var(--webik-lime)]/50 transition-colors"
                 >
-                  <span className="font-mono text-[10px]">{s.abbr}</span>
+                  <img src={s.icon} alt={s.label} className="w-4 h-4 opacity-60 hover:opacity-100 transition-opacity" />
                 </a>
               ))}
             </div>
