@@ -9,7 +9,7 @@ const portfolioItems = [
     tags: 'Shopify · Web Design · Web Development',
     link: '/work/imitation-book',
     internal: true,
-    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/80984f361_generated_image.png',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/2f0607804_Macbook_Air_M2_Mockup_2-2-1-1024x768.png',
     initial: 'IB',
   },
   {
@@ -19,7 +19,7 @@ const portfolioItems = [
     tags: 'Web Design · Web Development',
     link: '/work/bitlyft',
     internal: true,
-    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/79b3b38ef_generated_image.png',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/320477d11_BitLyft-mockup-1024x708.png',
     initial: 'BL',
   },
   {
@@ -29,7 +29,7 @@ const portfolioItems = [
     tags: 'Web Design · Web Development · Real Estate',
     link: '/work/biosis-designs',
     internal: true,
-    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/72a560d3f_generated_image.png',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/04413f1f7_Biosys-mockup-1536x1062.png',
     initial: 'BD',
   },
   {
@@ -39,7 +39,7 @@ const portfolioItems = [
     tags: 'Web Design · Web Development',
     link: '/work/the-genesis-company',
     internal: true,
-    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/a37516163_generated_image.png',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/da528b25d_Genesis-mockup-1024x708.png',
     initial: 'GC',
   },
   {
