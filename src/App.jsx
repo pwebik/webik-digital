@@ -9,6 +9,10 @@ import Home from './pages/Home';
 import CaseStudy from './pages/CaseStudy';
 import Contact from './pages/Contact';
 import Work from './pages/Work';
+import About from './pages/About';
+import Services from './pages/Services';
+import Pricing from './pages/Pricing';
+import FAQ from './pages/FAQ';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -41,6 +45,10 @@ const AuthenticatedApp = () => {
       <Route path="/work/:slug" element={<CaseStudy />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/work" element={<Work />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/pricing" element={<Pricing />} />
+      <Route path="/faq" element={<FAQ />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

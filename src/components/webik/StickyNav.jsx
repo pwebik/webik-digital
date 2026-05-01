@@ -10,10 +10,10 @@ const workItems = [
 ];
 
 const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'About', href: '/about', internal: true },
+  { label: 'Services', href: '/services', internal: true },
+  { label: 'Pricing', href: '/pricing', internal: true },
+  { label: 'FAQ', href: '/faq', internal: true },
 ];
 
 export default function StickyNav() {
@@ -116,14 +116,24 @@ export default function StickyNav() {
 
             {/* Other links */}
             {navLinks.map(link => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => handleAnchorClick(e, link.href)}
-                className="text-[var(--webik-muted)] hover:text-[var(--webik-dark)] text-sm font-inter font-medium transition-colors"
-              >
-                {link.label}
-              </a>
+              link.internal ? (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="text-[var(--webik-muted)] hover:text-[var(--webik-dark)] text-sm font-inter font-medium transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleAnchorClick(e, link.href)}
+                  className="text-[var(--webik-muted)] hover:text-[var(--webik-dark)] text-sm font-inter font-medium transition-colors"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
           </div>
 
@@ -190,22 +200,41 @@ export default function StickyNav() {
           </div>
 
           {navLinks.map((link, i) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={(e) => handleAnchorClick(e, link.href)}
-              className="font-fraunces italic font-light text-5xl sm:text-6xl leading-tight transition-all duration-200"
-              style={{
-                color: 'var(--webik-cream)',
-                opacity: mobileOpen ? 1 : 0,
-                transform: mobileOpen ? 'translateY(0)' : 'translateY(16px)',
-                transition: `color 0.2s, opacity 0.4s ease ${0.15 + i * 0.07}s, transform 0.4s ease ${0.15 + i * 0.07}s`,
-              }}
-              onMouseEnter={e => e.currentTarget.style.color = 'var(--webik-lime)'}
-              onMouseLeave={e => e.currentTarget.style.color = 'var(--webik-cream)'}
-            >
-              {link.label}
-            </a>
+            link.internal ? (
+              <Link
+                key={link.href}
+                to={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="font-fraunces italic font-light text-5xl sm:text-6xl leading-tight transition-all duration-200"
+                style={{
+                  color: 'var(--webik-cream)',
+                  opacity: mobileOpen ? 1 : 0,
+                  transform: mobileOpen ? 'translateY(0)' : 'translateY(16px)',
+                  transition: `color 0.2s, opacity 0.4s ease ${0.15 + i * 0.07}s, transform 0.4s ease ${0.15 + i * 0.07}s`,
+                }}
+                onMouseEnter={e => e.currentTarget.style.color = 'var(--webik-lime)'}
+                onMouseLeave={e => e.currentTarget.style.color = 'var(--webik-cream)'}
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => handleAnchorClick(e, link.href)}
+                className="font-fraunces italic font-light text-5xl sm:text-6xl leading-tight transition-all duration-200"
+                style={{
+                  color: 'var(--webik-cream)',
+                  opacity: mobileOpen ? 1 : 0,
+                  transform: mobileOpen ? 'translateY(0)' : 'translateY(16px)',
+                  transition: `color 0.2s, opacity 0.4s ease ${0.15 + i * 0.07}s, transform 0.4s ease ${0.15 + i * 0.07}s`,
+                }}
+                onMouseEnter={e => e.currentTarget.style.color = 'var(--webik-lime)'}
+                onMouseLeave={e => e.currentTarget.style.color = 'var(--webik-cream)'}
+              >
+                {link.label}
+              </a>
+            )
           ))}
         </nav>
 
