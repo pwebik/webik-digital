@@ -30,7 +30,7 @@ export default function TestimonialsSection() {
       <div className="max-w-[1440px] mx-auto">
         <span className="text-[var(--webik-dark)]/60 text-xs font-mono uppercase tracking-[0.2em]">( Testimonials )</span>
         <h2 className="font-grotesk text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
-          Don't take it from <em className="font-fraunces italic">us.</em>
+          Don't take it from <span style={{ color: 'var(--webik-dark)', textDecoration: 'underline', textDecorationColor: 'var(--webik-dark)', textUnderlineOffset: '4px' }}>us.</span>
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">

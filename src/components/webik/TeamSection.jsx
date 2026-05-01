@@ -14,7 +14,7 @@ export default function TeamSection() {
       <div className="max-w-[1440px] mx-auto">
         <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Team )</span>
         <h2 className="font-grotesk text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
-          Five specialists. One <em className="font-fraunces italic">goal.</em>
+          Five specialists. One <span style={{ color: 'var(--webik-lime)', WebkitTextStroke: '1px var(--webik-dark)' }}>goal.</span>
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-16">
@@ -38,7 +38,7 @@ export default function TeamSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--webik-dark)] via-[var(--webik-dark)]/30 to-transparent" />
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-5">
-                <h3 className="font-fraunces text-[var(--webik-cream)] text-lg lg:text-xl font-light">{member.name}</h3>
+                <h3 className="font-grotesk text-[var(--webik-cream)] text-lg lg:text-xl font-light">{member.name}</h3>
                 <p className="text-[var(--webik-lime)] font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.15em] mt-1">{member.role}</p>
               </div>
             </div>

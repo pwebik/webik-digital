@@ -87,7 +87,7 @@ export default function PricingSection() {
         <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Pricing )</span>
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mt-4">
           <h2 className="font-grotesk text-[var(--webik-cream)] text-3xl sm:text-4xl lg:text-5xl font-light">
-            Lower risk. Higher <em className="font-fraunces italic">partnership.</em>
+            Lower risk. Higher <span style={{ color: 'var(--webik-lime)' }}>partnership.</span>
           </h2>
           {isPhilippines === null && (
             <div className="flex items-center gap-2 text-[var(--webik-muted)] font-mono text-xs">

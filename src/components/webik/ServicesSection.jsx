@@ -47,7 +47,7 @@ export default function ServicesSection() {
       <div className="max-w-[1440px] mx-auto relative z-10">
         <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Services )</span>
         <h2 className="font-grotesk text-[var(--webik-cream)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4 max-w-[700px]">
-          Built like a <em className="font-fraunces italic">partnership.</em> Priced like a subscription.
+          Built like a <span style={{ color: 'var(--webik-lime)' }}>partnership.</span> Priced like a subscription.
         </h2>
 
         {/* Grid with 1px gap borders like Claude */}
@@ -65,7 +65,7 @@ export default function ServicesSection() {
             >
               <span className="font-mono text-[11px] tracking-[0.15em]" style={{ color: 'var(--webik-lime)' }}>SERVICE / {svc.num}</span>
               <h3
-                className="font-fraunces font-light italic mt-24 lg:mt-28 leading-none tracking-tight"
+                className="font-grotesk font-light mt-24 lg:mt-28 leading-none tracking-tight"
                 style={{ color: 'var(--webik-cream)', fontSize: 'clamp(32px,3.5vw,44px)', letterSpacing: '-0.03em' }}
               >
                 {svc.title}

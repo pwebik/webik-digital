@@ -12,8 +12,8 @@ export default function ProcessSection() {
     <section className="bg-[var(--webik-cream-2)] py-20 lg:py-32 px-6 lg:px-12">
       <div className="max-w-[1440px] mx-auto">
         <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Process )</span>
-        <h2 className="font-fraunces text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
-          AI-accelerated. <em className="italic">Human-perfected.</em>
+        <h2 className="font-grotesk text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
+          AI-accelerated. <span style={{ color: 'var(--webik-lime)', WebkitTextStroke: '1px var(--webik-dark)' }}>Human-perfected.</span>
         </h2>
 
         <div className="mt-16 relative">
@@ -36,11 +36,11 @@ export default function ProcessSection() {
                   onMouseEnter={e => e.currentTarget.style.background = 'var(--webik-lime)'}
                   onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-cream)'}
                 >
-                  <span className="font-fraunces italic text-2xl text-[var(--webik-dark)] font-light">{step.num}</span>
+                  <span className="font-grotesk text-2xl text-[var(--webik-dark)] font-light">{step.num}</span>
                 </div>
                 <div className="mt-5">
                   <span className="text-[var(--webik-muted)] font-mono text-[10px] uppercase tracking-[0.15em]">{step.day}</span>
-                  <h3 className="font-fraunces text-[var(--webik-dark)] text-xl font-light mt-2">{step.title}</h3>
+                  <h3 className="font-grotesk text-[var(--webik-dark)] text-xl font-light mt-2">{step.title}</h3>
                   <p className="text-[var(--webik-muted)] font-inter text-sm leading-relaxed mt-2">{step.desc}</p>
                 </div>
               </div>
