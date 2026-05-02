@@ -20,6 +20,46 @@ const values = [
 
 export default function About() {
   return (
+    <>
+      <script dangerouslySetInnerHTML={{ __html: `
+        document.title = "About Webik Digital — SEC-Registered Cebu Digital Agency";
+        (function(){
+          var s=function(n,c,p){var e=document.querySelector(p?'meta[property="'+n+'"]':'meta[name="'+n+'"]');if(!e){e=document.createElement('meta');if(p)e.setAttribute('property',n);else e.setAttribute('name',n);document.head.appendChild(e);}e.setAttribute('content',c);};
+          s('description','Meet the founders and team of Webik Digital. SEC-registered Cebu digital agency. AI-accelerated, human-perfected websites for SMEs and international clients.');
+          s('robots','index, follow');
+          s('og:title','About Webik Digital — SEC-Registered Cebu Digital Agency',true);
+          s('og:description','Learn about Webik Digital — an SEC-registered Cebu digital agency building AI-accelerated, human-perfected websites. Meet the founders and team.',true);
+          s('og:url','https://webikdigital.com/about',true);
+          var c=document.querySelector('link[rel="canonical"]');if(!c){c=document.createElement('link');c.setAttribute('rel','canonical');document.head.appendChild(c);}c.setAttribute('href','https://webikdigital.com/about');
+        })();
+      ` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "AboutPage",
+            "@id": "https://webikdigital.com/about#aboutpage",
+            "name": "About Webik Digital",
+            "url": "https://webikdigital.com/about",
+            "description": "Learn about Webik Digital — an SEC-registered Cebu digital agency building AI-accelerated, human-perfected websites. Meet the founders and team behind the work.",
+            "isPartOf": { "@id": "https://webikdigital.com/#website" },
+            "mainEntity": { "@id": "https://webikdigital.com/#organization" },
+            "about": [
+              { "@id": "https://webikdigital.com/#pryce-resma" },
+              { "@id": "https://webikdigital.com/#ray-mendoza" },
+              { "@id": "https://webikdigital.com/#julius-parungao" },
+              { "@id": "https://webikdigital.com/#xavier-gonzales" }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://webikdigital.com" },
+              { "@type": "ListItem", "position": 2, "name": "About", "item": "https://webikdigital.com/about" }
+            ]
+          }
+        ]
+      }) }} />
     <div style={{ background: 'var(--webik-cream)' }}>
       <StickyNav />
 
@@ -157,5 +197,6 @@ export default function About() {
       <FinalCTA />
       <Footer />
     </div>
+    </>
   );
 }

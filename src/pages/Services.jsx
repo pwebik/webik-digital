@@ -70,6 +70,57 @@ const process = [
 
 export default function Services() {
   return (
+    <>
+      <script dangerouslySetInnerHTML={{ __html: `
+        document.title = "Services — Web Design, SEO, Google Ads & More | Webik Digital Cebu";
+        (function(){
+          var s=function(n,c,p){var e=document.querySelector(p?'meta[property="'+n+'"]':'meta[name="'+n+'"]');if(!e){e=document.createElement('meta');if(p)e.setAttribute('property',n);else e.setAttribute('name',n);document.head.appendChild(e);}e.setAttribute('content',c);};
+          s('description','Full-service Cebu digital agency. Web design, web development, SEO, AEO, Google Ads, branding, e-commerce, social media, and content. Serving the Philippines and worldwide.');
+          s('robots','index, follow');
+          s('og:title','Services — Web Design, SEO, Google Ads & More | Webik Digital Cebu',true);
+          s('og:description','Full-service Cebu digital agency. Web design, web development, SEO, AEO, Google Ads, branding, e-commerce, and digital marketing.',true);
+          s('og:url','https://webikdigital.com/services',true);
+          var c=document.querySelector('link[rel="canonical"]');if(!c){c=document.createElement('link');c.setAttribute('rel','canonical');document.head.appendChild(c);}c.setAttribute('href','https://webikdigital.com/services');
+        })();
+      ` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://webikdigital.com/services#collectionpage",
+            "name": "Webik Digital Services",
+            "url": "https://webikdigital.com/services",
+            "description": "Web design, web development, SEO, AEO, Google Ads, branding, e-commerce, and digital marketing services from Webik Digital — a Cebu-based agency serving the Philippines and international clients.",
+            "isPartOf": { "@id": "https://webikdigital.com/#website" },
+            "about": { "@id": "https://webikdigital.com/#organization" },
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Web Design", "url": "https://webikdigital.com/services#web-design" },
+                { "@type": "ListItem", "position": 2, "name": "Web Development", "url": "https://webikdigital.com/services#web-development" },
+                { "@type": "ListItem", "position": 3, "name": "Search Engine Optimization (SEO)", "url": "https://webikdigital.com/services#seo" },
+                { "@type": "ListItem", "position": 4, "name": "Answer Engine Optimization (AEO)", "url": "https://webikdigital.com/services#aeo" },
+                { "@type": "ListItem", "position": 5, "name": "Google Ads Management", "url": "https://webikdigital.com/services#google-ads" },
+                { "@type": "ListItem", "position": 6, "name": "Digital Marketing", "url": "https://webikdigital.com/services#digital-marketing" },
+                { "@type": "ListItem", "position": 7, "name": "Branding & Logo Design", "url": "https://webikdigital.com/services#branding" },
+                { "@type": "ListItem", "position": 8, "name": "Social Media Management", "url": "https://webikdigital.com/services#social-media" },
+                { "@type": "ListItem", "position": 9, "name": "E-commerce Development", "url": "https://webikdigital.com/services#ecommerce" },
+                { "@type": "ListItem", "position": 10, "name": "Website Maintenance", "url": "https://webikdigital.com/services#maintenance" },
+                { "@type": "ListItem", "position": 11, "name": "Email Marketing", "url": "https://webikdigital.com/services#email" },
+                { "@type": "ListItem", "position": 12, "name": "Content Writing", "url": "https://webikdigital.com/services#content" }
+              ]
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://webikdigital.com" },
+              { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://webikdigital.com/services" }
+            ]
+          }
+        ]
+      }) }} />
     <div style={{ background: 'var(--webik-cream)' }}>
       <StickyNav />
 
@@ -165,5 +216,6 @@ export default function Services() {
       <FinalCTA />
       <Footer />
     </div>
+    </>
   );
 }

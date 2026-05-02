@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import AnnouncementBar from '../components/webik/AnnouncementBar';
 import StickyNav from '../components/webik/StickyNav';
@@ -7,6 +7,17 @@ import GrainOverlay from '../components/webik/GrainOverlay';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
+
+  useEffect(() => {
+    document.title = "Contact Webik Digital — Book a Free Discovery Call";
+    const setMeta = (n, c, p) => { const sel = p ? `meta[property="${n}"]` : `meta[name="${n}"]`; let e = document.querySelector(sel); if (!e) { e = document.createElement('meta'); if (p) e.setAttribute('property', n); else e.setAttribute('name', n); document.head.appendChild(e); } e.setAttribute('content', c); };
+    setMeta('description', 'Get in touch with Webik Digital. Book a free 15-minute discovery call. Email pryce@webikdigital.com or call +63 927 353 2498. Cebu, Philippines.');
+    setMeta('robots', 'index, follow');
+    setMeta('og:title', 'Contact Webik Digital — Book a Free Discovery Call', true);
+    setMeta('og:description', 'Book a free 15-minute discovery call with Webik Digital. SEC-registered Cebu digital agency.', true);
+    setMeta('og:url', 'https://webikdigital.com/contact', true);
+    let c = document.querySelector('link[rel="canonical"]'); if (!c) { c = document.createElement('link'); c.setAttribute('rel', 'canonical'); document.head.appendChild(c); } c.setAttribute('href', 'https://webikdigital.com/contact');
+  }, []);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -24,6 +35,28 @@ export default function Contact() {
   };
 
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ContactPage",
+            "@id": "https://webikdigital.com/contact#contactpage",
+            "name": "Contact Webik Digital",
+            "url": "https://webikdigital.com/contact",
+            "description": "Book a free 15-minute discovery call with Webik Digital. SEC-registered Cebu digital agency serving the Philippines and international clients.",
+            "isPartOf": { "@id": "https://webikdigital.com/#website" },
+            "mainEntity": { "@id": "https://webikdigital.com/#organization" }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://webikdigital.com" },
+              { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://webikdigital.com/contact" }
+            ]
+          }
+        ]
+      }) }} />
     <div style={{
       '--webik-lime': '#C8F048',
       '--webik-dark': '#0E1A0A',
@@ -180,5 +213,6 @@ export default function Contact() {
 
       <Footer />
     </div>
+    </>
   );
 }
