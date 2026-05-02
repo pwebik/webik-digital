@@ -45,9 +45,9 @@ export default function Footer() {
             <h4 className="text-[var(--webik-cream)] font-inter text-sm font-semibold uppercase tracking-wider mb-5">Company</h4>
             <ul className="space-y-3">
               {[
-                { label: 'About', to: '/#about' },
+                { label: 'About', to: '/about' },
                 { label: 'Portfolio', to: '/work' },
-                { label: 'Pricing', to: '/#pricing' },
+                { label: 'Pricing', to: '/pricing' },
                 { label: 'Contact', to: '/contact' },
               ].map(l => (
                 <li key={l.label}>
