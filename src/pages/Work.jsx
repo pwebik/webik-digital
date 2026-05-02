@@ -55,49 +55,6 @@ const portfolioItems = [
 
 export default function Work() {
   return (
-    <>
-      <script dangerouslySetInnerHTML={{ __html: `
-        document.title = "Selected Work — Webik Digital Portfolio | Cebu Web Design Agency";
-        (function(){
-          var s=function(n,c,p){var e=document.querySelector(p?'meta[property="'+n+'"]':'meta[name="'+n+'"]');if(!e){e=document.createElement('meta');if(p)e.setAttribute('property',n);else e.setAttribute('name',n);document.head.appendChild(e);}e.setAttribute('content',c);};
-          s('description','Case studies from Webik Digital. Websites and brand systems for e-commerce, cybersecurity, architecture, and strategy clients in the Philippines, US, and UK.');
-          s('robots','index, follow');
-          s('og:title','Selected Work — Webik Digital Portfolio | Cebu Web Design Agency',true);
-          s('og:description','Case studies from Webik Digital. Websites and brand systems for e-commerce, cybersecurity, architecture, and strategy clients.',true);
-          s('og:url','https://webikdigital.com/work',true);
-          var c=document.querySelector('link[rel="canonical"]');if(!c){c=document.createElement('link');c.setAttribute('rel','canonical');document.head.appendChild(c);}c.setAttribute('href','https://webikdigital.com/work');
-        })();
-      ` }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "CollectionPage",
-            "@id": "https://webikdigital.com/work#collectionpage",
-            "name": "Selected Work — Webik Digital Portfolio",
-            "url": "https://webikdigital.com/work",
-            "description": "Selected case studies from Webik Digital — websites and brand systems for SMEs and international clients across e-commerce, tech, architecture, and business.",
-            "isPartOf": { "@id": "https://webikdigital.com/#website" },
-            "mainEntity": {
-              "@type": "ItemList",
-              "itemListElement": [
-                { "@type": "ListItem", "position": 1, "item": { "@type": "CreativeWork", "name": "Imitation Book", "url": "https://webikdigital.com/work/imitation-book", "about": "E-commerce / Publishing", "creator": { "@id": "https://webikdigital.com/#organization" } } },
-                { "@type": "ListItem", "position": 2, "item": { "@type": "CreativeWork", "name": "BitLyft Cybersecurity", "url": "https://webikdigital.com/work/bitlyft", "about": "Tech / Cybersecurity", "creator": { "@id": "https://webikdigital.com/#organization" } } },
-                { "@type": "ListItem", "position": 3, "item": { "@type": "CreativeWork", "name": "Biosis Designs", "url": "https://webikdigital.com/work/biosis-designs", "about": "Architecture / Design", "creator": { "@id": "https://webikdigital.com/#organization" } } },
-                { "@type": "ListItem", "position": 4, "item": { "@type": "CreativeWork", "name": "The Genesis Company", "url": "https://webikdigital.com/work/the-genesis-company", "about": "Business / Strategy", "creator": { "@id": "https://webikdigital.com/#organization" } } },
-                { "@type": "ListItem", "position": 5, "item": { "@type": "CreativeWork", "name": "Go Relocation PH", "url": "https://webikdigital.com/work/go-relocation-ph", "about": "Services / Consultancy", "creator": { "@id": "https://webikdigital.com/#organization" } } }
-              ]
-            }
-          },
-          {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://webikdigital.com" },
-              { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://webikdigital.com/work" }
-            ]
-          }
-        ]
-      }) }} />
     <div style={{
       '--webik-lime': '#C8F048',
       '--webik-dark': '#0E1A0A',
@@ -217,6 +174,5 @@ export default function Work() {
 
       <Footer />
     </div>
-    </>
   );
 }

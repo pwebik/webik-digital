@@ -62,8 +62,8 @@ export default function Home() {
       <FinalCTA />
       <Footer />
 
-      {/* JSON-LD Schema Markup — Full AEO @graph */}
-      <script
+      {/* JSON-LD schema is injected statically in index.html — no runtime injection needed */}
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -274,7 +274,7 @@ export default function Home() {
             ]
           })
         }}
-      />
+      /> */}
     </div>
   );
 }

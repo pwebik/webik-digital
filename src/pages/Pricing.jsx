@@ -1,60 +1,12 @@
 import React, { useState, useEffect } from 'react';
-
-const pricingSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "CollectionPage",
-      "@id": "https://webikdigital.com/pricing#collectionpage",
-      "name": "Webik Digital Pricing",
-      "url": "https://webikdigital.com/pricing",
-      "description": "Transparent partnership-based pricing from Webik Digital. The Launchpad starts at ₱5,000 setup. Monthly Guardian Care Plan covers hosting, security, and updates.",
-      "isPartOf": { "@id": "https://webikdigital.com/#website" },
-      "mainEntity": {
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "ListItem", "position": 1,
-            "item": {
-              "@type": "Offer",
-              "name": "The Launchpad — Premium One-Page Website",
-              "description": "Custom one-page website. Mobile-first, AEO-ready, deployed in 48 hours. Built on Bricks Builder.",
-              "priceSpecification": { "@type": "PriceSpecification", "price": "5000", "priceCurrency": "PHP", "valueAddedTaxIncluded": false },
-              "category": "One-time setup",
-              "seller": { "@id": "https://webikdigital.com/#organization" },
-              "areaServed": ["Philippines", "Worldwide"]
-            }
-          },
-          {
-            "@type": "ListItem", "position": 2,
-            "item": {
-              "@type": "Offer",
-              "name": "The Guardian — Monthly Care Plan",
-              "description": "Mandatory care plan covering premium hosting, business email, monthly security patches, content updates, and priority support.",
-              "priceSpecification": { "@type": "PriceSpecification", "price": "1500", "priceCurrency": "PHP", "valueAddedTaxIncluded": false },
-              "category": "Subscription",
-              "seller": { "@id": "https://webikdigital.com/#organization" },
-              "areaServed": ["Philippines", "Worldwide"]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://webikdigital.com" },
-        { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://webikdigital.com/pricing" }
-      ]
-    }
-  ]
-};
 import { Check, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import StickyNav from '@/components/webik/StickyNav';
 import FinalCTA from '@/components/webik/FinalCTA';
 import Footer from '@/components/webik/Footer';
 import GrainOverlay from '@/components/webik/GrainOverlay';
+
+// Schema is injected statically in index.html — no runtime injection needed
 
 async function detectPhilippines() {
   try {
@@ -75,18 +27,6 @@ const faqs = [
 
 export default function Pricing() {
   const [isPhilippines, setIsPhilippines] = useState(null);
-
-  // Inject page-specific meta + canonical on mount
-  useEffect(() => {
-    document.title = "Pricing — From ₱5,000 Setup | Webik Digital Cebu";
-    const setMeta = (n, c, p) => { const sel = p ? `meta[property="${n}"]` : `meta[name="${n}"]`; let e = document.querySelector(sel); if (!e) { e = document.createElement('meta'); if (p) e.setAttribute('property', n); else e.setAttribute('name', n); document.head.appendChild(e); } e.setAttribute('content', c); };
-    setMeta('description', 'Webik Digital pricing: The Launchpad website starts at ₱5,000. Guardian Care Plan covers hosting, security, and updates monthly. No surprise fees.');
-    setMeta('robots', 'index, follow');
-    setMeta('og:title', 'Pricing — From ₱5,000 Setup | Webik Digital Cebu', true);
-    setMeta('og:description', 'Partnership-based pricing. The Launchpad starts at ₱5,000. Guardian Care Plan covers hosting, security, and monthly updates.', true);
-    setMeta('og:url', 'https://webikdigital.com/pricing', true);
-    let c = document.querySelector('link[rel="canonical"]'); if (!c) { c = document.createElement('link'); c.setAttribute('rel', 'canonical'); document.head.appendChild(c); } c.setAttribute('href', 'https://webikdigital.com/pricing');
-  }, []);
 
   useEffect(() => {
     detectPhilippines().then(setIsPhilippines);
@@ -150,8 +90,6 @@ export default function Pricing() {
   ];
 
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
     <div style={{ background: 'var(--webik-dark)' }}>
       <StickyNav />
 
@@ -342,7 +280,6 @@ export default function Pricing() {
       <FinalCTA />
       <Footer />
     </div>
-    </>
   );
 }
 
