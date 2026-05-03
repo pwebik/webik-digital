@@ -86,7 +86,7 @@ export default function Footer() {
       <div className="border-t border-[var(--webik-dark-2)]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-[var(--webik-muted)] font-inter text-xs">
-            © 2026 Webik Corp. All rights reserved. SEC-Registered Philippines. · Last updated: {new Date().toLocaleDateString('en-PH', { year: 'numeric', month: 'long', day: 'numeric' })}
+            © 2026 Webik Corp. All rights reserved. SEC-Registered Philippines. · Last updated: May 2026
           </p>
           <div className="flex gap-5">
             {['Terms', 'Privacy', 'Cookies'].map(l => (
