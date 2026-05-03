@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { caseStudies, getNextProject } from '@/lib/caseStudyData';
 import CaseStudyNav from '@/components/webik/CaseStudyNav';
@@ -7,16 +7,64 @@ import Footer from '@/components/webik/Footer';
 import GrainOverlay from '@/components/webik/GrainOverlay';
 import ColorSwatch from '@/components/webik/ColorSwatch';
 
+const caseMeta = {
+  'imitation-book': {
+    title: 'Imitation Book — Shopify E-commerce Case Study by Webik Digital',
+    description: 'How Webik Digital built a warm, conversion-focused Shopify storefront for Twin Cities Speech Therapy Publishing — a speech-therapy e-commerce brand helping little ones learn to talk.',
+  },
+  'bitlyft': {
+    title: 'BitLyft Cybersecurity — Web Design & Development Case Study by Webik Digital',
+    description: 'How Webik Digital redesigned BitLyft Cybersecurity\'s website to project enterprise authority and serve mid-sized businesses seeking managed security services.',
+  },
+  'biosis-designs': {
+    title: 'Biosis Designs — Architecture Portfolio Case Study by Webik Digital',
+    description: 'How Webik Digital crafted a calm, whitespace-driven portfolio website for Biosis Designs, an architectural studio combining visionary thinking with technical precision.',
+  },
+  'the-genesis-company': {
+    title: 'The Genesis Company — Business Strategy Case Study by Webik Digital',
+    description: 'How Webik Digital built an energetic, color-rich website for The Genesis Company — a strategic growth partner coordinating business transformation across all verticals.',
+  },
+  'go-relocation-ph': {
+    title: 'Go Relocation PH — Relocation Consultancy Case Study by Webik Digital',
+    description: 'How Webik Digital built a structured, authority-projecting website for Go Relocation Philippines — helping foreign nationals navigate visas, settlement, and real estate in the Philippines.',
+  },
+};
+
 export default function CaseStudy() {
   const { slug } = useParams();
-  const navigate = useNavigate();
   const project = caseStudies[slug];
   const nextProject = project ? getNextProject(slug) : null;
+  const meta = caseMeta[slug];
 
   // Scroll to top on slug change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
+
+  // Dynamic meta tags
+  useEffect(() => {
+    if (!project || !meta) return;
+    document.title = meta.title;
+    const setMeta = (name, content, prop = false) => {
+      const sel = prop ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let el = document.querySelector(sel);
+      if (!el) { el = document.createElement('meta'); prop ? el.setAttribute('property', name) : el.setAttribute('name', name); document.head.appendChild(el); }
+      el.setAttribute('content', content);
+    };
+    setMeta('description', meta.description);
+    setMeta('robots', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
+    setMeta('og:title', meta.title, true);
+    setMeta('og:description', meta.description, true);
+    setMeta('og:url', `https://webikdigital.com/work/${slug}`, true);
+    setMeta('og:image', project.mockupUrl, true);
+    setMeta('twitter:title', meta.title);
+    setMeta('twitter:description', meta.description);
+    // Canonical
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) { canonical = document.createElement('link'); canonical.setAttribute('rel', 'canonical'); document.head.appendChild(canonical); }
+    canonical.setAttribute('href', `https://webikdigital.com/work/${slug}`);
+    return () => { document.title = 'Webik Digital — Best Web Design & Digital Marketing Agency in Cebu, Philippines'; };
+  }, [slug, project, meta]);
 
   // Reveal on scroll
   useEffect(() => {
@@ -42,19 +90,22 @@ export default function CaseStudy() {
 
   return (
     <>
-      {/* JSON-LD Schema */}
+      {/* JSON-LD Schema — CreativeWork per case study */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'CreativeWork',
-            name: project.title,
-            description: project.subtitle,
-            creator: { '@type': 'Organization', name: 'Webik Corp' },
-            dateCreated: project.year,
-            url: project.liveUrl,
-            keywords: project.scope,
+            'name': project.title,
+            'creator': { '@id': 'https://webikdigital.com/#organization' },
+            'about': project.category,
+            'description': project.subtitle,
+            'image': project.mockupUrl,
+            'datePublished': project.year,
+            'url': `https://webikdigital.com/work/${project.slug}`,
+            'keywords': project.scope,
+            'publisher': { '@id': 'https://webikdigital.com/#organization' },
           }),
         }}
       />
