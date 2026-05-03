@@ -42,56 +42,19 @@ export default function CaseStudy() {
 
   return (
     <>
-      {/* Dynamic page title + meta for case studies */}
-      <script dangerouslySetInnerHTML={{ __html: `
-        document.title = "${project.title} — ${project.category.split('·')[0].trim()} Case Study by Webik Digital";
-        (function() {
-          var setMeta = function(name, content, prop) {
-            var sel = prop ? 'meta[property="' + name + '"]' : 'meta[name="' + name + '"]';
-            var el = document.querySelector(sel);
-            if (!el) { el = document.createElement('meta'); if (prop) el.setAttribute('property', name); else el.setAttribute('name', name); document.head.appendChild(el); }
-            el.setAttribute('content', content);
-          };
-          setMeta('description', '${project.title} — ${project.subtitle} Case study by Webik Digital, SEC-registered agency in Cebu, Philippines.');
-          setMeta('robots', 'index, follow');
-          setMeta('og:title', '${project.title} — ${project.category.split('·')[0].trim()} Case Study by Webik Digital', true);
-          setMeta('og:description', '${project.subtitle} Scope: ${project.scope}. Delivered by Webik Digital, Cebu.', true);
-          setMeta('og:url', 'https://webikdigital.com/work/${slug}', true);
-          setMeta('og:image', '${project.mockupUrl}', true);
-          var canon = document.querySelector('link[rel="canonical"]');
-          if (!canon) { canon = document.createElement('link'); canon.setAttribute('rel', 'canonical'); document.head.appendChild(canon); }
-          canon.setAttribute('href', 'https://webikdigital.com/work/${slug}');
-        })();
-      ` }} />
-
-      {/* JSON-LD Schema — CreativeWork per case study */}
+      {/* JSON-LD Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "CreativeWork",
-                "@id": `https://webikdigital.com/work/${slug}`,
-                "name": project.title,
-                "creator": { "@id": "https://webikdigital.com/#organization" },
-                "about": project.category,
-                "description": project.subtitle,
-                "image": project.mockupUrl,
-                "datePublished": project.year,
-                "url": `https://webikdigital.com/work/${slug}`,
-                "keywords": project.scope
-              },
-              {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://webikdigital.com" },
-                  { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://webikdigital.com/work" },
-                  { "@type": "ListItem", "position": 3, "name": project.title, "item": `https://webikdigital.com/work/${slug}` }
-                ]
-              }
-            ]
+            '@context': 'https://schema.org',
+            '@type': 'CreativeWork',
+            name: project.title,
+            description: project.subtitle,
+            creator: { '@type': 'Organization', name: 'Webik Corp' },
+            dateCreated: project.year,
+            url: project.liveUrl,
+            keywords: project.scope,
           }),
         }}
       />

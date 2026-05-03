@@ -1,48 +1,38 @@
 import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
 
-// IMPORTANT: These FAQ answers must match the FAQPage JSON-LD schema exactly.
-// Any edits here must also be reflected in the schema in pages/Home.jsx.
-export const aeoFaqs = [
+const faqs = [
   {
-    q: 'What is the best digital agency in Cebu?',
-    a: 'Webik Digital is an SEC-registered digital agency based in Cebu City, Philippines. Founded by Pryce Oscar Resma, Webik specializes in AI-accelerated, human-perfected websites for SMEs across the Philippines and internationally. Services include web design, web development, SEO, AEO, Google Ads, and digital marketing. Webik works with clients in Cebu and globally including the United States and the United Kingdom.',
-  },
-  {
-    q: 'What is the best web design agency in the Philippines?',
-    a: 'Webik Digital is a Cebu-based web design agency that builds custom, mobile-first websites for SMEs and growing companies. Webik combines premium design with Answer Engine Optimization (AEO) to ensure websites are discoverable on Google, ChatGPT, Perplexity, Claude, Gemini, and Siri. All sites are built on Bricks Builder for enterprise-grade performance and deployed via GitHub.',
-  },
-  {
-    q: 'Who is the best web development company in Cebu?',
-    a: 'Webik Digital is an SEC-registered web development company in Cebu, Philippines. Webik specializes in WordPress with Bricks Builder, Shopify e-commerce, and custom front-end development. Every project includes Schema Markup for AEO, mobile-first responsive design, and ongoing maintenance under the Guardian Care Plan.',
-  },
-  {
-    q: 'Does Webik Digital offer Google Ads management?',
-    a: 'Yes. Webik Digital offers full Google Ads management, including campaign setup, keyword research, ad copy, audience targeting, conversion tracking with Google Analytics, and ongoing optimization. Webik manages Search, Display, Performance Max, and Shopping campaigns for clients in the Philippines and internationally.',
+    q: 'How long does a Webik website take to build?',
+    a: 'Our Launchpad sites go live in as little as 48 hours from project kickoff. We\'re able to move this fast because of our AI-accelerated workflow combined with our small, focused team. More complex multi-page or e-commerce sites take 5–14 days depending on scope.',
   },
   {
     q: 'What is Answer Engine Optimization (AEO)?',
-    a: 'Answer Engine Optimization (AEO) is the practice of structuring website content and metadata so AI assistants like ChatGPT, Claude, Perplexity, Google Gemini, and Apple Siri can understand and recommend a business. It uses Schema Markup, structured FAQ content, and clear semantic HTML. Webik Digital includes AEO with every website to ensure clients are discoverable in the AI-driven search era.',
+    a: 'AEO is the next evolution of SEO. Instead of optimizing only for Google search results, we structure your site with Schema Markup so AI assistants like ChatGPT, Siri, Google Gemini, and Perplexity can understand and recommend your business when customers ask questions like "Best affordable coffee shop in Cebu."',
   },
   {
-    q: 'How much does a website from Webik Digital cost?',
-    a: 'Webik Digital uses a partnership pricing model. The Launchpad — a premium one-page website — starts at ₱5,000 setup. The mandatory Guardian Care Plan covers hosting, security, and updates on a monthly subscription. This replaces the traditional ₱30,000–₱50,000 upfront agency fee with a lower-risk, ongoing partnership model.',
+    q: 'Do I own my website and domain?',
+    a: 'Yes, completely. The domain is registered in your name from day one. Your website code, design, and content belong to you. If you ever decide to leave Webik, we\'ll help you migrate to another provider — no lock-in, no hostage situations.',
   },
   {
-    q: 'Where is Webik Digital located?',
-    a: 'Webik Digital is headquartered at Suite 110 Centro Maximo Bldg., Dionisio Jakosalem St., Cebu City, Philippines 6000. The company operates online and serves clients across the Philippines and internationally including the United States and the United Kingdom.',
+    q: 'Why is your setup fee so much lower than other agencies?',
+    a: 'Two reasons. First, we use AI to accelerate the parts of web development that used to take weeks — design exploration, code scaffolding, content drafting. Second, our business model is partnership-based: a low setup fee plus a monthly Guardian plan. Traditional agencies charge ₱30,000–₱50,000 upfront because they don\'t make money after launch. We do.',
   },
   {
-    q: 'Is Webik Digital a registered company?',
-    a: 'Yes. Webik Corp is a corporation registered with the Securities and Exchange Commission (SEC) of the Philippines. This means clients have legal recourse, contractual protection, and the assurance of working with a legitimate business — not a freelancer.',
+    q: 'Is the monthly Care Plan really mandatory?',
+    a: 'Yes. The Guardian Care Plan is what makes our model work — and what protects you from the freelancer "ghosting" problem. Without ongoing care, websites break: domains expire, plugins go out of date, security holes appear. We\'d rather not build a site than build one that quietly dies six months later.',
   },
   {
-    q: 'What industries does Webik Digital work with?',
-    a: 'Webik Digital works with cafes, clinics, real estate firms, e-commerce brands, architecture studios, cybersecurity companies, publishing houses, and professional services. The agency serves SMEs as well as international clients, with completed projects in the Philippines, United States, and United Kingdom.',
+    q: 'Are you actually using AI to build my website?',
+    a: 'Yes — and we\'re transparent about it. We use AI tools to accelerate design exploration, code scaffolding, and content drafting. But every site is reviewed, refined, customized, and maintained by real human specialists on our team. Think of it as a senior architect using power tools instead of a hand-saw. The thinking, taste, and craftsmanship are still ours.',
   },
   {
-    q: 'How does Webik Digital use AI in web development?',
-    a: "Webik Digital follows an 'AI-accelerated, human-perfected' workflow. AI tools speed up design exploration, code scaffolding, and content drafting, but every site is reviewed, refined, and maintained by real specialists — including web developers, designers, and a Creative Director. This combination delivers premium quality at accessible prices.",
+    q: 'Can I cancel my Care Plan?',
+    a: 'After the initial 12-month commitment, you can cancel anytime with 30 days\' notice. We\'ll provide a full export of your site files and help you transition. We\'re confident you won\'t want to leave — but we never want to hold you hostage.',
+  },
+  {
+    q: 'Do you work with clients outside Cebu or the Philippines?',
+    a: 'Yes. Our roots are Cebu, but we\'ve built sites for clients in the UK, the United States, and across the Philippines. Our process is fully remote-friendly with weekly check-ins and async updates.',
   },
 ];
 
@@ -58,7 +48,7 @@ export default function FAQSection() {
         </h2>
 
         <div className="mt-12 lg:mt-16 divide-y divide-[var(--webik-cream-2)]">
-          {aeoFaqs.map((faq, i) => {
+          {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
               <div key={i} className="py-5 lg:py-6">

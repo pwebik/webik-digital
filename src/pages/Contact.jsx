@@ -7,8 +7,6 @@ import GrainOverlay from '../components/webik/GrainOverlay';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
-
-  // Schema injected statically in index.html
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 

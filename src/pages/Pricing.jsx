@@ -6,8 +6,6 @@ import FinalCTA from '@/components/webik/FinalCTA';
 import Footer from '@/components/webik/Footer';
 import GrainOverlay from '@/components/webik/GrainOverlay';
 
-// Schema is injected statically in index.html — no runtime injection needed
-
 async function detectPhilippines() {
   try {
     const res = await fetch('https://ipapi.co/json/');
