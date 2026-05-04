@@ -4,6 +4,7 @@ import AnnouncementBar from '../components/webik/AnnouncementBar';
 import StickyNav from '../components/webik/StickyNav';
 import Footer from '../components/webik/Footer';
 import GrainOverlay from '../components/webik/GrainOverlay';
+import { base44 } from '@/api/base44Client';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
@@ -17,8 +18,12 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate submission delay — replace with real integration later
-    await new Promise(r => setTimeout(r, 900));
+    await base44.integrations.Core.SendEmail({
+      to: 'pryce@webikdigital.com',
+      from_name: 'Webik Contact Form',
+      subject: `New enquiry from ${form.name}`,
+      body: `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\n\nMessage:\n${form.message}`,
+    });
     setLoading(false);
     setSubmitted(true);
   };
