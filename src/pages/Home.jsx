@@ -358,7 +358,7 @@ export default function Home() {
                     "name": "I already have hosting and a domain. Do I still need the Care Plan?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "No. If you already have your own hosting platform and registered domain elsewhere and only want a website redesign, the mandatory Guardian Care Plan does not apply to you. You can still subscribe to our monthly Care Plan for ongoing maintenance and support, and we encourage it, but it is entirely optional."
+                      "text": "No — the mandatory Guardian Care Plan is voided if you already have your own hosting platform and registered domain. You own your infrastructure and we're simply building on top of it. That said, yes — we still encourage you to subscribe to our monthly Care Plan for ongoing maintenance, security, and support. But it's entirely your choice."
                     }
                   },
                   {

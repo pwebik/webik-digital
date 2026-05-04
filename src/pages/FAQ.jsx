@@ -36,7 +36,7 @@ const faqCategories = [
       },
       {
         q: 'I already have hosting and a domain. Do I still need the Care Plan?',
-        a: 'No. If you already have your own hosting platform and registered domain elsewhere and only want a website redesign, the mandatory Guardian Care Plan does not apply to you. You own your infrastructure — we\'re just building on top of it. You can still subscribe to our monthly Care Plan for ongoing maintenance and support, and we encourage it, but the choice is entirely yours.',
+        a: 'No — the mandatory Guardian Care Plan is voided if you already have your own hosting platform and registered domain. You own your infrastructure and we\'re simply building on top of it. That said, yes — we still encourage you to subscribe to our monthly Care Plan for ongoing maintenance, security, and support. But it\'s entirely your choice.',
       },
       {
         q: 'Can I upgrade from a Launchpad to a custom multi-page site later?',
