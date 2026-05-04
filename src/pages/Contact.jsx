@@ -18,14 +18,20 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    await base44.functions.invoke('sendContactEmail', {
-      name: form.name,
-      email: form.email,
-      phone: form.phone,
-      message: form.message,
-    });
-    setLoading(false);
-    setSubmitted(true);
+    try {
+      await base44.functions.invoke('sendContactEmail', {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        message: form.message,
+      });
+      setSubmitted(true);
+    } catch (err) {
+      console.error('Contact form error:', err);
+      alert('Something went wrong. Please try again or email us directly at pryce@webikdigital.com');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
