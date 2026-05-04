@@ -19,13 +19,17 @@ export default function Contact() {
     e.preventDefault();
     setLoading(true);
     try {
-      await base44.integrations.Core.SendEmail({
-        to: 'pryce@webikdigital.com',
-        from_name: 'Webik Contact Form',
-        subject: `New enquiry from ${form.name}`,
-        body: `You have a new contact form submission:\n\nName: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\n\nMessage:\n${form.message}`,
+      const res = await base44.functions.invoke('sendContactEmail', {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        message: form.message,
       });
-      setSubmitted(true);
+      if (res?.data?.success) {
+        setSubmitted(true);
+      } else {
+        throw new Error(res?.data?.error || 'Submission failed');
+      }
     } catch (err) {
       console.error('Contact form error:', err);
       alert('Something went wrong. Please try again or email us directly at pryce@webikdigital.com');
