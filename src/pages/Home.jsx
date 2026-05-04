@@ -350,7 +350,15 @@ export default function Home() {
                     "name": "Is the monthly Care Plan really mandatory?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Yes. The Guardian Care Plan is what makes our model work — and what protects you from the freelancer 'ghosting' problem. Without ongoing care, websites break: domains expire, plugins go out of date, security holes appear. We'd rather not build a site than build one that quietly dies six months later."
+                      "text": "It depends on your setup. If you host with us, yes — the Guardian Care Plan is mandatory and covers hosting, security, backups, and updates. However, if you already have your own hosting platform and domain, the mandatory Care Plan is waived. You're still welcome to subscribe for ongoing maintenance, but you are not obligated to."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "I already have hosting and a domain. Do I still need the Care Plan?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "No. If you already have your own hosting platform and registered domain elsewhere and only want a website redesign, the mandatory Guardian Care Plan does not apply to you. You can still subscribe to our monthly Care Plan for ongoing maintenance and support, and we encourage it, but it is entirely optional."
                     }
                   },
                   {

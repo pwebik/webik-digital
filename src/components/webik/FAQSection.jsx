@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: 'How much does a website from Webik Digital cost?',
-    a: 'Webik Digital uses a partnership pricing model. The Launchpad — a premium one-page website — starts at ₱5,000 setup. The mandatory Guardian Care Plan covers hosting, security, and updates on a monthly subscription. This replaces the traditional ₱30,000–₱50,000 upfront agency fee with a lower-risk, ongoing partnership model.',
+    a: 'Webik Digital uses a partnership pricing model. The Launchpad — a premium one-page website — starts at ₱5,000 setup. If you host with us, the Guardian Care Plan (covering hosting, security, and updates) is mandatory on a monthly subscription — replacing the traditional ₱30,000–₱50,000 upfront fee with a low-risk, ongoing model. If you already have your own hosting and domain, the Care Plan is optional but still recommended.',
   },
   {
     q: 'Is Webik Digital a registered company?',
@@ -25,7 +25,11 @@ const faqs = [
   },
   {
     q: 'Is the monthly Care Plan really mandatory?',
-    a: 'Yes. The Guardian Care Plan is what makes our model work — and what protects you from the freelancer \'ghosting\' problem. Without ongoing care, websites break: domains expire, plugins go out of date, security holes appear. We\'d rather not build a site than build one that quietly dies six months later.',
+    a: 'It depends on your setup. If you host with us, yes — the Guardian Care Plan is mandatory and is what makes our low-setup-fee model work. It covers hosting, security, backups, and updates. However, if you already have your own hosting platform and domain, the mandatory Care Plan is waived. You\'re still welcome to subscribe for peace of mind, but you are not obligated to. We\'d rather be upfront about this than surprise you.',
+  },
+  {
+    q: 'I already have hosting and a domain. Do I still need the Care Plan?',
+    a: 'No. If you already have your own hosting platform and registered domain elsewhere and only want a website redesign, the mandatory Guardian Care Plan does not apply to you. You own your infrastructure — we\'re just building on top of it. You can still subscribe to our monthly Care Plan for ongoing maintenance and support, and we encourage it, but the choice is entirely yours.',
   },
   {
     q: 'Are you actually using AI to build my website?',
