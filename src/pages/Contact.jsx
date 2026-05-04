@@ -102,7 +102,7 @@ export default function Contact() {
                   <p className="mt-4 font-inter text-base leading-relaxed" style={{ color: 'var(--webik-muted)', maxWidth: 420 }}>
                     Expect a reply from Pryce within 24 hours. In the meantime, feel free to browse our work.
                   </p>
-                  <a href="/#work" className="mt-8 inline-flex items-center gap-2 font-inter text-sm font-medium text-[var(--webik-dark)] underline underline-offset-4 hover:text-[var(--webik-muted)] transition-colors">
+                  <a href="/work" className="mt-8 inline-flex items-center gap-2 font-inter text-sm font-medium text-[var(--webik-dark)] underline underline-offset-4 hover:text-[var(--webik-muted)] transition-colors">
                     See our portfolio →
                   </a>
                 </div>
