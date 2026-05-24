@@ -13,7 +13,7 @@ export default function ProcessSection() {
       <div className="max-w-[1440px] mx-auto">
         <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Process )</span>
         <h2 className="font-grotesk text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
-          AI-accelerated. <span style={{ color: 'var(--webik-lime)' }}>Human-perfected.</span>
+          Human-led. <span style={{ color: 'var(--webik-lime)' }}>AI-accelerated.</span>
         </h2>
 
         <div className="mt-16 relative">
