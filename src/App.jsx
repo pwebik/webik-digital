@@ -9,10 +9,13 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import CaseStudy from './pages/CaseStudy';
 import Contact from './pages/Contact';
-import Work from './pages/Work';
 import About from './pages/About';
 import Services from './pages/Services';
-import Pricing from './pages/Pricing';
+import Team from './pages/Team';
+import Portfolio from './pages/Portfolio';
+import Blog from './pages/Blog';
+import BlogPostPage from './pages/BlogPostPage';
+import LeadMagnet from './pages/LeadMagnet';
 import FAQ from './pages/FAQ';
 // Add page imports here
 
@@ -47,10 +50,13 @@ const AuthenticatedApp = () => {
       <Route path="/" element={<Home />} />
       <Route path="/work/:slug" element={<CaseStudy />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/work" element={<Work />} />
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Services />} />
-      <Route path="/pricing" element={<Pricing />} />
+      <Route path="/team" element={<Team />} />
+      <Route path="/portfolio" element={<Portfolio />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogPostPage />} />
+      <Route path="/resources/5-signs-website-losing-clients" element={<LeadMagnet />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>

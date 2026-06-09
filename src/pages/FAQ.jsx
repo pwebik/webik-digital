@@ -1,25 +1,38 @@
 import React, { useState } from 'react';
+import AnnouncementBar from '@/components/webik/AnnouncementBar';
 import StickyNav from '@/components/webik/StickyNav';
 import Footer from '@/components/webik/Footer';
-import { Link } from 'react-router-dom';
 import GrainOverlay from '@/components/webik/GrainOverlay';
 import FinalCTA from '@/components/webik/FinalCTA';
 
 const faqCategories = [
   {
-    category: 'Getting Started',
+    category: 'Who We Are',
     faqs: [
       {
-        q: 'How long does a Webik website take to build?',
-        a: 'Our Launchpad sites go live in as little as 48 hours from project kickoff. We\'re able to move this fast because of our AI-accelerated workflow combined with our small, focused team. More complex multi-page or e-commerce sites take 5–14 days depending on scope.',
+        q: 'What is Webik Corp?',
+        a: 'Webik Corp is an SEC-registered digital agency based in Cebu, Philippines. We design, build, and grow digital presences for businesses that are serious about owning their corner of the internet. Our team combines senior-level experience across web design, development, sales, and operations. We serve clients locally in the Philippines and internationally.',
       },
       {
-        q: 'How does the discovery call work?',
-        a: 'It\'s a free, no-pressure 15-minute conversation. We\'ll ask about your business, your goals, your timeline, and your budget. From there, we\'ll give you an honest recommendation — whether that\'s working with us or pointing you elsewhere.',
+        q: 'Why do you call yourselves "a digital team, not just an agency"?',
+        a: 'Most agencies hand you a deliverable and move on. We do not. We act as a long-term partner — staying in after launch, treating your business goals like our own, and making ourselves available as your digital team. The relationship does not end at handoff.',
       },
       {
-        q: 'What do I need to provide to get started?',
-        a: 'Ideally: your logo (or we can help create one), your brand colors (if you have them), a brief description of your business and services, and any reference sites you love. We\'ll guide you through the rest.',
+        q: 'Is Webik Corp a registered company?',
+        a: 'Yes. Webik Corp is a corporation registered with the Securities and Exchange Commission (SEC) of the Philippines. This means clients have legal recourse, contractual protection, and the assurance of working with a legitimate business — not a freelancer who can disappear.',
+      },
+    ],
+  },
+  {
+    category: 'Digital Presence',
+    faqs: [
+      {
+        q: 'What does it mean to "own your digital presence"?',
+        a: 'It means building your business on a foundation you actually control — your website, your domain, your audience — instead of renting space on Facebook, Instagram, or another platform that could change its rules or suspend your account overnight. Social media is a powerful channel. It is a terrible foundation.',
+      },
+      {
+        q: 'Do you work with clients outside the Philippines?',
+        a: 'Yes. Webik Corp serves clients in the Philippines and in English-speaking international markets. Time zone differences are not a barrier — we work across them regularly. Our international work funds and sharpens what we do; our local work in the Philippines is the long game.',
       },
     ],
   },
@@ -27,54 +40,25 @@ const faqCategories = [
     category: 'Services & Pricing',
     faqs: [
       {
-        q: 'Why is your setup fee so much lower than other agencies?',
-        a: 'Two reasons. First, we use AI to accelerate the parts of web development that used to take weeks — design exploration, code scaffolding, content drafting. Second, our business model is partnership-based: a low setup fee plus a monthly Guardian plan. Traditional agencies charge ₱30,000–₱50,000 upfront because they don\'t make money after launch. We do.',
+        q: 'Do you publish your prices?',
+        a: 'No — and not because we are hiding anything. Every project is genuinely different, and pricing on a website forces businesses to fit themselves into a package. The discovery call is where we figure out together what makes sense for your specific situation. There is no pressure and no obligation.',
       },
       {
-        q: 'Is the monthly Care Plan really mandatory?',
-        a: 'It depends on your setup. If you host with us, yes — the Guardian Care Plan is mandatory and is what makes our low-setup-fee model work. It covers hosting, security, backups, and updates. However, if you already have your own hosting platform and domain, the mandatory Care Plan is waived. You\'re still welcome to subscribe for peace of mind, but you are not obligated to. We\'d rather be upfront about this than surprise you.',
-      },
-      {
-        q: 'I already have hosting and a domain. Do I still need the Care Plan?',
-        a: 'No — the mandatory Guardian Care Plan is voided if you already have your own hosting platform and registered domain. You own your infrastructure and we\'re simply building on top of it. That said, yes — we still encourage you to subscribe to our monthly Care Plan for ongoing maintenance, security, and support. But it\'s entirely your choice.',
-      },
-      {
-        q: 'Can I upgrade from a Launchpad to a custom multi-page site later?',
-        a: 'Absolutely. Many of our clients start with a Launchpad and upgrade as their business grows. We\'ll credit your existing Guardian subscription toward the new build.',
+        q: 'What services do you actually offer?',
+        a: 'Web design and development, email marketing design, branding and logo design, SEO and Answer Engine Optimization (AEO), graphic design, and ongoing website maintenance. Every service is scoped around your business, not a one-size-fits-all package.',
       },
     ],
   },
   {
-    category: 'Technology & AEO',
+    category: 'After Launch',
     faqs: [
       {
-        q: 'What is Answer Engine Optimization (AEO)?',
-        a: 'AEO is the next evolution of SEO. Instead of optimizing only for Google search results, we structure your site with Schema Markup so AI assistants like ChatGPT, Siri, Google Gemini, and Perplexity can understand and recommend your business when customers ask questions like "Best affordable coffee shop in Cebu."',
+        q: 'What happens after my website launches?',
+        a: 'We do not disappear after launch. Our maintenance plans cover ongoing updates, security patches, performance monitoring, and content edits as your business evolves. If you would rather not subscribe to maintenance, we still respond to issues as a former client — but most of our clients stay on because owning a website is a long-term commitment, not a one-time event.',
       },
       {
-        q: 'Are you actually using AI to build my website?',
-        a: 'Yes — and we\'re transparent about it. We use AI tools to accelerate design exploration, code scaffolding, and content drafting. But every site is reviewed, refined, customized, and maintained by real human specialists on our team. Think of it as a senior architect using power tools instead of a hand-saw. The thinking, taste, and craftsmanship are still ours.',
-      },
-      {
-        q: 'What platform do you build on?',
-        a: 'Most of our Launchpad sites are built on WordPress with Bricks Builder — the fastest, most flexible visual builder available. E-commerce builds use Shopify. Custom enterprise projects may use other stacks depending on requirements.',
-      },
-    ],
-  },
-  {
-    category: 'Ownership & Contracts',
-    faqs: [
-      {
-        q: 'Do I own my website and domain?',
-        a: 'Yes, completely. The domain is registered in your name from day one. Your website code, design, and content belong to you. If you ever decide to leave Webik, we\'ll help you migrate to another provider — no lock-in, no hostage situations.',
-      },
-      {
-        q: 'Can I cancel my Care Plan?',
-        a: 'After the initial 12-month commitment, you can cancel anytime with 30 days\' notice. We\'ll provide a full export of your site files and help you transition. We\'re confident you won\'t want to leave — but we never want to hold you hostage.',
-      },
-      {
-        q: 'Do you work with clients outside Cebu or the Philippines?',
-        a: 'Yes. Our roots are Cebu, but we\'ve built sites for clients in the UK, the United States, and across the Philippines. Our process is fully remote-friendly with weekly check-ins and async updates.',
+        q: 'How does the discovery call work?',
+        a: 'It is a free, no-pressure conversation — usually 20 to 30 minutes. We ask about your business, your goals, and what is not working right now. No pitch. From there, we send a clear proposal scoped to exactly what you need. You decide with no pressure and no follow-up calls if you are not ready.',
       },
     ],
   },
@@ -92,11 +76,11 @@ function FAQItem({ faq, defaultOpen }) {
           {faq.q}
         </span>
         <span
-          className={`shrink-0 w-7 h-7 rounded-full border border-[var(--webik-dark)]/20 flex items-center justify-center transition-all duration-300 font-mono text-lg leading-none ${open ? 'rotate-45 bg-[var(--webik-dark)]' : ''}`}
+          className={`shrink-0 w-7 h-7 rounded-full border border-[var(--webik-dark)]/20 flex items-center justify-center transition-all duration-400 font-mono text-lg leading-none ${open ? 'rotate-45 bg-[var(--webik-dark)]' : ''}`}
           style={{ color: open ? 'var(--webik-cream)' : 'var(--webik-dark)' }}
         >+</span>
       </button>
-      <div className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+      <div className={`overflow-hidden transition-all duration-400 ${open ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
         <p className="text-[var(--webik-muted)] font-inter text-sm lg:text-base leading-relaxed pr-12">{faq.a}</p>
       </div>
     </div>
@@ -105,25 +89,34 @@ function FAQItem({ faq, defaultOpen }) {
 
 export default function FAQ() {
   return (
-    <div style={{ background: 'var(--webik-cream)' }}>
+    <div style={{
+      '--webik-lime': '#C8F048',
+      '--webik-dark': '#0E1A0A',
+      '--webik-dark-2': '#15240F',
+      '--webik-cream': '#F5F3EC',
+      '--webik-cream-2': '#EBE8DD',
+      '--webik-muted': '#6B7560',
+      background: 'var(--webik-cream)'
+    }}>
+      <AnnouncementBar />
       <StickyNav />
 
       {/* Hero */}
       <section className="relative py-24 lg:py-36 px-6 lg:px-12 overflow-hidden" style={{ background: 'var(--webik-dark)' }}>
         <GrainOverlay />
-        <div className="absolute right-[-5vw] top-[20%] h-full w-[55vw] select-none pointer-events-none" aria-hidden="true" style={{ opacity: 0.12 }}>
+        <div className="absolute right-[-5vw] top-[20%] h-full w-[55vw] select-none pointer-events-none" aria-hidden="true" style={{ opacity: 0.1 }}>
           <img src="https://media.base44.com/images/public/69ecce3288377cd246349884/848d53c15_Group5.png" alt="" className="w-full h-full object-contain object-right" style={{ filter: 'invert(1)' }} />
         </div>
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( FAQ )</span>
           <h1
-            className="font-grotesk font-light leading-[0.92] tracking-tight mt-6"
-            style={{ color: 'var(--webik-cream)', fontSize: 'clamp(48px, 8vw, 120px)', letterSpacing: '-0.04em' }}
+            className="font-fraunces italic font-light leading-[1.0] tracking-tight mt-6"
+            style={{ color: 'var(--webik-cream)', fontSize: 'clamp(42px, 7vw, 110px)', letterSpacing: '-0.02em' }}
           >
             Things people ask<br />before they <span style={{ color: 'var(--webik-lime)' }}>sign.</span>
           </h1>
-          <p className="mt-8 font-inter text-base lg:text-lg leading-relaxed max-w-[520px]" style={{ color: 'rgba(245,243,236,0.7)' }}>
-            Honest answers to the real questions. If you don't see yours here, just ask.
+          <p className="mt-8 font-inter text-base lg:text-lg leading-relaxed max-w-[520px]" style={{ color: 'rgba(245,243,236,0.65)' }}>
+            Honest answers to the real questions. If you do not see yours here, just ask.
           </p>
         </div>
       </section>
@@ -132,7 +125,7 @@ export default function FAQ() {
       <section className="py-20 lg:py-28 px-6 lg:px-12" style={{ background: 'var(--webik-cream)' }}>
         <div className="max-w-[1440px] mx-auto">
           <div className="grid lg:grid-cols-4 gap-12 lg:gap-16">
-            {/* Sticky sidebar nav */}
+            {/* Sticky sidebar */}
             <div className="hidden lg:block">
               <div className="sticky top-28 space-y-2">
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] mb-4" style={{ color: 'var(--webik-muted)' }}>Jump to</p>
@@ -155,7 +148,7 @@ export default function FAQ() {
             <div className="lg:col-span-3 space-y-16">
               {faqCategories.map((cat, ci) => (
                 <div key={ci} id={`cat-${ci}`}>
-                  <h2 className="font-grotesk font-light text-3xl lg:text-4xl leading-tight mb-8" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>
+                  <h2 className="font-fraunces italic font-light text-3xl lg:text-4xl leading-tight mb-8" style={{ color: 'var(--webik-dark)' }}>
                     {cat.category}
                   </h2>
                   <div>
