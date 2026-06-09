@@ -44,8 +44,8 @@ export default function FAQSection() {
     <section id="faq" className="bg-[var(--webik-cream)] py-20 lg:py-32 px-6 lg:px-12">
       <div className="max-w-[900px] mx-auto">
         <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( FAQ )</span>
-        <h2 className="font-fraunces italic text-[var(--webik-dark)] font-light mt-4 leading-[1.05]" style={{ fontSize: 'clamp(28px, 4.5vw, 60px)', letterSpacing: '-0.02em' }}>
-          Things people ask before <span style={{ color: 'var(--webik-lime)' }}>they sign.</span>
+        <h2 className="font-grotesk text-[var(--webik-dark)] font-light mt-4 leading-[1.05]" style={{ fontSize: 'clamp(28px, 4.5vw, 60px)', letterSpacing: '-0.03em' }}>
+          Things people ask before <span style={{ color: '#C8F048' }}>they sign.</span>
         </h2>
 
         <div className="mt-12 lg:mt-16 divide-y divide-[var(--webik-cream-2)]">

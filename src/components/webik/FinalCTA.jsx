@@ -15,7 +15,7 @@ export default function FinalCTA() {
       />
       <div className="max-w-[760px] mx-auto relative z-10">
         <h2
-          className="font-fraunces italic font-light leading-[1.05]"
+          className="font-grotesk font-light leading-[1.05]"
           style={{ color: 'var(--webik-cream)', fontSize: 'clamp(32px, 5vw, 72px)', letterSpacing: '-0.03em' }}
         >
           Ready to Own Your Digital Presence?
@@ -34,7 +34,7 @@ export default function FinalCTA() {
           >
             See What We Can Do Together
           </Link>
-          <p className="font-fraunces italic text-sm" style={{ color: 'rgba(245,243,236,0.35)' }}>
+          <p className="font-inter italic text-sm" style={{ color: 'rgba(245,243,236,0.35)' }}>
             Not sure where to start? That is what the first call is for.
           </p>
         </div>

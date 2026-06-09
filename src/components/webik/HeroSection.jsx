@@ -42,7 +42,7 @@ export default function HeroSection() {
           src="https://media.base44.com/images/public/69ecce3288377cd246349884/848d53c15_Group5.png"
           alt=""
           className="w-[65vw] max-w-[900px] object-contain"
-          style={{ filter: 'invert(1)' }}
+          style={{ filter: 'invert(0) sepia(1) saturate(10) hue-rotate(30deg) brightness(1.2)' }}
         />
       </div>
 
@@ -66,11 +66,11 @@ export default function HeroSection() {
           {/* Headline */}
           <h1
             ref={headlineRef}
-            className="font-fraunces italic font-light leading-[1.0] tracking-tight"
+            className="font-grotesk font-light leading-[1.0] tracking-tight"
             style={{
               color: 'var(--webik-cream)',
               fontSize: 'clamp(48px, 8.5vw, 128px)',
-              letterSpacing: '-0.03em',
+              letterSpacing: '-0.04em',
             }}
           >
             Your Digital Team,<br />Not Just Your Agency.
@@ -110,7 +110,7 @@ export default function HeroSection() {
           {/* Sub-note */}
           <p
             ref={noteRef}
-            className="mt-5 font-fraunces italic text-sm"
+            className="mt-5 font-inter italic text-sm"
             style={{ color: 'rgba(245,243,236,0.38)' }}
           >
             Not sure where to start? That is what the first call is for.

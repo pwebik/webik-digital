@@ -1,6 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const serviceImages = [
+  'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=75',
+  'https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=600&q=75',
+  'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=75',
+  'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=75',
+  'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=75',
+  'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&q=75',
+];
+
 const services = [
   {
     num: '01',
@@ -47,8 +56,8 @@ export default function ServicesSection() {
         </span>
         <div className="mt-5 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <h2
-            className="font-fraunces italic font-light leading-[1.05] max-w-[640px]"
-            style={{ color: 'var(--webik-dark)', fontSize: 'clamp(28px, 4.5vw, 60px)', letterSpacing: '-0.02em' }}
+            className="font-grotesk font-light leading-[1.05] max-w-[640px]"
+            style={{ color: 'var(--webik-dark)', fontSize: 'clamp(28px, 4.5vw, 60px)', letterSpacing: '-0.03em' }}
           >
             Everything Your Digital Presence Needs. Under One Roof.
           </h2>
@@ -61,23 +70,32 @@ export default function ServicesSection() {
           {services.map((service, i) => (
             <div
               key={i}
-              className="p-8 lg:p-10 flex flex-col transition-colors duration-300 group"
-              style={{ background: 'var(--webik-dark)' }}
-              onMouseEnter={e => e.currentTarget.style.background = 'var(--webik-dark-2)'}
-              onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-dark)'}
+              className="flex flex-col transition-colors duration-300 group overflow-hidden"
+              style={{ background: 'var(--webik-cream)' }}
+              onMouseEnter={e => e.currentTarget.style.background = 'var(--webik-cream-2)'}
+              onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-cream)'}
             >
-              <span className="font-mono text-[10px] tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>
-                {service.num}
-              </span>
-              <h3
-                className="font-fraunces italic font-light text-xl lg:text-2xl mt-4 leading-snug flex-1"
-                style={{ color: 'var(--webik-cream)' }}
-              >
-                {service.title}
-              </h3>
-              <p className="font-inter text-sm leading-relaxed mt-4" style={{ color: 'rgba(245,243,236,0.55)' }}>
-                {service.promise}
-              </p>
+              <div className="aspect-[3/2] overflow-hidden">
+                <img
+                  src={serviceImages[i]}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90"
+                />
+              </div>
+              <div className="p-8 lg:p-10 flex flex-col flex-1">
+                <span className="font-mono text-[10px] tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>
+                  {service.num}
+                </span>
+                <h3
+                  className="font-grotesk font-medium text-xl lg:text-2xl mt-3 leading-snug flex-1"
+                  style={{ color: 'var(--webik-dark)' }}
+                >
+                  {service.title}
+                </h3>
+                <p className="font-inter text-sm leading-relaxed mt-4" style={{ color: 'var(--webik-muted)' }}>
+                  {service.promise}
+                </p>
+              </div>
             </div>
           ))}
         </div>

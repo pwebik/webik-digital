@@ -29,8 +29,8 @@ export default function ProblemSection() {
           ( Sound Familiar? )
         </span>
         <h2
-          className="font-fraunces italic font-light mt-5 leading-[1.05]"
-          style={{ color: 'var(--webik-dark)', fontSize: 'clamp(32px, 5vw, 64px)', letterSpacing: '-0.02em' }}
+          className="font-grotesk font-light mt-5 leading-[1.05]"
+          style={{ color: 'var(--webik-dark)', fontSize: 'clamp(32px, 5vw, 64px)', letterSpacing: '-0.03em' }}
         >
           You Built a Business. Your Digital Presence Should Reflect That.
         </h2>

@@ -14,8 +14,8 @@ export default function SolutionSection() {
               ( Who We Are )
             </span>
             <h2
-              className="font-fraunces italic font-light mt-5 leading-[1.05]"
-              style={{ color: 'var(--webik-cream)', fontSize: 'clamp(32px, 4vw, 60px)', letterSpacing: '-0.02em' }}
+              className="font-grotesk font-light mt-5 leading-[1.05]"
+              style={{ color: 'var(--webik-cream)', fontSize: 'clamp(32px, 4vw, 60px)', letterSpacing: '-0.03em' }}
             >
               A Team That Understands Business, Not Just Design.
             </h2>

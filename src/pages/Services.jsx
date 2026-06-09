@@ -82,7 +82,7 @@ export default function Services() {
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Services )</span>
           <h1
-            className="font-grotesk font-light leading-[0.92] tracking-tight mt-6"
+            className="font-grotesk font-light leading-[0.95] tracking-tight mt-6"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(48px, 8vw, 120px)', letterSpacing: '-0.04em' }}
           >
             Built like a <span style={{ color: 'var(--webik-lime)' }}>partnership.</span><br />Priced like a subscription.

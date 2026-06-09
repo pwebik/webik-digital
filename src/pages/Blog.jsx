@@ -6,6 +6,12 @@ import Footer from '../components/webik/Footer';
 import GrainOverlay from '../components/webik/GrainOverlay';
 import { blogPosts } from '../lib/blogData';
 
+const blogImages = [
+  'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80',
+  'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80',
+  'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80',
+];
+
 const pageVars = {
   '--webik-lime': '#C8F048',
   '--webik-dark': '#0E1A0A',
@@ -27,8 +33,8 @@ export default function Blog() {
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Blog )</span>
           <h1
-            className="font-fraunces italic font-light leading-[1.0] tracking-tight mt-6"
-            style={{ color: 'var(--webik-cream)', fontSize: 'clamp(42px, 7vw, 110px)', letterSpacing: '-0.02em' }}
+            className="font-grotesk font-light leading-[1.0] tracking-tight mt-6"
+            style={{ color: 'var(--webik-cream)', fontSize: 'clamp(42px, 7vw, 110px)', letterSpacing: '-0.04em' }}
           >
             Insights From the Team.
           </h1>
@@ -44,21 +50,20 @@ export default function Blog() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {blogPosts.map((post, i) => (
               <article key={i} className="flex flex-col group">
-                <div className="aspect-[16/9] rounded-xl mb-6 flex items-end p-6 relative overflow-hidden" style={{ background: 'var(--webik-dark)' }}>
-                  <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at 20% 80%, rgba(200,240,72,0.08), transparent 60%)' }} />
-                  <span
-                    className="font-fraunces italic font-light relative z-10"
-                    style={{ fontSize: 'clamp(48px, 5vw, 72px)', color: 'rgba(200,240,72,0.1)', lineHeight: 1 }}
-                  >
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
+                <div className="aspect-[16/9] rounded-xl mb-6 relative overflow-hidden">
+                  <img
+                    src={blogImages[i % blogImages.length]}
+                    alt={post.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(14,26,10,0.5), transparent)' }} />
                 </div>
 
                 <span className="inline-block font-mono text-[10px] uppercase tracking-[0.2em] px-3 py-1 rounded-full mb-4 self-start" style={{ background: 'rgba(200,240,72,0.15)', color: 'var(--webik-lime)' }}>
                   {post.category}
                 </span>
 
-                <h2 className="font-fraunces italic font-light text-xl lg:text-2xl leading-snug flex-1" style={{ color: 'var(--webik-dark)' }}>
+                <h2 className="font-grotesk font-medium text-xl lg:text-2xl leading-snug flex-1" style={{ color: 'var(--webik-dark)' }}>
                   {post.title}
                 </h2>
 
