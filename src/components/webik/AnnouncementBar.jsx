@@ -1,24 +1,35 @@
 import React from 'react';
 
 const phrases = [
-  "SEC-Registered Cebu Digital Agency",
-  "AI-Accelerated, Human-Perfected",
-  "Now booking Q2 projects",
-  "Premium Digital Presence. Accessible to All"
+  'Your Digital Team, Not Just Your Agency',
+  'Senior Practitioners · Real Partnership',
+  'Web Design & Development',
+  'Branding & Identity',
+  'SEO & AEO',
+  'Email Marketing Design',
+  'Graphic Design',
+  'Website Maintenance',
+  'SEC-Registered · Cebu, Philippines',
+  'Serving Clients Locally and Internationally',
 ];
 
 export default function AnnouncementBar() {
-  const marqueeContent = phrases.map((p, i) => (
-    <React.Fragment key={i}>
-      <span className="mx-4 text-[var(--webik-cream)] text-xs tracking-[0.2em] uppercase font-inter whitespace-nowrap">{p}</span>
-      <span className="mx-4 text-[var(--webik-lime)]">◆</span>
-    </React.Fragment>
-  ));
+  const items = [...phrases, ...phrases];
 
   return (
-    <div className="bg-[var(--webik-dark)] overflow-hidden py-2.5 relative">
-      <div className="flex items-center animate-marquee whitespace-nowrap">
-        {marqueeContent}{marqueeContent}{marqueeContent}{marqueeContent}
+    <div
+      className="overflow-hidden py-2.5 relative"
+      style={{ background: 'var(--webik-dark-2)', borderBottom: '1px solid rgba(200,240,72,0.1)' }}
+    >
+      <div className="flex gap-0 animate-marquee whitespace-nowrap">
+        {items.map((phrase, i) => (
+          <span key={i} className="inline-flex items-center gap-4 px-6">
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em]" style={{ color: 'var(--webik-muted)' }}>
+              {phrase}
+            </span>
+            <span style={{ color: 'var(--webik-lime)', fontSize: '8px' }}>◆</span>
+          </span>
+        ))}
       </div>
     </div>
   );

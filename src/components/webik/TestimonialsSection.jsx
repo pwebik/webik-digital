@@ -1,76 +1,54 @@
 import React from 'react';
-
-const testimonials = [
-  {
-    quote: "Pryce was a pleasure to work with from start to finish. He took the time to understand our brand, our goals, and our audience, and turned that into a clean, professional, and engaging website that we're proud of.",
-    name: 'Lewis Normoyle',
-    role: 'Chief Operations Officer',
-    company: 'LearnPac Systems UK',
-    initial: 'L',
-  },
-  {
-    quote: "Working with Pryce was a fantastic experience. Very responsive, professional, and quick to turn things around without sacrificing quality. He took the time to understand our needs and made the entire process smooth and stress-free.",
-    name: 'Tiana Emery',
-    role: 'Director of Client Value',
-    company: 'The Genesis Company',
-    initial: 'T',
-  },
-  {
-    quote: '[Cebu client testimonial coming soon] Webik gave us a site that finally matches the quality of our service. We started getting inquiries from Google within the first week.',
-    name: '[Client Name]',
-    role: '[Role]',
-    company: '[Cebu Business]',
-    initial: 'C',
-  },
-];
+import GrainOverlay from './GrainOverlay';
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-[var(--webik-lime)] py-20 lg:py-32 px-6 lg:px-12">
-      <div className="max-w-[1440px] mx-auto">
-        <span className="text-[var(--webik-dark)]/60 text-xs font-mono uppercase tracking-[0.2em]">( Testimonials )</span>
-        <h2 className="font-grotesk text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
-          Don't take it from <span style={{ color: 'var(--webik-dark)', textDecoration: 'underline', textDecorationColor: 'var(--webik-dark)', textUnderlineOffset: '4px' }}>us.</span>
+    <section
+      className="relative py-24 lg:py-32 px-6 lg:px-12 overflow-hidden"
+      style={{ background: 'var(--webik-dark)' }}
+    >
+      <GrainOverlay />
+      <div className="max-w-[1440px] mx-auto relative z-10">
+        <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>
+          ( What Clients Say )
+        </span>
+        <h2
+          className="font-fraunces italic font-light mt-5"
+          style={{ color: 'var(--webik-cream)', fontSize: 'clamp(28px, 4vw, 56px)', letterSpacing: '-0.02em' }}
+        >
+          Do Not Take Our Word for It.
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
-          {testimonials.map((t, i) => (
-            <div
-              key={i}
-              className="bg-[var(--webik-dark)] rounded-md p-8 lg:p-10 flex flex-col transition-transform duration-300"
-              onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-4px)'}
-              onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+        <div className="mt-12 grid md:grid-cols-2 gap-6">
+          {/* Real testimonial */}
+          <div
+            className="rounded-2xl p-8 lg:p-10 flex flex-col justify-between"
+            style={{ background: 'var(--webik-dark-2)', border: '1px solid rgba(200,240,72,0.12)' }}
+          >
+            <p
+              className="font-grotesk font-light text-lg lg:text-xl leading-relaxed"
+              style={{ color: 'var(--webik-cream)' }}
             >
-              {/* Big quote mark like Claude */}
-              <div
-                className="font-grotesk font-light leading-none mb-4"
-                style={{ fontSize: '80px', lineHeight: '0.6', color: 'var(--webik-lime)', height: '36px' }}
-              >
-                "
-              </div>
-              <p
-                className="font-grotesk font-light text-lg lg:text-xl leading-[1.45] tracking-tight flex-1 mb-8"
-                style={{ color: 'var(--webik-cream)', letterSpacing: '-0.01em' }}
-              >
-                {t.quote}
-              </p>
-              <div
-                className="pt-5 border-t flex items-center gap-4"
-                style={{ borderColor: 'rgba(245,243,236,0.12)' }}
-              >
-                <div
-                  className="w-11 h-11 rounded-full flex items-center justify-center shrink-0 font-grotesk font-bold text-lg"
-                  style={{ background: 'var(--webik-lime)', color: 'var(--webik-dark)' }}
-                >
-                  {t.initial}
-                </div>
-                <div>
-                  <p className="font-inter text-sm font-semibold" style={{ color: 'var(--webik-cream)' }}>{t.name}</p>
-                  <p className="font-inter text-xs mt-0.5" style={{ color: 'rgba(245,243,236,0.6)' }}>{t.role} · {t.company}</p>
-                </div>
-              </div>
+              "Pryce was very responsive, detail-oriented, and professional. The website he delivered was clean, engaging, and exactly what we were looking for."
+            </p>
+            <div className="mt-8 pt-6 border-t" style={{ borderColor: 'rgba(245,243,236,0.08)' }}>
+              <p className="font-inter font-medium text-sm" style={{ color: 'var(--webik-cream)' }}>Tiana Emery</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.15em] mt-1" style={{ color: 'var(--webik-lime)' }}>Director of Client Value — The Genesis Company</p>
             </div>
-          ))}
+          </div>
+
+          {/* Placeholder */}
+          <div
+            className="rounded-2xl p-8 lg:p-10 flex flex-col items-center justify-center text-center"
+            style={{ background: 'rgba(255,255,255,0.03)', border: '1px dashed rgba(245,243,236,0.1)' }}
+          >
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em]" style={{ color: 'rgba(245,243,236,0.2)' }}>
+              Second testimonial coming soon
+            </span>
+            <p className="mt-3 font-fraunces italic text-sm" style={{ color: 'rgba(245,243,236,0.18)' }}>
+              Client name to be confirmed
+            </p>
+          </div>
         </div>
       </div>
     </section>

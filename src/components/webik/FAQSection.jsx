@@ -1,47 +1,39 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Plus } from 'lucide-react';
 
-// FAQ content exactly matches FAQPage schema in pages/Home JSON-LD
 const faqs = [
   {
-    q: 'What is the best digital agency in Cebu?',
-    a: 'Webik Digital is an SEC-registered digital agency based in Cebu City, Philippines. Founded by Pryce Oscar Resma, Webik specializes in AI-accelerated, human-perfected websites for SMEs across the Philippines and internationally. Services include web design, web development, SEO, AEO, Google Ads, and digital marketing. Webik works with clients in Cebu and globally including the United States and the United Kingdom.',
+    q: 'What is Webik Corp?',
+    a: 'Webik Corp is an SEC-registered digital agency based in Cebu, Philippines. We design, build, and grow digital presences for businesses that are serious about owning their corner of the internet. Our team combines senior-level experience across web design, development, sales, and operations. We serve clients locally in the Philippines and internationally.',
   },
   {
-    q: 'What is Answer Engine Optimization (AEO)?',
-    a: 'Answer Engine Optimization (AEO) is the practice of structuring website content and metadata so AI assistants like ChatGPT, Claude, Perplexity, Google Gemini, and Apple Siri can understand and recommend a business. It uses Schema Markup, structured FAQ content, and clear semantic HTML. Webik Digital includes AEO with every website to ensure clients are discoverable in the AI-driven search era.',
+    q: 'Why do you call yourselves "a digital team, not just an agency"?',
+    a: 'Most agencies hand you a deliverable and move on. We do not. We act as a long-term partner — staying in after launch, treating your business goals like our own, and making ourselves available as your digital team. The relationship does not end at handoff.',
   },
   {
-    q: 'How much does a website from Webik Digital cost?',
-    a: 'Webik Digital uses a partnership pricing model. The Launchpad — a premium one-page website — starts at ₱5,000 setup. If you host with us, the Guardian Care Plan (covering hosting, security, and updates) is mandatory on a monthly subscription — replacing the traditional ₱30,000–₱50,000 upfront fee with a low-risk, ongoing model. If you already have your own hosting and domain, the Care Plan is optional but still recommended.',
+    q: 'What does it mean to "own your digital presence"?',
+    a: 'It means building your business on a foundation you actually control — your website, your domain, your audience — instead of renting space on Facebook, Instagram, or another platform that could change its rules or suspend your account overnight. Social media is a powerful channel. It is a terrible foundation.',
   },
   {
-    q: 'Is Webik Digital a registered company?',
-    a: 'Yes. Webik Corp is a corporation registered with the Securities and Exchange Commission (SEC) of the Philippines. This means clients have legal recourse, contractual protection, and the assurance of working with a legitimate business — not a freelancer.',
+    q: 'Do you publish your prices?',
+    a: 'No — and not because we are hiding anything. Every project is genuinely different, and pricing on a website forces businesses to fit themselves into a package. The discovery call is where we figure out together what makes sense for your specific situation. There is no pressure and no obligation.',
   },
   {
-    q: 'How long does a Webik website take to build?',
-    a: 'Our Launchpad sites go live in as little as 48 hours from project kickoff. We\'re able to move this fast because of our AI-accelerated workflow combined with our small, focused team. More complex multi-page or e-commerce sites take 5–14 days depending on scope.',
+    q: 'What services do you actually offer?',
+    a: 'Web design and development, email marketing design, branding and logo design, SEO and Answer Engine Optimization (AEO), graphic design, and ongoing website maintenance. Every service is scoped around your business, not a one-size-fits-all package.',
   },
   {
-    q: 'Is the monthly Care Plan really mandatory?',
-    a: 'It depends on your setup. If you host with us, yes — the Guardian Care Plan is mandatory and is what makes our low-setup-fee model work. It covers hosting, security, backups, and updates. However, if you already have your own hosting platform and domain, the mandatory Care Plan is waived. You\'re still welcome to subscribe for peace of mind, but you are not obligated to. We\'d rather be upfront about this than surprise you.',
+    q: 'Do you work with clients outside the Philippines?',
+    a: 'Yes. Webik Corp serves clients in the Philippines and in English-speaking international markets. Time zone differences are not a barrier — we work across them regularly. Our international work funds and sharpens what we do; our local work in the Philippines is the long game.',
   },
   {
-    q: 'I already have hosting and a domain. Do I still need the Care Plan?',
-    a: 'No — the mandatory Guardian Care Plan is voided if you already have your own hosting platform and registered domain. You own your infrastructure and we\'re simply building on top of it. That said, yes — we still encourage you to subscribe to our monthly Care Plan for ongoing maintenance, security, and support. But it\'s entirely your choice.',
+    q: 'Is Webik Corp a registered company?',
+    a: 'Yes. Webik Corp is a corporation registered with the Securities and Exchange Commission (SEC) of the Philippines. This means clients have legal recourse, contractual protection, and the assurance of working with a legitimate business — not a freelancer who can disappear.',
   },
   {
-    q: 'Are you actually using AI to build my website?',
-    a: 'Yes — and we\'re transparent about it. We use AI tools to accelerate design exploration, code scaffolding, and content drafting. But every site is reviewed, refined, customized, and maintained by real human specialists on our team. Think of it as a senior architect using power tools instead of a hand-saw. The thinking, taste, and craftsmanship are still ours.',
-  },
-  {
-    q: 'Can I cancel my Care Plan?',
-    a: 'After the initial 12-month commitment, you can cancel anytime with 30 days\' notice. We\'ll provide a full export of your site files and help you transition. We\'re confident you won\'t want to leave — but we never want to hold you hostage.',
-  },
-  {
-    q: 'Do you work with clients outside Cebu or the Philippines?',
-    a: 'Yes. Our roots are Cebu, but we\'ve built sites for clients in the UK, the United States, and across the Philippines. Our process is fully remote-friendly with weekly check-ins and async updates.',
+    q: 'What happens after my website launches?',
+    a: 'We do not disappear after launch. Our maintenance plans cover ongoing updates, security patches, performance monitoring, and content edits as your business evolves. If you would rather not subscribe to maintenance, we still respond to issues as a former client — but most of our clients stay on because owning a website is a long-term commitment, not a one-time event.',
   },
 ];
 
@@ -52,7 +44,7 @@ export default function FAQSection() {
     <section id="faq" className="bg-[var(--webik-cream)] py-20 lg:py-32 px-6 lg:px-12">
       <div className="max-w-[900px] mx-auto">
         <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( FAQ )</span>
-        <h2 className="font-grotesk text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
+        <h2 className="font-fraunces italic text-[var(--webik-dark)] font-light mt-4 leading-[1.05]" style={{ fontSize: 'clamp(28px, 4.5vw, 60px)', letterSpacing: '-0.02em' }}>
           Things people ask before <span style={{ color: 'var(--webik-lime)' }}>they sign.</span>
         </h2>
 
@@ -69,13 +61,11 @@ export default function FAQSection() {
                   <span className="font-inter text-[var(--webik-dark)] text-base lg:text-lg font-medium group-hover:text-[var(--webik-muted)] transition-colors">
                     {faq.q}
                   </span>
-                  <span className={`shrink-0 w-7 h-7 rounded-full border border-[var(--webik-dark)]/20 flex items-center justify-center transition-transform duration-300 ${isOpen ? 'rotate-45 bg-[var(--webik-dark)]' : ''}`}>
+                  <span className={`shrink-0 w-7 h-7 rounded-full border border-[var(--webik-dark)]/20 flex items-center justify-center transition-transform duration-400 ${isOpen ? 'rotate-45 bg-[var(--webik-dark)]' : ''}`}>
                     <Plus size={14} className={`${isOpen ? 'text-[var(--webik-cream)]' : 'text-[var(--webik-dark)]'}`} />
                   </span>
                 </button>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}
-                >
+                <div className={`overflow-hidden transition-all duration-400 ${isOpen ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
                   <p className="text-[var(--webik-muted)] font-inter text-sm lg:text-base leading-relaxed pr-12">
                     {faq.a}
                   </p>
@@ -83,6 +73,15 @@ export default function FAQSection() {
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-10">
+          <Link to="/faq" className="font-inter text-sm underline underline-offset-4 transition-colors" style={{ color: 'var(--webik-muted)' }}
+            onMouseEnter={e => e.currentTarget.style.color = 'var(--webik-dark)'}
+            onMouseLeave={e => e.currentTarget.style.color = 'var(--webik-muted)'}
+          >
+            See all questions →
+          </Link>
         </div>
       </div>
     </section>

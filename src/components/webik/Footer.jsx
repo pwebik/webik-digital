@@ -14,15 +14,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center">
+            <Link to="/" className="flex items-center">
               <img
                 src="https://media.base44.com/images/public/69ecce3288377cd246349884/72f22f932_Icon2.png"
                 alt="Webik Corp icon"
                 className="h-10 w-auto opacity-90"
               />
-            </div>
-            <p className="text-[var(--webik-muted)] font-inter text-sm mt-4 leading-relaxed">
-              Premium Digital Presence.<br />Accessible to All.
+            </Link>
+            <p className="font-fraunces italic text-sm mt-4 leading-relaxed" style={{ color: 'rgba(245,243,236,0.5)' }}>
+              Your Digital Team, Not Just Your Agency.
             </p>
             <div className="flex gap-2 mt-6">
               {socialLinks.map(s => (
@@ -40,30 +40,31 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Services */}
+          <div>
+            <h4 className="text-[var(--webik-cream)] font-inter text-sm font-semibold uppercase tracking-wider mb-5">Services</h4>
+            <ul className="space-y-3">
+              {['Web Design and Development', 'Email Marketing Design', 'Branding and Logo Design', 'SEO and AEO', 'Graphic Design', 'Website Maintenance'].map(s => (
+                <li key={s}>
+                  <Link to="/services" className="text-[var(--webik-muted)] hover:text-[var(--webik-cream)] font-inter text-sm transition-colors">{s}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Company */}
           <div>
             <h4 className="text-[var(--webik-cream)] font-inter text-sm font-semibold uppercase tracking-wider mb-5">Company</h4>
             <ul className="space-y-3">
               {[
                 { label: 'About', to: '/about' },
-                { label: 'Portfolio', to: '/work' },
-                { label: 'Pricing', to: '/pricing' },
+                { label: 'Team', to: '/team' },
+                { label: 'Portfolio', to: '/portfolio' },
+                { label: 'Blog', to: '/blog' },
                 { label: 'Contact', to: '/contact' },
               ].map(l => (
                 <li key={l.label}>
                   <Link to={l.to} className="text-[var(--webik-muted)] hover:text-[var(--webik-cream)] font-inter text-sm transition-colors">{l.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-[var(--webik-cream)] font-inter text-sm font-semibold uppercase tracking-wider mb-5">Services</h4>
-            <ul className="space-y-3">
-              {['The Launchpad', 'The Guardian', 'A.E.O.', 'Branding'].map(s => (
-                <li key={s}>
-                  <a href="#services" className="text-[var(--webik-muted)] hover:text-[var(--webik-cream)] font-inter text-sm transition-colors">{s}</a>
                 </li>
               ))}
             </ul>
@@ -85,14 +86,17 @@ export default function Footer() {
       {/* Bottom strip */}
       <div className="border-t border-[var(--webik-dark-2)]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[var(--webik-muted)] font-inter text-xs">
-            © 2026 Webik Corp. All rights reserved. SEC-Registered Philippines. · Last updated: May 2026
-          </p>
-          <div className="flex gap-5">
-            {['Terms', 'Privacy', 'Cookies'].map(l => (
-              <a key={l} href="#" className="text-[var(--webik-muted)] hover:text-[var(--webik-cream)] font-inter text-xs transition-colors">{l}</a>
-            ))}
+          <div className="text-center sm:text-left">
+            <p className="text-[var(--webik-muted)] font-inter text-xs">
+              © 2026 Webik Corp. All rights reserved. SEC-Registered Philippines.
+            </p>
+            <p className="font-fraunces italic text-xs mt-1" style={{ color: 'rgba(245,243,236,0.25)' }}>
+              SEC-registered. Built on experience. Here for the long game.
+            </p>
           </div>
+          <p className="font-mono text-[10px] uppercase tracking-[0.15em]" style={{ color: 'rgba(245,243,236,0.2)' }}>
+            webikdigital.com · Cebu, Philippines · Serving clients globally
+          </p>
         </div>
       </div>
     </footer>

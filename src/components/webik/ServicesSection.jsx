@@ -1,94 +1,97 @@
 import React from 'react';
-import GrainOverlay from './GrainOverlay';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
     num: '01',
-    title: 'The Launchpad',
-    subtitle: 'PREMIUM ONE-PAGE WEBSITE',
-    desc: 'For cafes, clinics, and service providers ready to look legitimate. Stunning, mobile-responsive sites built on enterprise-grade tech — live in 48 hours.',
-    features: [
-      'Built on Bricks (fastest visual builder)',
-      'Mobile-first for the Cebuano market',
-      'Custom design, never templated',
-      'SEO + AEO baked in from day one',
-    ],
+    title: 'Web Design and Development',
+    promise: 'A professionally designed, fast, modern website that converts visitors into leads or customers — and makes you visible on Google and AI tools from day one.',
   },
   {
     num: '02',
-    title: 'The Guardian',
-    subtitle: 'MANDATORY CARE PLAN',
-    desc: "Your digital insurance policy. We don't just host — we protect, patch, and update your site monthly. The thing freelancers never give you.",
-    features: [
-      'Premium cloud hosting + domain management',
-      'Professional business email (info@yourbiz.com)',
-      'Monthly security patches & updates',
-      'Content updates (text/image changes)',
-    ],
+    title: 'Email Marketing Design',
+    promise: 'Professional email designs that get opened, clicked, and acted on — built to represent your brand at every send.',
   },
   {
     num: '03',
-    title: 'A.E.O.',
-    subtitle: 'ANSWER ENGINE OPTIMIZATION',
-    desc: 'We speak the language of AI. Every Webik site includes Schema Markup — code that tells ChatGPT, Siri, and Google exactly who you are and why you matter.',
-    features: [
-      'LocalBusiness schema for Cebu visibility',
-      'FAQ schema for AI answer engines',
-      'Optimized for "Best [X] in Cebu" queries',
-      'Future-proof for the AI search era',
-    ],
+    title: 'Branding and Logo Design',
+    promise: 'A complete brand kit — logo, colors, typography, and usage guidelines — so every touchpoint looks intentional and consistent.',
+  },
+  {
+    num: '04',
+    title: 'SEO and AEO',
+    promise: 'Visibility on Google and AI-powered search tools so the right people find you when they are already looking.',
+  },
+  {
+    num: '05',
+    title: 'Graphic Design',
+    promise: 'On-brand visual assets ready for web, print, and social — built to match the quality of your actual product or service.',
+  },
+  {
+    num: '06',
+    title: 'Website Maintenance',
+    promise: 'Ongoing support so your site stays fast, secure, and up to date — without you having to think about it.',
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="relative bg-[var(--webik-dark)] py-20 lg:py-32 px-6 lg:px-12">
-      <GrainOverlay />
-      <div className="max-w-[1440px] mx-auto relative z-10">
-        <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Services )</span>
-        <h2 className="font-grotesk text-[var(--webik-cream)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4 max-w-[700px]">
-          Built like a <span style={{ color: 'var(--webik-lime)' }}>partnership.</span> Priced like a subscription.
-        </h2>
+    <section
+      id="services"
+      className="py-24 lg:py-36 px-6 lg:px-12"
+      style={{ background: 'var(--webik-cream)' }}
+    >
+      <div className="max-w-[1440px] mx-auto">
+        <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>
+          ( What We Build )
+        </span>
+        <div className="mt-5 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <h2
+            className="font-fraunces italic font-light leading-[1.05] max-w-[640px]"
+            style={{ color: 'var(--webik-dark)', fontSize: 'clamp(28px, 4.5vw, 60px)', letterSpacing: '-0.02em' }}
+          >
+            Everything Your Digital Presence Needs. Under One Roof.
+          </h2>
+          <p className="font-inter text-sm leading-relaxed max-w-[340px]" style={{ color: 'var(--webik-muted)' }}>
+            We do not do cookie-cutter. Every service we offer is scoped around what your business actually needs — not a package you have to fit into.
+          </p>
+        </div>
 
-        {/* Grid with 1px gap borders like Claude */}
-        <div
-          className="grid lg:grid-cols-3 mt-16"
-          style={{ gap: '1px', background: 'rgba(245,243,236,0.12)', border: '1px solid rgba(245,243,236,0.12)' }}
-        >
-          {services.map((svc, i) => (
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-px" style={{ background: 'var(--webik-cream-2)' }}>
+          {services.map((service, i) => (
             <div
               key={i}
-              className="p-8 lg:p-12 transition-colors duration-300 cursor-default"
+              className="p-8 lg:p-10 flex flex-col transition-colors duration-300 group"
               style={{ background: 'var(--webik-dark)' }}
               onMouseEnter={e => e.currentTarget.style.background = 'var(--webik-dark-2)'}
               onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-dark)'}
             >
-              <span className="font-mono text-[11px] tracking-[0.15em]" style={{ color: 'var(--webik-lime)' }}>SERVICE / {svc.num}</span>
+              <span className="font-mono text-[10px] tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>
+                {service.num}
+              </span>
               <h3
-                className="font-grotesk font-light mt-24 lg:mt-28 leading-none tracking-tight"
-                style={{ color: 'var(--webik-cream)', fontSize: 'clamp(32px,3.5vw,44px)', letterSpacing: '-0.03em' }}
+                className="font-fraunces italic font-light text-xl lg:text-2xl mt-4 leading-snug flex-1"
+                style={{ color: 'var(--webik-cream)' }}
               >
-                {svc.title}
+                {service.title}
               </h3>
-              <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.1em] mt-3 mb-6" style={{ color: 'var(--webik-lime)' }}>{svc.subtitle}</p>
-              <p className="font-inter text-sm leading-relaxed mb-6" style={{ color: 'rgba(245,243,236,0.75)' }}>{svc.desc}</p>
-              <ul
-                className="border-t pt-5"
-                style={{ borderColor: 'rgba(245,243,236,0.12)' }}
-              >
-                {svc.features.map((f, fi) => (
-                  <li
-                    key={fi}
-                    className="flex items-start gap-2.5 font-inter text-sm py-2.5 border-b"
-                    style={{ color: 'rgba(245,243,236,0.85)', borderColor: 'rgba(245,243,236,0.12)' }}
-                  >
-                    <span className="shrink-0 font-semibold" style={{ color: 'var(--webik-lime)' }}>+</span>
-                    {f}
-                  </li>
-                ))}
-              </ul>
+              <p className="font-inter text-sm leading-relaxed mt-4" style={{ color: 'rgba(245,243,236,0.55)' }}>
+                {service.promise}
+              </p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-inter font-medium text-sm transition-all duration-400"
+            style={{ background: 'var(--webik-dark)', color: 'var(--webik-cream)' }}
+            onMouseEnter={e => { e.currentTarget.style.background = 'var(--webik-dark-2)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
+            onMouseLeave={e => { e.currentTarget.style.background = 'var(--webik-dark)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+          >
+            See What We Can Do Together
+          </Link>
         </div>
       </div>
     </section>

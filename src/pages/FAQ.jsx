@@ -76,11 +76,11 @@ function FAQItem({ faq, defaultOpen }) {
           {faq.q}
         </span>
         <span
-          className={`shrink-0 w-7 h-7 rounded-full border border-[var(--webik-dark)]/20 flex items-center justify-center transition-all duration-400 font-mono text-lg leading-none ${open ? 'rotate-45 bg-[var(--webik-dark)]' : ''}`}
+          className={`shrink-0 w-7 h-7 rounded-full border border-[var(--webik-dark)]/20 flex items-center justify-center transition-all duration-300 font-mono text-lg leading-none ${open ? 'rotate-45 bg-[var(--webik-dark)]' : ''}`}
           style={{ color: open ? 'var(--webik-cream)' : 'var(--webik-dark)' }}
         >+</span>
       </button>
-      <div className={`overflow-hidden transition-all duration-400 ${open ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+      <div className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
         <p className="text-[var(--webik-muted)] font-inter text-sm lg:text-base leading-relaxed pr-12">{faq.a}</p>
       </div>
     </div>
@@ -101,12 +101,8 @@ export default function FAQ() {
       <AnnouncementBar />
       <StickyNav />
 
-      {/* Hero */}
       <section className="relative py-24 lg:py-36 px-6 lg:px-12 overflow-hidden" style={{ background: 'var(--webik-dark)' }}>
         <GrainOverlay />
-        <div className="absolute right-[-5vw] top-[20%] h-full w-[55vw] select-none pointer-events-none" aria-hidden="true" style={{ opacity: 0.1 }}>
-          <img src="https://media.base44.com/images/public/69ecce3288377cd246349884/848d53c15_Group5.png" alt="" className="w-full h-full object-contain object-right" style={{ filter: 'invert(1)' }} />
-        </div>
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( FAQ )</span>
           <h1
@@ -121,11 +117,9 @@ export default function FAQ() {
         </div>
       </section>
 
-      {/* FAQ categories */}
       <section className="py-20 lg:py-28 px-6 lg:px-12" style={{ background: 'var(--webik-cream)' }}>
         <div className="max-w-[1440px] mx-auto">
           <div className="grid lg:grid-cols-4 gap-12 lg:gap-16">
-            {/* Sticky sidebar */}
             <div className="hidden lg:block">
               <div className="sticky top-28 space-y-2">
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] mb-4" style={{ color: 'var(--webik-muted)' }}>Jump to</p>
@@ -144,7 +138,6 @@ export default function FAQ() {
               </div>
             </div>
 
-            {/* FAQ list */}
             <div className="lg:col-span-3 space-y-16">
               {faqCategories.map((cat, ci) => (
                 <div key={ci} id={`cat-${ci}`}>
