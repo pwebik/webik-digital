@@ -4,6 +4,7 @@ import AnnouncementBar from '../components/webik/AnnouncementBar';
 import StickyNav from '../components/webik/StickyNav';
 import Footer from '../components/webik/Footer';
 import GrainOverlay from '../components/webik/GrainOverlay';
+import HeroBackground from '../components/webik/HeroBackground';
 
 const portfolioItems = [
   {
@@ -69,7 +70,7 @@ export default function Work() {
       {/* Hero */}
       <section className="relative bg-[var(--webik-dark)] pt-24 pb-20 lg:pt-32 lg:pb-28 px-6 lg:px-12 overflow-hidden">
         <GrainOverlay />
-        <div className="absolute inset-0 pointer-events-none z-[2]" style={{ background: 'radial-gradient(circle at 80% 40%, rgba(200,240,72,0.08), transparent 55%)' }} />
+        <HeroBackground />
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Work )</span>
           <h1

@@ -4,6 +4,7 @@ import AnnouncementBar from '../components/webik/AnnouncementBar';
 import StickyNav from '../components/webik/StickyNav';
 import Footer from '../components/webik/Footer';
 import GrainOverlay from '../components/webik/GrainOverlay';
+import HeroBackground from '../components/webik/HeroBackground';
 import { blogPosts } from '../lib/blogData';
 
 const blogImages = [
@@ -30,6 +31,7 @@ export default function Blog() {
       {/* Hero */}
       <section className="relative py-24 lg:py-36 px-6 lg:px-12 overflow-hidden" style={{ background: 'var(--webik-dark)' }}>
         <GrainOverlay />
+        <HeroBackground />
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Blog )</span>
           <h1

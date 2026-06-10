@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Images matched per service: Web Design, Email Marketing, Branding, SEO, Graphic Design, Maintenance
+// Images matched per service: Web Design, Email Marketing, Branding, SEO/AEO, Graphic Design, Maintenance
 const serviceImages = [
   'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80',
   'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&q=80',
   'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80',
-  'https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=800&q=80',
+  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
   'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80',
-  'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80',
+  'https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?w=800&q=80',
 ];
 
 

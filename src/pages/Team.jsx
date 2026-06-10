@@ -3,6 +3,7 @@ import AnnouncementBar from '../components/webik/AnnouncementBar';
 import StickyNav from '../components/webik/StickyNav';
 import Footer from '../components/webik/Footer';
 import GrainOverlay from '../components/webik/GrainOverlay';
+import HeroBackground from '../components/webik/HeroBackground';
 import FinalCTA from '../components/webik/FinalCTA';
 
 const members = [
@@ -51,6 +52,16 @@ const members = [
     ],
   },
   {
+    name: 'Allaiah Divina',
+    role: 'CHIEF MARKETING OFFICER',
+    workingStyle: 'Strategic, energetic, and audience-driven.',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/343467812_generated_68f653e7.png',
+    bio: [
+      'Allaiah leads marketing strategy at Webik Corp, bringing a deep understanding of digital consumer behaviour, brand positioning, and campaign execution. Her work ensures that every client-facing message — from social to email to content — is purposeful, consistent, and built to move people to action.',
+      'She brings a data-informed creative instinct to everything she touches, and her ability to bridge the gap between strategy and execution makes her an essential part of how Webik Corp grows — and how our clients grow with us.',
+    ],
+  },
+  {
     name: 'Xavier Gonzales',
     role: 'HEAD OF WEB DEVELOPMENT',
     workingStyle: 'Precise, methodical, and quietly brilliant.',
@@ -90,6 +101,7 @@ export default function Team() {
       {/* Hero */}
       <section className="relative py-24 lg:py-36 px-6 lg:px-12 overflow-hidden" style={{ background: 'var(--webik-dark)' }}>
         <GrainOverlay />
+        <HeroBackground />
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( The Team )</span>
           <h1

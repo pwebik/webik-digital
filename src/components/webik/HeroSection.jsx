@@ -97,7 +97,7 @@ export default function HeroSection() {
               See What We Can Do Together
             </Link>
             <Link
-              to="/portfolio"
+              to="/work"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-inter font-medium text-sm transition-all duration-400"
               style={{ background: 'transparent', color: 'var(--webik-cream)', border: '1px solid rgba(245,243,236,0.2)' }}
               onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,243,236,0.5)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}

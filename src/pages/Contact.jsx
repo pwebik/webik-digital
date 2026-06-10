@@ -4,6 +4,7 @@ import AnnouncementBar from '../components/webik/AnnouncementBar';
 import StickyNav from '../components/webik/StickyNav';
 import Footer from '../components/webik/Footer';
 import GrainOverlay from '../components/webik/GrainOverlay';
+import HeroBackground from '../components/webik/HeroBackground';
 import { base44 } from '@/api/base44Client';
 import { Link } from 'react-router-dom';
 
@@ -62,12 +63,12 @@ export default function Contact() {
       {/* Hero */}
       <section className="relative bg-[var(--webik-dark)] pt-24 pb-20 lg:pt-32 lg:pb-28 px-6 lg:px-12 overflow-hidden">
         <GrainOverlay />
-        <div className="absolute inset-0 pointer-events-none z-[2]" style={{ background: 'radial-gradient(circle at 20% 60%, rgba(200,240,72,0.09), transparent 50%)' }} />
+        <HeroBackground />
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Contact )</span>
           <h1
-            className="font-fraunces italic font-light leading-[1.0] mt-6 tracking-tight"
-            style={{ color: 'var(--webik-cream)', fontSize: 'clamp(42px, 7vw, 110px)', letterSpacing: '-0.02em' }}
+            className="font-grotesk font-light leading-[1.0] mt-6 tracking-tight"
+            style={{ color: 'var(--webik-cream)', fontSize: 'clamp(42px, 7vw, 110px)', letterSpacing: '-0.04em' }}
           >
             Let's Figure Out What You Need.
           </h1>
@@ -86,7 +87,7 @@ export default function Contact() {
               See What We Can Do Together
               <ArrowUpRight size={16} />
             </Link>
-            <p className="mt-3 font-fraunces italic text-sm" style={{ color: 'rgba(245,243,236,0.4)' }}>Book a free discovery call — no pitch, no pressure.</p>
+            <p className="mt-3 font-inter italic text-sm" style={{ color: 'rgba(245,243,236,0.4)' }}>Book a free discovery call — no pitch, no pressure.</p>
           </div>
         </div>
       </section>
@@ -120,7 +121,7 @@ export default function Contact() {
 
             {/* Right form */}
             <div className="lg:col-span-3">
-              <h2 className="font-fraunces italic font-light text-2xl lg:text-3xl mb-2" style={{ color: 'var(--webik-dark)' }}>Or Send Us a Message</h2>
+              <h2 className="font-grotesk font-light text-2xl lg:text-3xl mb-2" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>Or Send Us a Message</h2>
               <p className="font-inter text-sm mb-8" style={{ color: 'var(--webik-muted)' }}>Prefer to write it out first? Fill in the form below and we will come back to you within one business day.</p>
 
               {submitted ? (
@@ -128,12 +129,12 @@ export default function Contact() {
                   <div className="inline-flex items-center px-5 py-2 rounded-full mb-8" style={{ background: 'rgba(200,240,72,0.15)', border: '1px solid rgba(200,240,72,0.3)' }}>
                     <span className="font-mono text-xs uppercase tracking-[0.15em]" style={{ color: 'var(--webik-lime)' }}>Sent ✓</span>
                   </div>
-                  <h3 className="font-fraunces italic font-light text-3xl lg:text-4xl" style={{ color: 'var(--webik-dark)' }}>We got your message.</h3>
+                  <h3 className="font-grotesk font-light text-3xl lg:text-4xl" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>We got your message.</h3>
                   <p className="mt-4 font-inter text-base leading-relaxed" style={{ color: 'var(--webik-muted)', maxWidth: 420 }}>
                     Expect a reply within one business day. In the meantime, feel free to browse our work.
                   </p>
-                  <Link to="/portfolio" className="mt-8 inline-flex items-center gap-2 font-inter text-sm font-medium text-[var(--webik-dark)] underline underline-offset-4 hover:text-[var(--webik-muted)] transition-colors">
-                    See our portfolio →
+                  <Link to="/work" className="mt-8 inline-flex items-center gap-2 font-inter text-sm font-medium text-[var(--webik-dark)] underline underline-offset-4 hover:text-[var(--webik-muted)] transition-colors">
+                    See our work →
                   </Link>
                 </div>
               ) : (
@@ -206,7 +207,7 @@ export default function Contact() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
             <div>
               <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( What Happens Next )</span>
-              <h2 className="font-fraunces italic font-light text-3xl lg:text-4xl mt-4" style={{ color: 'var(--webik-dark)' }}>No Surprises. Here Is Exactly What to Expect.</h2>
+              <h2 className="font-grotesk font-light text-3xl lg:text-4xl mt-4" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>No Surprises. Here Is Exactly What to Expect.</h2>
               <div className="mt-10 space-y-6">
                 {nextSteps.map((step, i) => (
                   <div key={i} className="flex items-start gap-5">
@@ -221,7 +222,7 @@ export default function Contact() {
 
             <div>
               <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( A Few Things Worth Knowing )</span>
-              <h2 className="font-fraunces italic font-light text-3xl lg:text-4xl mt-4 mb-8" style={{ color: 'var(--webik-dark)' }}>Worth reading before you reach out.</h2>
+              <h2 className="font-grotesk font-light text-3xl lg:text-4xl mt-4 mb-8" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>Worth reading before you reach out.</h2>
               <div className="space-y-6">
                 {[
                   'We do not publish our pricing publicly — not because we are hiding anything, but because every project is different. The call is where we figure out what makes sense for your situation.',

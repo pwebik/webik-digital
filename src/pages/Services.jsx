@@ -2,6 +2,7 @@ import React from 'react';
 import StickyNav from '@/components/webik/StickyNav';
 import Footer from '@/components/webik/Footer';
 import GrainOverlay from '@/components/webik/GrainOverlay';
+import HeroBackground from '@/components/webik/HeroBackground';
 import FinalCTA from '@/components/webik/FinalCTA';
 
 const services = [
@@ -62,10 +63,9 @@ const services = [
 ];
 
 const process = [
-  { num: '01', title: 'Discovery Call', duration: '15 min', desc: 'Free, no-pressure call to understand your business, goals, and timeline.' },
-  { num: '02', title: 'Design', duration: '24–48 hrs', desc: 'We create your design mockup based on your brand and audience. You review and approve.' },
-  { num: '03', title: 'Build', duration: '48 hrs', desc: 'Your site goes live. Built fast, built right, built to rank in AI search.' },
-  { num: '04', title: 'Guardian Begins', duration: 'Ongoing', desc: 'Monthly care, hosting, updates, and support. Your site stays healthy indefinitely.' },
+  { num: '01', title: 'Discovery Call', desc: 'We learn about your business, your goals, and what success looks like for you. No pitch. Just a real conversation.' },
+  { num: '02', title: 'Design and Build', desc: 'You stay informed at every stage. Clear proposals, no surprises, and revisions until it is right.' },
+  { num: '03', title: 'Launch and Stay', desc: 'Your new digital home goes live. And we do not disappear after this — we stay in as your ongoing digital team.' },
 ];
 
 export default function Services() {
@@ -76,9 +76,7 @@ export default function Services() {
       {/* Hero */}
       <section className="relative py-24 lg:py-36 px-6 lg:px-12 overflow-hidden" style={{ background: 'var(--webik-dark)' }}>
         <GrainOverlay />
-        <div className="absolute right-[-5vw] top-[20%] h-full w-[55vw] select-none pointer-events-none" aria-hidden="true" style={{ opacity: 0.12 }}>
-          <img src="https://media.base44.com/images/public/69ecce3288377cd246349884/848d53c15_Group5.png" alt="" className="w-full h-full object-contain object-right" style={{ filter: 'invert(1)' }} />
-        </div>
+        <HeroBackground />
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Services )</span>
           <h1
@@ -143,18 +141,19 @@ export default function Services() {
           <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
             From first call to live site — in <span style={{ color: 'var(--webik-lime)' }}>days,</span> not months.
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px mt-14" style={{ background: 'var(--webik-cream-2)' }}>
+          <div className="grid sm:grid-cols-3 gap-px mt-14" style={{ background: 'rgba(14,26,10,0.08)' }}>
             {process.map((step, i) => (
               <div
                 key={i}
-                className="p-8 transition-colors duration-300"
-                style={{ background: 'var(--webik-cream)' }}
-                onMouseEnter={e => e.currentTarget.style.background = 'var(--webik-cream-2)'}
-                onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-cream)'}
+                className="p-7 lg:p-10 group transition-colors duration-300"
+                style={{ background: 'var(--webik-cream-2)' }}
+                onMouseEnter={e => e.currentTarget.style.background = 'var(--webik-cream)'}
+                onMouseLeave={e => e.currentTarget.style.background = 'var(--webik-cream-2)'}
               >
-                <span className="font-grotesk font-light text-5xl" style={{ color: 'var(--webik-lime)' }}>{step.num}</span>
-                <h3 className="font-inter font-semibold text-base mt-6" style={{ color: 'var(--webik-dark)' }}>{step.title}</h3>
-                <p className="font-mono text-[10px] uppercase tracking-[0.15em] mt-1" style={{ color: 'var(--webik-muted)' }}>{step.duration}</p>
+                <div className="w-9 h-9 rounded-full flex items-center justify-center mb-5" style={{ background: 'var(--webik-dark)' }}>
+                  <span className="font-mono text-[11px] font-semibold" style={{ color: 'var(--webik-lime)' }}>{step.num}</span>
+                </div>
+                <h3 className="font-grotesk font-medium text-xl leading-snug" style={{ color: 'var(--webik-dark)' }}>{step.title}</h3>
                 <p className="font-inter text-sm leading-relaxed mt-3" style={{ color: 'var(--webik-muted)' }}>{step.desc}</p>
               </div>
             ))}

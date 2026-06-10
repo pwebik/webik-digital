@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import GrainOverlay from './GrainOverlay';
+import RotatingGlobe from './RotatingGlobe';
 
 export default function FinalCTA() {
   return (
@@ -13,6 +14,14 @@ export default function FinalCTA() {
         className="absolute inset-0 pointer-events-none z-[2]"
         style={{ background: 'radial-gradient(circle at 50% 60%, rgba(200,240,72,0.1), transparent 55%)' }}
       />
+      {/* Rotating globe — right side */}
+      <div className="absolute right-[-80px] top-1/2 -translate-y-1/2 pointer-events-none z-[1]">
+        <RotatingGlobe size={380} opacity={0.22} />
+      </div>
+      {/* Rotating globe — left side (mirrored, subtler) */}
+      <div className="absolute left-[-100px] top-1/2 -translate-y-1/2 pointer-events-none z-[1]">
+        <RotatingGlobe size={280} opacity={0.1} />
+      </div>
       <div className="max-w-[760px] mx-auto relative z-10">
         <h2
           className="font-grotesk font-light leading-[1.05]"
