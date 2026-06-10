@@ -59,7 +59,7 @@ export default function Footer() {
               {[
                 { label: 'About', to: '/about' },
                 { label: 'Team', to: '/team' },
-                { label: 'Portfolio', to: '/portfolio' },
+                { label: 'Work', to: '/work' },
                 { label: 'Blog', to: '/blog' },
                 { label: 'Contact', to: '/contact' },
               ].map(l => (

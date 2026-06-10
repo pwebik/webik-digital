@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Images matched per service: Web Design, Email Marketing, Branding, SEO, Graphic Design, Maintenance
 const serviceImages = [
-'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=75',
-'https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=600&q=75',
-'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=75',
-'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=75',
-'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=75',
-'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&q=75'];
+  'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80',
+  'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&q=80',
+  'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80',
+  'https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=800&q=80',
+  'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80',
+  'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80',
+];
 
 
 const services = [
@@ -76,10 +78,11 @@ export default function ServicesSection() {
             onMouseLeave={(e) => e.currentTarget.style.background = 'var(--webik-cream)'}>
             
               <div className="aspect-[3/2] overflow-hidden">
-                <img src="https://media.base44.com/images/public/69ecce3288377cd246349884/04413f1f7_Biosys-mockup-1536x1062.png"
-
-              alt={service.title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90" />
+                <img
+                  src={serviceImages[i]}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90"
+                />
               
               </div>
               <div className="p-8 lg:p-10 flex flex-col flex-1">

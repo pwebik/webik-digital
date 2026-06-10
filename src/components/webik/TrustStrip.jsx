@@ -24,7 +24,7 @@ export default function TrustStrip() {
               }}
             >
               <span
-                className="font-fraunces italic font-light"
+                className="font-grotesk font-light"
                 style={{ color: 'var(--webik-lime)', fontSize: 'clamp(22px, 3.5vw, 36px)' }}
               >
                 {stat.number}

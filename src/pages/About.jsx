@@ -53,7 +53,7 @@ export default function About() {
                 className="py-10 px-6 lg:px-10 flex flex-col"
                 style={{ borderRight: i < 3 ? '1px solid rgba(14,26,10,0.15)' : 'none' }}
               >
-                <span className="font-fraunces font-light text-5xl lg:text-6xl leading-none" style={{ color: 'var(--webik-dark)' }}>
+                <span className="font-grotesk font-light text-5xl lg:text-6xl leading-none" style={{ color: 'var(--webik-dark)' }}>
                   {stat.number}
                 </span>
                 <span className="mt-2 font-inter text-sm uppercase tracking-wider" style={{ color: 'rgba(14,26,10,0.65)' }}>{stat.label}</span>

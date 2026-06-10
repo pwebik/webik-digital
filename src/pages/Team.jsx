@@ -50,6 +50,26 @@ const members = [
       'He brings that understanding into every client conversation at Webik Corp — not to sell a package, but to be a strategic partner in their growth. Alfred holds the Google AI Professional Certificate and the Google Digital Marketing and E-commerce Professional Certificate.',
     ],
   },
+  {
+    name: 'Xavier Gonzales',
+    role: 'HEAD OF WEB DEVELOPMENT',
+    workingStyle: 'Precise, methodical, and quietly brilliant.',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/8e9f72288_IMG_0557.jpg',
+    bio: [
+      'Xavier is the engineer behind every Webik build. He brings a depth of technical knowledge that ensures every site is not just beautiful but structurally sound — fast, secure, and built to last. His work spans front-end and back-end development, with a particular focus on performance optimization and clean, maintainable code.',
+      'What sets Xavier apart is his ability to take a creative vision and execute it without compromise. He translates design into reality with precision, and his attention to technical detail means clients rarely encounter issues after launch.',
+    ],
+  },
+  {
+    name: 'Julius Parungao',
+    role: 'CREATIVE DIRECTOR',
+    workingStyle: 'Visually sharp, thoughtful, and concept-driven.',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/3ff4696ea_IMG_0563.jpg',
+    bio: [
+      'Julius leads the creative direction at Webik Corp. He is the person responsible for ensuring that every design decision serves both the brand and the user — that the work looks right, feels right, and actually performs. His background spans branding, UI/UX, and digital identity systems built for businesses at various stages of growth.',
+      'He approaches each project as a storytelling challenge: what does this brand need to communicate, and how do we communicate it in a way that earns attention and trust? The results speak for themselves — every Webik site carries a visual standard that consistently exceeds what clients expect.',
+    ],
+  },
 ];
 
 const pageVars = {
@@ -73,8 +93,8 @@ export default function Team() {
         <div className="max-w-[1440px] mx-auto relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( The Team )</span>
           <h1
-            className="font-fraunces italic font-light leading-[1.0] tracking-tight mt-6"
-            style={{ color: 'var(--webik-cream)', fontSize: 'clamp(42px, 7vw, 110px)', letterSpacing: '-0.02em' }}
+            className="font-grotesk font-light leading-[1.0] tracking-tight mt-6"
+            style={{ color: 'var(--webik-cream)', fontSize: 'clamp(42px, 7vw, 110px)', letterSpacing: '-0.04em' }}
           >
             Senior Experience.{' '}
             <span style={{ color: 'var(--webik-lime)' }}>Real Partnership.</span>{' '}
@@ -97,7 +117,7 @@ export default function Team() {
                     <img src={m.image} alt={m.name} className="w-full h-full object-cover" style={{ filter: 'grayscale(20%)' }} />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
-                      <span className="font-fraunces italic text-8xl font-light" style={{ color: 'rgba(200,240,72,0.15)' }}>
+                      <span className="font-grotesk text-8xl font-light" style={{ color: 'rgba(200,240,72,0.15)' }}>
                         {m.name.split(' ')[0][0]}
                       </span>
                     </div>
@@ -105,13 +125,13 @@ export default function Team() {
                 </div>
                 <div className="mt-5 p-4 rounded-xl" style={{ background: 'var(--webik-dark)' }}>
                   <p className="font-mono text-[10px] uppercase tracking-[0.15em] mb-1" style={{ color: 'var(--webik-lime)' }}>Working Style</p>
-                  <p className="font-fraunces italic text-sm" style={{ color: 'rgba(245,243,236,0.8)' }}>{m.workingStyle}</p>
+                  <p className="font-inter italic text-sm" style={{ color: 'rgba(245,243,236,0.8)' }}>{m.workingStyle}</p>
                 </div>
               </div>
 
               <div className="lg:col-span-2">
                 <span className="font-mono text-[10px] uppercase tracking-[0.15em]" style={{ color: 'var(--webik-muted)' }}>{m.role}</span>
-                <h2 className="font-fraunces italic font-light text-3xl lg:text-4xl mt-3 leading-tight" style={{ color: 'var(--webik-dark)' }}>
+                <h2 className="font-grotesk font-light text-3xl lg:text-4xl mt-3 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>
                   {m.name}
                 </h2>
                 <div className="mt-6 space-y-4">
@@ -125,24 +145,7 @@ export default function Team() {
             </div>
           ))}
 
-          {/* Coming soon */}
-          <div className="grid lg:grid-cols-3 gap-12 lg:gap-20 items-start">
-            <div className="lg:col-span-1">
-              <div className="aspect-[3/4] rounded-2xl flex flex-col items-center justify-center" style={{ background: 'var(--webik-dark-2)', border: '1px solid rgba(200,240,72,0.12)' }}>
-                <span className="font-mono text-[10px] uppercase tracking-[0.2em] mb-3" style={{ color: 'var(--webik-lime)' }}>Coming Soon</span>
-                <div className="w-8 h-px" style={{ background: 'var(--webik-lime)' }} />
-              </div>
-            </div>
-            <div className="lg:col-span-2">
-              <span className="font-mono text-[10px] uppercase tracking-[0.15em]" style={{ color: 'var(--webik-muted)' }}>TEAM MEMBER 5</span>
-              <h2 className="font-fraunces italic font-light text-3xl lg:text-4xl mt-3 leading-tight" style={{ color: 'var(--webik-dark)' }}>
-                We Are Still Growing.
-              </h2>
-              <p className="mt-4 font-inter text-base leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
-                Webik Corp is a team in progress. The fifth seat is reserved for someone who brings the same commitment, senior experience, and long-game thinking that defines everyone here. Watch this space.
-              </p>
-            </div>
-          </div>
+
         </div>
       </section>
 

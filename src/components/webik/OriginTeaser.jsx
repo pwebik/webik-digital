@@ -53,9 +53,7 @@ export default function OriginTeaser() {
             className="w-full h-full object-cover opacity-70"
           />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(14,26,10,0.6), transparent)' }} />
-          <p className="absolute bottom-5 left-5 font-mono text-[10px] uppercase tracking-[0.15em]" style={{ color: 'rgba(200,240,72,0.5)' }}>
-            Replace with your own photo
-          </p>
+
         </div>
       </div>
     </section>
