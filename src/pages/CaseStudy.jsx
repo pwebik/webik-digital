@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { caseStudies, getNextProject } from '@/lib/caseStudyData';
-import CaseStudyNav from '@/components/webik/CaseStudyNav';
+import StickyNav from '@/components/webik/StickyNav';
+import AnnouncementBar from '@/components/webik/AnnouncementBar';
 import Footer from '@/components/webik/Footer';
 import GrainOverlay from '@/components/webik/GrainOverlay';
 import ColorSwatch from '@/components/webik/ColorSwatch';
@@ -94,8 +95,9 @@ export default function CaseStudy() {
         .cs-reveal-delay-3 { transition-delay: 0.3s; }
       `}</style>
 
-      <div style={{ background: 'var(--webik-dark)' }}>
-        <CaseStudyNav />
+      <div style={{ background: 'var(--webik-dark)', '--webik-lime': '#C8F048', '--webik-dark': '#0E1A0A', '--webik-dark-2': '#15240F', '--webik-cream': '#F5F3EC', '--webik-cream-2': '#EBE8DD', '--webik-muted': '#6B7560' }}>
+        <AnnouncementBar />
+        <StickyNav />
 
         {/* ── SECTION 1: HERO ── */}
         <section className="relative overflow-hidden pt-20 pb-28 lg:pt-28 lg:pb-40 px-6 lg:px-12" style={{ background: 'var(--webik-dark)' }}>

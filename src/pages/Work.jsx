@@ -77,7 +77,7 @@ export default function Work() {
             className="font-grotesk font-light leading-[0.95] mt-4 tracking-tight"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(44px, 8vw, 112px)', letterSpacing: '-0.04em' }}
           >
-            Real clients.<br /><em className="font-fraunces italic" style={{ color: 'var(--webik-lime)' }}>Real results.</em>
+            Real clients.<br /><em className="font-grotesk italic" style={{ color: 'var(--webik-lime)' }}>Real results.</em>
           </h1>
           <p className="mt-6 font-inter text-base lg:text-lg leading-relaxed max-w-[520px]" style={{ color: 'rgba(245,243,236,0.6)' }}>
             Every project is a partnership. Here's what we've shipped so far.
@@ -156,7 +156,7 @@ export default function Work() {
             className="font-grotesk font-light leading-tight tracking-tight"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(32px, 5vw, 72px)', letterSpacing: '-0.03em' }}
           >
-            Want your project <em className="font-fraunces italic" style={{ color: 'var(--webik-lime)' }}>here?</em>
+            Want your project <em className="font-grotesk italic" style={{ color: 'var(--webik-lime)' }}>here?</em>
           </h2>
           <p className="mt-5 font-inter text-base leading-relaxed" style={{ color: 'rgba(245,243,236,0.6)', maxWidth: 440, margin: '20px auto 0' }}>
             We're accepting new clients. Let's talk about what we can build together.

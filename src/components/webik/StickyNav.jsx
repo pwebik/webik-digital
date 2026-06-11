@@ -1,12 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
+const workItems = [
+  { label: 'Imitation Book', slug: 'imitation-book', tag: 'E-Commerce' },
+  { label: 'BitLyft Cybersecurity', slug: 'bitlyft', tag: 'Tech' },
+  { label: 'Biosis Designs', slug: 'biosis-designs', tag: 'Industrial' },
+  { label: 'The Genesis Company', slug: 'the-genesis-company', tag: 'Business' },
+  { label: 'Go Relocation PH', slug: 'go-relocation-ph', tag: 'Services' },
+];
 
 const navLinks = [
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Team', href: '/team' },
-  { label: 'Work', href: '/work' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -14,6 +21,9 @@ const navLinks = [
 export default function StickyNav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [workOpen, setWorkOpen] = useState(false);
+  const [mobileWorkOpen, setMobileWorkOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40);
@@ -25,6 +35,16 @@ export default function StickyNav() {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setWorkOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
+  }, []);
 
   return (
     <>
@@ -41,6 +61,48 @@ export default function StickyNav() {
 
           {/* Desktop links */}
           <div className="hidden lg:flex items-center gap-7">
+            {/* Work dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setWorkOpen(v => !v)}
+                className="flex items-center gap-1 text-[var(--webik-muted)] hover:text-[var(--webik-dark)] text-sm font-inter font-medium transition-colors"
+              >
+                Work
+                <ChevronDown size={14} className={`transition-transform duration-200 ${workOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {workOpen && (
+                <div
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 rounded-2xl overflow-hidden shadow-xl z-50"
+                  style={{ background: 'var(--webik-dark)', border: '1px solid rgba(245,243,236,0.1)' }}
+                >
+                  <Link
+                    to="/work"
+                    onClick={() => setWorkOpen(false)}
+                    className="flex items-center justify-between px-5 py-3.5 border-b font-inter text-sm transition-colors"
+                    style={{ color: 'var(--webik-lime)', borderColor: 'rgba(245,243,236,0.08)' }}
+                    onMouseEnter={e => e.currentTarget.style.background = 'rgba(245,243,236,0.05)'}
+                    onMouseLeave={e => e.currentTarget.style.background = ''}
+                  >
+                    All Projects
+                    <span className="font-mono text-[10px]" style={{ color: 'var(--webik-muted)' }}>→</span>
+                  </Link>
+                  {workItems.map(item => (
+                    <Link
+                      key={item.slug}
+                      to={`/work/${item.slug}`}
+                      onClick={() => setWorkOpen(false)}
+                      className="flex items-center justify-between px-5 py-3.5 font-inter text-sm transition-colors"
+                      style={{ color: 'rgba(245,243,236,0.85)' }}
+                      onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245,243,236,0.05)'; e.currentTarget.style.color = 'var(--webik-cream)'; }}
+                      onMouseLeave={e => { e.currentTarget.style.background = ''; e.currentTarget.style.color = 'rgba(245,243,236,0.85)'; }}
+                    >
+                      {item.label}
+                      <span className="font-mono text-[9px] px-2 py-0.5 rounded-full" style={{ background: 'rgba(200,240,72,0.12)', color: 'var(--webik-lime)' }}>{item.tag}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
             {navLinks.map(link => (
               <Link
                 key={link.href}
@@ -95,6 +157,42 @@ export default function StickyNav() {
           >
             Home
           </Link>
+          {/* Work expandable */}
+          <div className="w-full text-center">
+            <button
+              onClick={() => setMobileWorkOpen(v => !v)}
+              className="font-grotesk font-light text-5xl sm:text-6xl leading-tight flex items-center gap-3 mx-auto transition-colors"
+              style={{ color: 'var(--webik-cream)' }}
+              onMouseEnter={e => e.currentTarget.style.color = 'var(--webik-lime)'}
+              onMouseLeave={e => e.currentTarget.style.color = mobileWorkOpen ? 'var(--webik-lime)' : 'var(--webik-cream)'}
+            >
+              Work
+              <ChevronDown size={28} className={`transition-transform duration-200 ${mobileWorkOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {mobileWorkOpen && (
+              <div className="mt-4 space-y-2">
+                <Link
+                  to="/work"
+                  onClick={() => setMobileOpen(false)}
+                  className="block font-inter text-base py-2 transition-colors"
+                  style={{ color: 'var(--webik-lime)' }}
+                >
+                  All Projects
+                </Link>
+                {workItems.map(item => (
+                  <Link
+                    key={item.slug}
+                    to={`/work/${item.slug}`}
+                    onClick={() => setMobileOpen(false)}
+                    className="block font-inter text-base py-2 transition-colors"
+                    style={{ color: 'rgba(245,243,236,0.7)' }}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
           {navLinks.map((link, i) => (
             <Link
               key={link.href}
