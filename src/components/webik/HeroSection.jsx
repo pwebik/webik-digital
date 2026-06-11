@@ -69,11 +69,11 @@ export default function HeroSection() {
             className="font-grotesk font-light leading-[1.0] tracking-tight"
             style={{
               color: 'var(--webik-cream)',
-              fontSize: 'clamp(48px, 8.5vw, 128px)',
+              fontSize: 'clamp(48px, 7vw, 108px)',
               letterSpacing: '-0.04em',
             }}
           >
-            Your Digital Team,<br />Not Just Your Agency.
+            Your Digital Team,<br />Not Just<br />Your Agency.
           </h1>
 
           {/* Subhead */}
