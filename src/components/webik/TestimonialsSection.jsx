@@ -46,11 +46,11 @@ export default function TestimonialsSection() {
               className="font-grotesk font-light text-lg lg:text-xl leading-relaxed"
               style={{ color: 'var(--webik-cream)' }}
             >
-              "Working with Webik was a seamless experience from start to finish. They really took the time to understand our brand and delivered something we are genuinely proud to show clients."
+              "Working with Pryce was a seamless experience from start to finish. He really took the time to understand our brand and delivered something we are genuinely proud to show clients."
             </p>
             <div className="mt-8 pt-6 border-t" style={{ borderColor: 'rgba(245,243,236,0.08)' }}>
               <p className="font-inter font-medium text-sm" style={{ color: 'var(--webik-cream)' }}>Lewis Normoyle</p>
-              <p className="font-mono text-[10px] uppercase tracking-[0.15em] mt-1" style={{ color: 'var(--webik-lime)' }}>Business Owner</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.15em] mt-1" style={{ color: 'var(--webik-lime)' }}>Chief of Operations, LearnPac Systems Inc.</p>
             </div>
           </div>
         </div>
