@@ -102,7 +102,7 @@ export const caseStudies = {
       { name: 'Black', hex: '#000000', rgb: 'R0 G0 B0' },
       { name: 'White', hex: '#FFFFFF', rgb: 'R255 G255 B255' },
     ],
-    techStack: ['WordPress', 'Bricks Builder', 'Custom Development', 'GitHub Deployment', 'SEO + AEO Schema', 'Performance-Tuned'],
+    techStack: ['HubSpot CMS', 'HubSpot CRM Integration', 'Custom Development', 'GitHub Deployment', 'SEO + AEO Schema', 'Performance-Tuned'],
     quote: null,
   },
 
@@ -156,7 +156,7 @@ export const caseStudies = {
       { name: 'Eerie Black', hex: '#1E1E1E', rgb: 'R30 G30 B30' },
       { name: 'Dark Gray', hex: '#A3A3A3', rgb: 'R163 G163 B163' },
     ],
-    techStack: ['WordPress', 'Bricks Builder', 'Custom Animations', 'GitHub Deployment', 'SEO + AEO Schema'],
+    techStack: ['WordPress', 'Elementor Pro', 'Custom Animations', 'GitHub Deployment', 'SEO + AEO Schema'],
     quote: null,
   },
 
@@ -211,7 +211,7 @@ export const caseStudies = {
       { name: 'White', hex: '#FFFFFF', rgb: 'R255 G255 B255' },
       { name: 'Black', hex: '#000000', rgb: 'R0 G0 B0' },
     ],
-    techStack: ['WordPress', 'Bricks Builder', 'Custom Animations', 'GitHub Deployment', 'SEO + AEO Schema'],
+    techStack: ['WordPress', 'Elementor Pro', 'Custom Animations', 'GitHub Deployment', 'SEO + AEO Schema'],
     quote: {
       text: 'Working with Pryce on our website was a fantastic experience. He was very responsive, professional, and quick to turn things around without sacrificing quality. Pryce took the time to understand our needs, offered thoughtful options, and made the entire process smooth and stress-free.',
       author: 'Tiana Emery',
