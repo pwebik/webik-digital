@@ -70,10 +70,12 @@ export default function StickyNav() {
                 Work
                 <ChevronDown size={14} className={`transition-transform duration-200 ${workOpen ? 'rotate-180' : ''}`} />
               </Link>
+              {/* Invisible bridge to prevent gap from closing dropdown */}
+              <div className="absolute top-full left-0 w-full h-3" />
               {workOpen && (
                 <div
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 rounded-2xl overflow-hidden shadow-xl z-50"
-                  style={{ background: 'var(--webik-dark)', border: '1px solid rgba(245,243,236,0.1)' }}
+                  className="absolute top-full left-1/2 -translate-x-1/2 w-64 rounded-2xl overflow-hidden shadow-xl z-50"
+                  style={{ marginTop: '8px', background: 'var(--webik-dark)', border: '1px solid rgba(245,243,236,0.1)' }}
                 >
                   <Link
                     to="/work"
