@@ -62,14 +62,14 @@ export default function StickyNav() {
           {/* Desktop links */}
           <div className="hidden lg:flex items-center gap-7">
             {/* Work dropdown */}
-            <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={() => setWorkOpen(v => !v)}
+            <div className="relative" ref={dropdownRef} onMouseEnter={() => setWorkOpen(true)} onMouseLeave={() => setWorkOpen(false)}>
+              <Link
+                to="/work"
                 className="flex items-center gap-1 text-[var(--webik-muted)] hover:text-[var(--webik-dark)] text-sm font-inter font-medium transition-colors"
               >
                 Work
                 <ChevronDown size={14} className={`transition-transform duration-200 ${workOpen ? 'rotate-180' : ''}`} />
-              </button>
+              </Link>
               {workOpen && (
                 <div
                   className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 rounded-2xl overflow-hidden shadow-xl z-50"
