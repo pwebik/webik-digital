@@ -19,19 +19,19 @@ export default function ProblemSection() {
   return (
     <section
       className="py-24 lg:py-36 px-6 lg:px-12"
-      style={{ background: 'var(--webik-cream)' }}
-    >
+      style={{ background: 'var(--webik-cream)' }}>
+      
       <div
         ref={sectionRef}
-        className="max-w-[900px] mx-auto reveal-on-scroll"
-      >
+        className="max-w-[900px] mx-auto reveal-on-scroll">
+        
         <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>
           ( Sound Familiar? )
         </span>
         <h2
           className="font-grotesk font-light mt-5 leading-[1.05]"
-          style={{ color: 'var(--webik-dark)', fontSize: 'clamp(32px, 5vw, 64px)', letterSpacing: '-0.03em' }}
-        >
+          style={{ color: 'var(--webik-dark)', fontSize: 'clamp(32px, 5vw, 64px)', letterSpacing: '-0.03em' }}>
+          
           You Built a Business. Your Digital Presence Should Reflect That.
         </h2>
 
@@ -46,13 +46,13 @@ export default function ProblemSection() {
             You deserve better than that. You deserve a digital presence that is yours — built to convert, built to last, and built to grow with you.
           </p>
           <p
-            className="font-fraunces italic text-xl lg:text-2xl"
-            style={{ color: 'var(--webik-dark)' }}
-          >
+            className="text-xl lg:text-2xl [font-family:'Host_Grotesk',_'system-ui',_sans-serif] not-italic"
+            style={{ color: 'var(--webik-dark)' }}>
+            
             That is what we do at Webik Corp.
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
