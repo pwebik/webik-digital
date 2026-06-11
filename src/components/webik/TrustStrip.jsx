@@ -2,7 +2,7 @@ import React from 'react';
 
 const stats = [
   { number: '100+', label: 'Websites Built' },
-  { number: '5+', label: 'Years Senior Experience' },
+  { number: '25+', label: 'Years Combined Experience' },
   { number: 'PH & Global', label: 'Philippines and International Clients' },
   { number: 'SEC', label: 'SEC-Registered Agency' },
 ];
