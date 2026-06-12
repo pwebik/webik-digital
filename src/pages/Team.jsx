@@ -30,14 +30,23 @@ const members = [
     ],
   },
   {
-    name: 'Joseph Miles S. Babad',
-    role: 'PROJECT MANAGER AND INVESTOR',
-    workingStyle: 'Organized, communicative, and reliable.',
-    image: null,
+    name: 'Xavier Gonzales',
+    role: 'HEAD OF WEB DEVELOPMENT',
+    workingStyle: 'Precise, methodical, and quietly brilliant.',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/8e9f72288_IMG_0557.jpg',
     bio: [
-      'Joseph is the reason projects at Webik Corp run the way they should. As Project Manager, he sits between the team and the client — making sure timelines are clear, communication never drops, and every deliverable arrives when it is supposed to. His background spans financial operations in cryptocurrency markets and project coordination at VNS Information Technology Services, where he developed a sharp eye for workflow efficiency and cross-team communication.',
-      'Joseph joined Webik Corp not just as a team member but as an investor — someone who saw the potential in both the business and the people behind it, and wanted to be part of building it from the ground up.',
-      'His Tourism Management background shaped how he handles clients: with patience, clarity, and a genuine commitment to making the experience smooth from start to finish.',
+      'Xavier is the engineer behind every Webik build. He brings a depth of technical knowledge that ensures every site is not just beautiful but structurally sound — fast, secure, and built to last. His work spans front-end and back-end development, with a particular focus on performance optimization and clean, maintainable code.',
+      'What sets Xavier apart is his ability to take a creative vision and execute it without compromise. He translates design into reality with precision, and his attention to technical detail means clients rarely encounter issues after launch.',
+    ],
+  },
+  {
+    name: 'Julius Parungao',
+    role: 'CREATIVE DIRECTOR',
+    workingStyle: 'Visually sharp, thoughtful, and concept-driven.',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/3ff4696ea_IMG_0563.jpg',
+    bio: [
+      'Julius leads the creative direction at Webik Corp. He is the person responsible for ensuring that every design decision serves both the brand and the user — that the work looks right, feels right, and actually performs. His background spans branding, UI/UX, and digital identity systems built for businesses at various stages of growth.',
+      'He approaches each project as a storytelling challenge: what does this brand need to communicate, and how do we communicate it in a way that earns attention and trust? The results speak for themselves — every Webik site carries a visual standard that consistently exceeds what clients expect.',
     ],
   },
   {
@@ -62,23 +71,14 @@ const members = [
     ],
   },
   {
-    name: 'Xavier Gonzales',
-    role: 'HEAD OF WEB DEVELOPMENT',
-    workingStyle: 'Precise, methodical, and quietly brilliant.',
-    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/8e9f72288_IMG_0557.jpg',
+    name: 'Joseph Miles S. Babad',
+    role: 'PROJECT MANAGER AND INVESTOR',
+    workingStyle: 'Organized, communicative, and reliable.',
+    image: null,
     bio: [
-      'Xavier is the engineer behind every Webik build. He brings a depth of technical knowledge that ensures every site is not just beautiful but structurally sound — fast, secure, and built to last. His work spans front-end and back-end development, with a particular focus on performance optimization and clean, maintainable code.',
-      'What sets Xavier apart is his ability to take a creative vision and execute it without compromise. He translates design into reality with precision, and his attention to technical detail means clients rarely encounter issues after launch.',
-    ],
-  },
-  {
-    name: 'Julius Parungao',
-    role: 'CREATIVE DIRECTOR',
-    workingStyle: 'Visually sharp, thoughtful, and concept-driven.',
-    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/3ff4696ea_IMG_0563.jpg',
-    bio: [
-      'Julius leads the creative direction at Webik Corp. He is the person responsible for ensuring that every design decision serves both the brand and the user — that the work looks right, feels right, and actually performs. His background spans branding, UI/UX, and digital identity systems built for businesses at various stages of growth.',
-      'He approaches each project as a storytelling challenge: what does this brand need to communicate, and how do we communicate it in a way that earns attention and trust? The results speak for themselves — every Webik site carries a visual standard that consistently exceeds what clients expect.',
+      'Joseph is the reason projects at Webik Corp run the way they should. As Project Manager, he sits between the team and the client — making sure timelines are clear, communication never drops, and every deliverable arrives when it is supposed to. His background spans financial operations in cryptocurrency markets and project coordination at VNS Information Technology Services, where he developed a sharp eye for workflow efficiency and cross-team communication.',
+      'Joseph joined Webik Corp not just as a team member but as an investor — someone who saw the potential in both the business and the people behind it, and wanted to be part of building it from the ground up.',
+      'His Tourism Management background shaped how he handles clients: with patience, clarity, and a genuine commitment to making the experience smooth from start to finish.',
     ],
   },
 ];
