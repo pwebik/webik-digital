@@ -53,7 +53,7 @@ const members = [
     name: 'Alfred Lean Achurra',
     role: 'DIRECTOR OF SALES AND CLIENT SERVICES',
     workingStyle: 'Driven, communicative, and solution-oriented.',
-    image: null,
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/6b5ee415f_AlfredAchurra.png',
     bio: [
       'Alfred is the bridge between what clients want and what the team builds. With close to a decade in digital services, his career started in tech support for Apple and Microsoft — giving him a deep, hands-on understanding of how technology actually works and how people interact with it.',
       'From there, he moved into an Executive Assistant role at a real estate development company, working directly alongside senior leadership through a period of rapid operational growth. That experience is what makes Alfred different. He has sat in the room with CEOs. He understands the pressures, the priorities, and the blind spots that business owners carry.',
@@ -74,7 +74,7 @@ const members = [
     name: 'Joseph Miles S. Babad',
     role: 'PROJECT MANAGER AND INVESTOR',
     workingStyle: 'Organized, communicative, and reliable.',
-    image: null,
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/91c615527_MilesBabad.png',
     bio: [
       'Joseph is the reason projects at Webik Corp run the way they should. As Project Manager, he sits between the team and the client — making sure timelines are clear, communication never drops, and every deliverable arrives when it is supposed to. His background spans financial operations in cryptocurrency markets and project coordination at VNS Information Technology Services, where he developed a sharp eye for workflow efficiency and cross-team communication.',
       'Joseph joined Webik Corp not just as a team member but as an investor — someone who saw the potential in both the business and the people behind it, and wanted to be part of building it from the ground up.',
