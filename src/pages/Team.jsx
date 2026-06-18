@@ -72,7 +72,7 @@ const members = [
   },
   {
     name: 'Joseph Miles S. Babad',
-    role: 'PROJECT MANAGER AND INVESTOR',
+    role: 'PROJECT DIRECTOR',
     workingStyle: 'Organized, communicative, and reliable.',
     image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/91c615527_MilesBabad.png',
     bio: [
