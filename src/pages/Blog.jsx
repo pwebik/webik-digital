@@ -61,7 +61,7 @@ export default function Blog() {
                   <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(14,26,10,0.5), transparent)' }} />
                 </div>
 
-                <span className="inline-block font-mono text-[10px] uppercase tracking-[0.2em] px-3 py-1 rounded-full mb-4 self-start" style={{ background: 'rgba(200,240,72,0.15)', color: 'var(--webik-lime)' }}>
+                <span className="inline-block font-mono text-[10px] uppercase tracking-[0.2em] px-3 py-1 rounded-full mb-4 self-start" style={{ background: 'rgba(200,240,72,0.15)', color: 'var(--webik-dark)' }}>
                   {post.category}
                 </span>
 
