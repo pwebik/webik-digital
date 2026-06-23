@@ -18,6 +18,8 @@ import BlogPostPage from './pages/BlogPostPage';
 import LeadMagnet from './pages/LeadMagnet';
 import FAQ from './pages/FAQ';
 import Analytics from './pages/Analytics';
+import BlogDashboard from './pages/BlogDashboard';
+import BlogEditor from './pages/BlogEditor';
 import ProtectedRoute from '@/components/ProtectedRoute';
 // Add page imports here
 
@@ -62,6 +64,8 @@ const AuthenticatedApp = () => {
       <Route path="/faq" element={<FAQ />} />
       <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
         <Route path="/analytics" element={<Analytics />} />
+        <Route path="/blog-dashboard" element={<BlogDashboard />} />
+        <Route path="/blog-editor" element={<BlogEditor />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

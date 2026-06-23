@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import AnnouncementBar from '../components/webik/AnnouncementBar';
 import StickyNav from '../components/webik/StickyNav';
 import Footer from '../components/webik/Footer';
 import GrainOverlay from '../components/webik/GrainOverlay';
 import HeroBackground from '../components/webik/HeroBackground';
-import { blogPosts } from '../lib/blogData';
+import { base44 } from '@/api/base44Client';
 
 const pageVars = {
   '--webik-lime': '#C8F048',
@@ -18,12 +18,40 @@ const pageVars = {
 
 export default function BlogPostPage() {
   const { slug } = useParams();
-  const post = blogPosts.find(p => p.slug === slug);
+  const [post, setPost] = useState(null);
+  const [nextPost, setNextPost] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (!slug) return;
+    setLoading(true);
+    base44.entities.BlogPost.filter({ slug }, '-datePublished', 100)
+      .then(posts => {
+        if (posts.length > 0) {
+          setPost(posts[0]);
+          return base44.entities.BlogPost.list('-datePublished', 100).then(all => {
+            const idx = all.findIndex(p => p.slug === slug);
+            if (idx >= 0 && all.length > 1) {
+              setNextPost(all[(idx + 1) % all.length]);
+            } else if (all.length > 0) {
+              setNextPost(all[0]);
+            }
+          });
+        }
+      })
+      .catch(err => console.error('Failed to load post', err))
+      .finally(() => setLoading(false));
+  }, [slug]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center" style={{ ...pageVars, background: 'var(--webik-cream)' }}>
+        <div className="w-8 h-8 border-4 rounded-full animate-spin" style={{ borderColor: 'var(--webik-cream-2)', borderTopColor: 'var(--webik-dark)' }}></div>
+      </div>
+    );
+  }
 
   if (!post) return <Navigate to="/blog" replace />;
-
-  const postIndex = blogPosts.indexOf(post);
-  const nextPost = blogPosts[(postIndex + 1) % blogPosts.length];
 
   return (
     <div style={pageVars}>
@@ -66,16 +94,55 @@ export default function BlogPostPage() {
           </p>
 
           <div className="space-y-10">
-            {post.sections.map((section, i) => (
-              <div key={i}>
-                <h2 className="font-grotesk font-light text-2xl lg:text-3xl mb-4" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>
-                  {section.heading}
-                </h2>
-                <p className="font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
-                  {section.body}
-                </p>
-              </div>
-            ))}
+            {(post.sections || []).map((section, i) => {
+              if (section.type === 'heading') {
+                return (
+                  <div key={i}>
+                    <h2 className="font-grotesk font-light text-2xl lg:text-3xl mb-2" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>
+                      {section.heading}
+                    </h2>
+                    {section.body && (
+                      <p className="font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
+                        {section.body}
+                      </p>
+                    )}
+                  </div>
+                );
+              }
+              if (section.type === 'paragraph') {
+                return (
+                  <p key={i} className="font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
+                    {section.body}
+                  </p>
+                );
+              }
+              if (section.type === 'image') {
+                return (
+                  <div key={i} className="my-8">
+                    <img src={section.imageUrl} alt={section.imageAlt || ''} className="w-full rounded-2xl" />
+                  </div>
+                );
+              }
+              if (section.type === 'button') {
+                return (
+                  <div key={i} className="my-6">
+                    <a href={section.buttonLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-inter font-medium text-sm transition-all duration-300" style={{ background: 'var(--webik-dark)', color: 'var(--webik-cream)' }}>
+                      {section.buttonText}
+                    </a>
+                  </div>
+                );
+              }
+              if (section.type === 'link') {
+                return (
+                  <p key={i} className="font-inter text-base lg:text-lg leading-relaxed">
+                    <a href={section.linkUrl} target="_blank" rel="noopener noreferrer" className="font-medium underline" style={{ color: 'var(--webik-dark)' }}>
+                      {section.linkText}
+                    </a>
+                  </p>
+                );
+              }
+              return null;
+            })}
           </div>
 
           {/* CTA */}
@@ -95,15 +162,17 @@ export default function BlogPostPage() {
           </div>
 
           {/* Next article */}
-          <div className="mt-16 pt-10 border-t" style={{ borderColor: 'var(--webik-cream-2)' }}>
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] mb-3" style={{ color: 'var(--webik-muted)' }}>Next Article</p>
-            <Link to={`/blog/${nextPost.slug}`} className="group flex items-start gap-4">
-              <span className="font-mono text-[10px] uppercase tracking-[0.15em] px-2 py-1 rounded" style={{ background: 'rgba(200,240,72,0.12)', color: 'var(--webik-lime)' }}>{nextPost.category}</span>
-              <h3 className="font-grotesk font-light text-xl lg:text-2xl group-hover:text-[var(--webik-muted)] transition-colors" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>
-                {nextPost.title} →
-              </h3>
-            </Link>
-          </div>
+          {nextPost && (
+            <div className="mt-16 pt-10 border-t" style={{ borderColor: 'var(--webik-cream-2)' }}>
+              <p className="font-mono text-[10px] uppercase tracking-[0.2em] mb-3" style={{ color: 'var(--webik-muted)' }}>Next Article</p>
+              <Link to={`/blog/${nextPost.slug}`} className="group flex items-start gap-4">
+                <span className="font-mono text-[10px] uppercase tracking-[0.15em] px-2 py-1 rounded" style={{ background: 'rgba(200,240,72,0.12)', color: 'var(--webik-lime)' }}>{nextPost.category}</span>
+                <h3 className="font-grotesk font-light text-xl lg:text-2xl group-hover:text-[var(--webik-muted)] transition-colors" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>
+                  {nextPost.title} →
+                </h3>
+              </Link>
+            </div>
+          )}
         </div>
       </article>
 

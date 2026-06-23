@@ -1,17 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AnnouncementBar from '../components/webik/AnnouncementBar';
 import StickyNav from '../components/webik/StickyNav';
 import Footer from '../components/webik/Footer';
 import GrainOverlay from '../components/webik/GrainOverlay';
 import HeroBackground from '../components/webik/HeroBackground';
-import { blogPosts } from '../lib/blogData';
-
-const blogImages = [
-  'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80',
-  'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80',
-  'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80',
-];
+import { base44 } from '@/api/base44Client';
 
 const pageVars = {
   '--webik-lime': '#C8F048',
@@ -23,6 +17,16 @@ const pageVars = {
 };
 
 export default function Blog() {
+  const [blogPosts, setBlogPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    base44.entities.BlogPost.list('-datePublished', 100)
+      .then(data => setBlogPosts(data))
+      .catch(err => console.error('Failed to load blog posts', err))
+      .finally(() => setLoading(false));
+  }, []);
+
   return (
     <div style={pageVars}>
       <AnnouncementBar />
@@ -50,11 +54,17 @@ export default function Blog() {
       <section className="py-20 lg:py-28 px-6 lg:px-12" style={{ background: 'var(--webik-cream)' }}>
         <div className="max-w-[1440px] mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            {blogPosts.map((post, i) => (
-              <article key={i} className="flex flex-col group">
+            {loading ? (
+              <div className="col-span-full flex items-center justify-center py-20">
+                <div className="w-8 h-8 border-4 rounded-full animate-spin" style={{ borderColor: 'var(--webik-cream-2)', borderTopColor: 'var(--webik-dark)' }}></div>
+              </div>
+            ) : blogPosts.length === 0 ? (
+              <p className="col-span-full text-center font-inter text-sm py-20" style={{ color: 'var(--webik-muted)' }}>No blog posts yet.</p>
+            ) : blogPosts.map((post, i) => (
+              <article key={post.id || i} className="flex flex-col group">
                 <div className="aspect-[16/9] rounded-xl mb-6 relative overflow-hidden">
                   <img
-                    src={blogImages[i % blogImages.length]}
+                    src={post.coverImage || 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80'}
                     alt={post.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
@@ -82,9 +92,9 @@ export default function Blog() {
                 >
                   Read More →
                 </Link>
-              </article>
-            ))}
-          </div>
+                </article>
+                ))}
+                </div>
         </div>
       </section>
 

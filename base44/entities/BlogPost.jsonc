@@ -1,0 +1,92 @@
+{
+  "name": "BlogPost",
+  "type": "object",
+  "properties": {
+    "slug": {
+      "type": "string",
+      "description": "URL slug for the blog post (unique)"
+    },
+    "category": {
+      "type": "string",
+      "description": "Category label (e.g. Education, The Work, The Team)",
+      "default": "Education"
+    },
+    "title": {
+      "type": "string",
+      "description": "Blog post title"
+    },
+    "excerpt": {
+      "type": "string",
+      "description": "Short summary shown in blog listing"
+    },
+    "coverImage": {
+      "type": "string",
+      "description": "URL to the cover image"
+    },
+    "datePublished": {
+      "type": "string",
+      "format": "date",
+      "description": "Publication date"
+    },
+    "sections": {
+      "type": "array",
+      "description": "Content blocks that make up the blog body",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "heading",
+              "paragraph",
+              "image",
+              "button",
+              "link"
+            ],
+            "default": "paragraph"
+          },
+          "heading": {
+            "type": "string",
+            "description": "Heading text (for heading blocks)"
+          },
+          "body": {
+            "type": "string",
+            "description": "Paragraph text (for heading/paragraph blocks)"
+          },
+          "imageUrl": {
+            "type": "string",
+            "description": "Image URL (for image blocks)"
+          },
+          "imageAlt": {
+            "type": "string",
+            "description": "Alt text for image"
+          },
+          "buttonText": {
+            "type": "string",
+            "description": "Button label (for button blocks)"
+          },
+          "buttonLink": {
+            "type": "string",
+            "description": "Button destination URL (for button blocks)"
+          },
+          "linkText": {
+            "type": "string",
+            "description": "Link label (for link blocks)"
+          },
+          "linkUrl": {
+            "type": "string",
+            "description": "Link destination URL (for link blocks)"
+          }
+        }
+      }
+    },
+    "cta": {
+      "type": "string",
+      "description": "Call-to-action text at the end of the post"
+    }
+  },
+  "required": [
+    "title",
+    "slug"
+  ]
+}

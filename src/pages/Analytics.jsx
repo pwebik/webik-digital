@@ -92,6 +92,12 @@ export default function Analytics() {
 
         {data && !loading && !error && (
           <>
+            {/* Blog manager link */}
+            <div className="flex justify-end mb-6">
+              <a href="/blog-dashboard" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-inter text-sm font-medium border transition-colors hover:bg-white" style={{ borderColor: 'var(--webik-cream-2)', color: 'var(--webik-dark)' }}>
+                Manage Blog Posts →
+              </a>
+            </div>
             {/* Overview metrics */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
               {[
