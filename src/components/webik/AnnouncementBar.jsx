@@ -1,35 +1,38 @@
 import React from 'react';
-
-const phrases = [
-  'Your Digital Team, Not Just Your Agency',
-  'Senior Practitioners · Real Partnership',
-  'Web Design & Development',
-  'Branding & Identity',
-  'SEO & AEO',
-  'Email Marketing Design',
-  'Graphic Design',
-  'Website Maintenance',
-  'SEC-Registered · Cebu, Philippines',
-  'Serving Clients Locally and Internationally',
-];
+import { Link } from 'react-router-dom';
+import { Flame, ArrowRight } from 'lucide-react';
 
 export default function AnnouncementBar() {
-  const items = [...phrases, ...phrases];
-
   return (
     <div
-      className="overflow-hidden py-2.5 relative"
-      style={{ background: 'var(--webik-dark-2)', borderBottom: '1px solid rgba(200,240,72,0.1)' }}
+      className="relative overflow-hidden py-3.5"
+      style={{ background: 'var(--webik-dark)', borderBottom: '2px solid var(--webik-lime)' }}
     >
-      <div className="flex gap-0 animate-marquee whitespace-nowrap">
-        {items.map((phrase, i) => (
-          <span key={i} className="inline-flex items-center gap-4 px-6">
-            <span className="font-mono text-[10px] uppercase tracking-[0.18em]" style={{ color: 'var(--webik-muted)' }}>
-              {phrase}
-            </span>
-            <span style={{ color: 'var(--webik-lime)', fontSize: '8px' }}>◆</span>
+      {/* Animated lime glow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse at left center, rgba(200,240,72,0.15) 0%, transparent 50%), radial-gradient(ellipse at right center, rgba(200,240,72,0.1) 0%, transparent 50%)',
+        }}
+      />
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex items-center justify-center gap-3 text-center relative z-10">
+        <Flame size={18} className="flex-shrink-0 animate-pulse" style={{ color: 'var(--webik-lime)' }} />
+        <p className="font-inter text-sm sm:text-base font-medium leading-tight" style={{ color: 'var(--webik-cream)' }}>
+          <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.15em] mr-2" style={{ color: 'var(--webik-lime)' }}>
+            Special Launch Offer
           </span>
-        ))}
+          <span className="hidden sm:inline">50% off for the first 10 signed Philippine clients. </span>
+          <span className="sm:hidden">50% off first 10 PH clients. </span>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-1 font-semibold underline decoration-2 underline-offset-2 transition-colors hover:opacity-80"
+            style={{ color: 'var(--webik-lime)' }}
+          >
+            Message Us
+            <ArrowRight size={14} className="inline-block" />
+          </Link>
+          <span className="ml-1">to claim your slot.</span>
+        </p>
       </div>
     </div>
   );
