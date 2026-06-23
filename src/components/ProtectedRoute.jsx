@@ -9,8 +9,8 @@ const DefaultFallback = () => (
   </div>
 );
 
-export default function ProtectedRoute({ fallback = <DefaultFallback />, unauthenticatedElement }) {
-  const { isAuthenticated, isLoadingAuth, authChecked, authError, checkUserAuth } = useAuth();
+export default function ProtectedRoute({ fallback = <DefaultFallback />, unauthenticatedElement, requiredRole }) {
+  const { user, isAuthenticated, isLoadingAuth, authChecked, authError, checkUserAuth } = useAuth();
 
   useEffect(() => {
     if (!authChecked && !isLoadingAuth) {
@@ -31,6 +31,17 @@ export default function ProtectedRoute({ fallback = <DefaultFallback />, unauthe
 
   if (!isAuthenticated) {
     return unauthenticatedElement;
+  }
+
+  if (requiredRole && user?.role !== requiredRole) {
+    return (
+      <div className="fixed inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center">
+        <h1 className="font-grotesk text-3xl font-light" style={{ color: 'var(--webik-dark)' }}>Access Restricted</h1>
+        <p className="font-inter text-sm max-w-md" style={{ color: 'var(--webik-muted)' }}>
+          You need {requiredRole} access to view this page. Contact an administrator if you believe this is an error.
+        </p>
+      </div>
+    );
   }
 
   return <Outlet />;

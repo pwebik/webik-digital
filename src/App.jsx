@@ -62,7 +62,7 @@ const AuthenticatedApp = () => {
       <Route path="/blog/:slug" element={<BlogPostPage />} />
       <Route path="/resources/5-signs-website-losing-clients" element={<LeadMagnet />} />
       <Route path="/faq" element={<FAQ />} />
-      <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
+      <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} requiredRole="admin" />}>
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/blog-dashboard" element={<BlogDashboard />} />
         <Route path="/blog-editor" element={<BlogEditor />} />
