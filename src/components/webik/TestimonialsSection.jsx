@@ -18,6 +18,11 @@ const testimonials = [
     name: 'Samuel Herschorn',
     role: 'CEO and Founder, Biosis Designs',
   },
+  {
+    quote: "Hired Webik to build the Go Relocation Philippines website and they were excellent from start to finish. They listened to my concerns, asked the right questions, and actually strategized before jumping into execution. The whole process felt collaborative rather than transactional. I will definitely work with them again on future projects and would recommend them to anyone looking for a web team that takes the time to understand the business first.",
+    name: 'Kervin Antiligando',
+    role: 'CEO and Founder, GoRelocation PH',
+  },
 ];
 
 export default function TestimonialsSection() {
