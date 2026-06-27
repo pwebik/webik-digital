@@ -75,7 +75,7 @@ export default function Footer() {
             <h4 className="text-[var(--webik-cream)] font-inter text-sm font-semibold uppercase tracking-wider mb-5">Get in Touch</h4>
             <ul className="space-y-3 text-[var(--webik-muted)] font-inter text-sm">
               <li><a href="mailto:pryce@webikdigital.com" className="hover:text-[var(--webik-cream)] transition-colors">pryce@webikdigital.com</a></li>
-              <li><a href="mailto:support@webikdigital.com" className="hover:text-[var(--webik-cream)] transition-colors">support@webikdigital.com</a></li>
+              <li className="hidden"><a href="mailto:support@webikdigital.com" className="hover:text-[var(--webik-cream)] transition-colors">support@webikdigital.com</a></li>
               <li><a href="tel:+639273532498" className="hover:text-[var(--webik-cream)] transition-colors">+63 927 353 2498</a></li>
               <li className="leading-relaxed">Suite 110 Centro Maximo Bldg.,<br />Dionisio Jakosalem St.,<br />Cebu City, Philippines</li>
             </ul>
