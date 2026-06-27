@@ -14,7 +14,7 @@ export default function ShowcaseCard({ project, onOpen }) {
           <img
             src={project.thumbnail}
             alt={`${project.name} website preview`}
-            className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             loading="lazy"
           />
         ) : (
@@ -35,9 +35,8 @@ export default function ShowcaseCard({ project, onOpen }) {
       {/* Content */}
       <div className="p-6 lg:p-7">
         <h3 className="font-grotesk text-xl font-medium" style={{ color: 'var(--webik-dark)' }}>{project.name}</h3>
-        <p className="font-inter text-sm leading-relaxed mt-2.5" style={{ color: 'var(--webik-muted)' }}>{project.description}</p>
         <div className="mt-5 inline-flex items-center gap-1.5 font-inter text-sm font-medium" style={{ color: 'var(--webik-dark)' }}>
-          View Live Site
+          View Interactive Mockups
           <ArrowUpRight size={15} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </div>
       </div>
