@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import AnnouncementBar from '@/components/webik/AnnouncementBar';
 import StickyNav from '@/components/webik/StickyNav';
 import Footer from '@/components/webik/Footer';
+import GrainOverlay from '@/components/webik/GrainOverlay';
+import HeroBackground from '@/components/webik/HeroBackground';
 import ShowcaseCard from '@/components/webik/ShowcaseCard';
 import ShowcaseModal from '@/components/webik/ShowcaseModal';
 
@@ -62,18 +64,18 @@ export default function Showcase() {
       <StickyNav />
 
       {/* Hero */}
-      <section className="px-6 lg:px-12 py-16 lg:py-24" style={{ background: 'var(--webik-cream)' }}>
-        <div className="max-w-[1440px] mx-auto">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>
-            ( Showcase )
-          </span>
+      <section className="relative py-24 lg:py-36 px-6 lg:px-12 overflow-hidden" style={{ background: 'var(--webik-dark)' }}>
+        <GrainOverlay />
+        <HeroBackground />
+        <div className="max-w-[1440px] mx-auto relative z-10">
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Showcase )</span>
           <h1
-            className="font-grotesk font-light mt-5"
-            style={{ color: 'var(--webik-dark)', fontSize: 'clamp(36px, 5vw, 72px)', letterSpacing: '-0.03em', lineHeight: 1.05 }}
+            className="font-grotesk font-light leading-[0.92] tracking-tight mt-6"
+            style={{ color: 'var(--webik-cream)', fontSize: 'clamp(48px, 8vw, 120px)', letterSpacing: '-0.04em' }}
           >
-            Live Websites,<br />Built to Perform.
+            Live Websites,<br />Built to <span style={{ color: 'var(--webik-lime)' }}>Perform.</span>
           </h1>
-          <p className="font-inter text-base lg:text-lg mt-6 max-w-2xl leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
+          <p className="mt-8 font-inter text-base lg:text-lg leading-relaxed max-w-[580px]" style={{ color: 'rgba(245,243,236,0.7)' }}>
             Browse our recent work below. Click any project to explore the live site — fully interactive, right here in your browser.
           </p>
         </div>
