@@ -73,10 +73,10 @@ export default function Showcase() {
             className="font-grotesk font-light leading-[0.92] tracking-tight mt-6"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(48px, 8vw, 120px)', letterSpacing: '-0.04em' }}
           >
-            Live Websites,<br />Built to <span style={{ color: 'var(--webik-lime)' }}>Perform.</span>
+            Interactive Mockups,<br />Built to <span style={{ color: 'var(--webik-lime)' }}>Perform.</span>
           </h1>
           <p className="mt-8 font-inter text-base lg:text-lg leading-relaxed max-w-[580px]" style={{ color: 'rgba(245,243,236,0.7)' }}>
-            Browse our recent work below. Click any project to explore the live site — fully interactive, right here in your browser.
+            Browse our recent mockups below. Click any project to explore them. Fully interactive, right here in your browser.
           </p>
         </div>
       </section>
