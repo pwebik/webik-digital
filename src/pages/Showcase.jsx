@@ -11,30 +11,35 @@ const projects = [
     initial: 'K',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     url: 'https://kitcuts.base44.app/',
+    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/2d86a1497_5.png',
   },
   {
     name: 'PNDK Studio',
     initial: 'P',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
     url: 'https://pundok-groom-craft.base44.app/',
+    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/4f4c2df33_2.png',
   },
   {
     name: 'Ursal Pascual',
     initial: 'U',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
     url: 'https://ursal-pascual.base44.app/',
+    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/232e9e35e_6.png',
   },
   {
     name: 'Cusina Lucas',
     initial: 'C',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
     url: 'https://cusina-lucas.base44.app/',
+    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/5226c6675_4.png',
   },
   {
     name: 'Serene Dental',
     initial: 'S',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
     url: 'https://serene-dental-center.base44.app/',
+    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/6004b794f_3.png',
   },
 ];
 
