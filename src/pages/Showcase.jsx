@@ -43,6 +43,20 @@ const projects = [
     url: 'https://serene-dental-center.base44.app/',
     thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/6004b794f_3.png',
   },
+  {
+    name: 'Seamasters Food Products',
+    initial: 'S',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
+    url: 'https://seamasters-food-products.base44.app/',
+    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/6004b794f_3.png',
+  },
+  {
+    name: 'Conquer Fitness',
+    initial: 'C',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
+    url: 'https://conquer-fitness.base44.app/',
+    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/6004b794f_3.png',
+  },
 ];
 
 export default function Showcase() {
