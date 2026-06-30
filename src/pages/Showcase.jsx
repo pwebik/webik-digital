@@ -48,14 +48,14 @@ const projects = [
     initial: 'S',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
     url: 'https://seamaster-ocean-harvest.base44.app',
-    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/a00c25563_generated_image.png',
+    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/346a7ad6d_image.png',
   },
   {
     name: 'Conquer Fitness',
     initial: 'C',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
     url: 'https://conquerfitnessgym.base44.app',
-    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/1b9236edf_generated_image.png',
+    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/a38150d2d_image.png',
   },
 ];
 
