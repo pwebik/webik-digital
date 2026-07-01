@@ -39,6 +39,7 @@
             "enum": [
               "heading",
               "paragraph",
+              "list",
               "image",
               "button",
               "link"
@@ -52,6 +53,13 @@
           "body": {
             "type": "string",
             "description": "Paragraph text (for heading/paragraph blocks)"
+          },
+          "items": {
+            "type": "array",
+            "description": "Bullet items (for list blocks)",
+            "items": {
+              "type": "string"
+            }
           },
           "imageUrl": {
             "type": "string",

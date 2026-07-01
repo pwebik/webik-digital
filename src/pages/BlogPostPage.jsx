@@ -116,6 +116,18 @@ export default function BlogPostPage() {
                   </p>
                 );
               }
+              if (section.type === 'list') {
+                return (
+                  <ul key={i} className="space-y-2 pl-1">
+                    {(section.items || []).map((item, j) => (
+                      <li key={j} className="flex items-start gap-3 font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
+                        <span className="mt-2.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: 'var(--webik-lime)' }} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                );
+              }
               if (section.type === 'image') {
                 return (
                   <div key={i} className="my-8">
