@@ -78,7 +78,7 @@ export default function ServicesSection() {
             onMouseLeave={(e) => e.currentTarget.style.background = 'var(--webik-cream)'}>
             
               <div className="aspect-[3/2] overflow-hidden">
-                <img src="https://media.base44.com/images/public/69ecce3288377cd246349884/18943c22e_Frame_12.png"
+                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80"
 
               alt={service.title}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90" />
