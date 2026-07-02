@@ -48,9 +48,9 @@ export default function OriginTeaser() {
           style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(200,240,72,0.12)' }}
         >
           <img
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
+            src="https://media.base44.com/images/public/69ecce3288377cd246349884/79097b141_IMG_2529.jpg"
             alt="The Webik team at work"
-            className="w-full h-full object-cover opacity-70"
+            className="w-full h-full object-cover opacity-80"
           />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(14,26,10,0.6), transparent)' }} />
 
