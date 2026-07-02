@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 import AnnouncementBar from '../components/webik/AnnouncementBar';
 import StickyNav from '../components/webik/StickyNav';
 import Footer from '../components/webik/Footer';
@@ -111,9 +112,25 @@ export default function BlogPostPage() {
               }
               if (section.type === 'paragraph') {
                 return (
-                  <p key={i} className="font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
+                  <ReactMarkdown
+                    key={i}
+                    components={{
+                      p: ({ children }) => (
+                        <p className="font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
+                          {children}
+                        </p>
+                      ),
+                      a: ({ children, href }) => (
+                        <a href={href} target="_blank" rel="noopener noreferrer" className="underline transition-colors" style={{ color: 'var(--webik-dark)' }}
+                          onMouseEnter={e => e.currentTarget.style.color = 'var(--webik-lime)'}
+                          onMouseLeave={e => e.currentTarget.style.color = 'var(--webik-dark)'}>
+                          {children}
+                        </a>
+                      ),
+                    }}
+                  >
                     {section.body}
-                  </p>
+                  </ReactMarkdown>
                 );
               }
               if (section.type === 'list') {
