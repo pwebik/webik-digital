@@ -23,7 +23,7 @@ const services = [
 {
   num: '04',
   title: 'SEO and AEO',
-  image: 'https://images.unsplash.com/photo-1573487717215-6449b8756f53?w=800&q=80',
+  image: 'https://images.unsplash.com/photo-1562577305-29a3e7242967?w=800&q=80',
   promise: 'Visibility on Google and AI-powered search tools so the right people find you when they are already looking.'
 },
 {
