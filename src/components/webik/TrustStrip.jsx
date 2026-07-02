@@ -3,8 +3,8 @@ import React from 'react';
 const stats = [
 { number: '100+', label: 'Websites Built' },
 { number: '25+', label: 'Years Combined Experience' },
-{ number: "Global", label: "Clients Worldwioe" },
-{ number: 'SEC', label: 'SEC-Registered Agency' }];
+{ number: "Global", label: "Clients Worldwide" },
+{ number: 'SEC', label: "SEC-Registered Business" }];
 
 
 export default function TrustStrip() {
