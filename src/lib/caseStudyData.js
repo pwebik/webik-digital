@@ -219,6 +219,60 @@ export const caseStudies = {
     },
   },
 
+  'pnlt': {
+    slug: 'pnlt',
+    index: 5,
+    breadcrumb: 'WEBIK / WORK / 06 — PNLT',
+    title: 'PNLT',
+    subtitle: 'A legal, transparent pathway for foreigners to secure a home in the Philippines.',
+    category: 'LEGAL · EXPAT HOUSING',
+    client: 'Philippine New Land Trust, Cebu',
+    year: '2025',
+    scope: 'Web Design · Web Development · Content Architecture',
+    liveUrl: 'https://pnlt.ph',
+    liveDomain: 'WWW.PNLT.PH',
+    mockupUrl: 'https://media.base44.com/images/public/69f95de45f65220f9c4a6955/0f79f1a59_generated_image.png',
+    thumbnailUrl: 'https://media.base44.com/images/public/69f95de45f65220f9c4a6955/0f79f1a59_generated_image.png',
+    brief: [
+      'Philippine New Land Trust (PNLT) helps expats turn their dream of living in the Philippines into reality by making long-term housing legally possible — through their flagship program, HomeSecure™.',
+      'They needed a website that projected legal authority and calm trust, while educating foreign nationals about the risks of informal land arrangements and guiding them toward a compliant, documented pathway.',
+    ],
+    approach: [
+      { num: '01', title: 'Trust through clarity', desc: 'Housing law for foreigners is high-stakes. We structured the site to explain the legal reality first — no jargon, no fear-mongering, just transparent facts.' },
+      { num: '02', title: 'Education as conversion', desc: 'Instead of pushing a hard sell, we built a content-rich resources hub covering court cases, FAQs, and common traps — positioning PNLT as the authority before the consultation.' },
+      { num: '03', title: 'Honest qualification', desc: 'A clear "Is HomeSecure right for you?" section filters out property investors and short-term visitors, so consultations are spent on qualified, committed expats.' },
+      { num: '04', title: 'Comparison as proof', desc: 'A side-by-side comparison table contrasts HomeSecure against risky alternatives — dummy corporations, partner-name purchases — making the value proposition undeniable.' },
+    ],
+    pageTour: [
+      { name: 'Home', label: 'PAGE 01', desc: 'A legal, transparent pathway for foreigners to secure a home in the Philippines through HomeSecure™.' },
+      { name: 'About', label: 'PAGE 02', desc: 'PNLT was created to solve the biggest frustration foreigners face — the inability to own land and the risky workarounds that leave them vulnerable.' },
+      { name: 'Resources', label: 'PAGE 03', desc: 'Detailed guides, real court cases, and FAQs that educate expats before they ever book a consultation.' },
+    ],
+    typography: {
+      primary: 'Plus Jakarta Sans',
+      body: 'Inter',
+      specimen: 'Aa',
+      scale: [
+        { label: 'H1', size: '64px' },
+        { label: 'H2', size: '44px' },
+        { label: 'H3', size: '32px' },
+        { label: 'H4', size: '24px' },
+        { label: 'Body', size: '16px' },
+      ],
+    },
+    palette: [
+      { name: 'Deep Navy', hex: '#0A1F3C', rgb: 'R10 G31 B60' },
+      { name: 'Ocean Blue', hex: '#1B4D7E', rgb: 'R27 G77 B126' },
+      { name: 'Tropical Teal', hex: '#2A9D8F', rgb: 'R42 G157 B143' },
+      { name: 'Warm Sand', hex: '#E9C46A', rgb: 'R233 G196 B106' },
+      { name: 'Terracotta', hex: '#E76F51', rgb: 'R231 G111 B81' },
+      { name: 'Off White', hex: '#F8F9FA', rgb: 'R248 G249 B250' },
+      { name: 'Charcoal', hex: '#1A1A2E', rgb: 'R26 G26 B46' },
+    ],
+    techStack: ['Custom Development', 'Content Architecture', 'Lead Capture System', 'SEO + AEO Schema', 'Mobile-First', 'GitHub Deployment'],
+    quote: null,
+  },
+
   'go-relocation-ph': {
     slug: 'go-relocation-ph',
     index: 4,
@@ -273,7 +327,7 @@ export const caseStudies = {
   },
 };
 
-export const slugOrder = ['imitation-book', 'bitlyft', 'biosis-designs', 'the-genesis-company', 'go-relocation-ph'];
+export const slugOrder = ['imitation-book', 'bitlyft', 'biosis-designs', 'the-genesis-company', 'go-relocation-ph', 'pnlt'];
 
 export function getNextProject(currentSlug) {
   const idx = slugOrder.indexOf(currentSlug);

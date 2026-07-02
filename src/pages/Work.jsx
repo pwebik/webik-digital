@@ -52,6 +52,15 @@ const portfolioItems = [
     internal: true,
     image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/9470d6e4b_generated_image.png',
   },
+  {
+    name: 'PNLT',
+    year: '2025',
+    category: 'LEGAL',
+    tags: 'Web Design · Web Development · Content Architecture',
+    link: '/work/pnlt',
+    internal: true,
+    image: 'https://media.base44.com/images/public/69f95de45f65220f9c4a6955/0f79f1a59_generated_image.png',
+  },
 ];
 
 export default function Work() {
@@ -86,7 +95,7 @@ export default function Work() {
           {/* Stats strip */}
           <div className="mt-16 flex flex-wrap gap-12">
             {[
-              { num: '5+', label: 'Projects Shipped' },
+              { num: '6+', label: 'Projects Shipped' },
               { num: '3', label: 'Countries' },
               { num: '48h', label: 'Avg. Deploy Time' },
             ].map((s, i) => (

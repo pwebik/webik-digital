@@ -8,6 +8,7 @@ const workItems = [
   { label: 'Biosis Designs', slug: 'biosis-designs', tag: 'Industrial' },
   { label: 'The Genesis Company', slug: 'the-genesis-company', tag: 'Business' },
   { label: 'Go Relocation PH', slug: 'go-relocation-ph', tag: 'Services' },
+  { label: 'PNLT', slug: 'pnlt', tag: 'Legal' },
 ];
 
 const navLinks = [
