@@ -1,46 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Images matched per service: Web Design, Email Marketing, Branding, SEO/AEO, Graphic Design, Maintenance
-const serviceImages = [
-  'https://media.base44.com/images/public/69ecce3288377cd246349884/1dfc3162b_WebDesignandDevelopment.png',
-  'https://media.base44.com/images/public/69ecce3288377cd246349884/3eb5412f7_EmailMarketingDesign.png',
-  'https://media.base44.com/images/public/69ecce3288377cd246349884/f3603044e_BrandingandLogoDesign.png',
-  'https://images.unsplash.com/photo-1573487717215-6449b8756f53?w=800&q=80',
-  'https://media.base44.com/images/public/69ecce3288377cd246349884/257a3b129_GraphicDesign.png',
-  'https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?w=800&q=80'];
-
-
-
 const services = [
 {
   num: '01',
   title: 'Web Design and Development',
+  image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/1dfc3162b_WebDesignandDevelopment.png',
   promise: 'A professionally designed, fast, modern website that converts visitors into leads or customers — and makes you visible on Google and AI tools from day one.'
 },
 {
   num: '02',
   title: 'Email Marketing Design',
+  image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/3eb5412f7_EmailMarketingDesign.png',
   promise: 'Professional email designs that get opened, clicked, and acted on — built to represent your brand at every send.'
 },
 {
   num: '03',
   title: 'Branding and Logo Design',
+  image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/f3603044e_BrandingandLogoDesign.png',
   promise: 'A complete brand kit — logo, colors, typography, and usage guidelines — so every touchpoint looks intentional and consistent.'
 },
 {
   num: '04',
   title: 'SEO and AEO',
+  image: 'https://images.unsplash.com/photo-1573487717215-6449b8756f53?w=800&q=80',
   promise: 'Visibility on Google and AI-powered search tools so the right people find you when they are already looking.'
 },
 {
   num: '05',
   title: 'Graphic Design',
+  image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/257a3b129_GraphicDesign.png',
   promise: 'On-brand visual assets ready for web, print, and social — built to match the quality of your actual product or service.'
 },
 {
   num: '06',
   title: 'Website Maintenance',
+  image: 'https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?w=800&q=80',
   promise: 'Ongoing support so your site stays fast, secure, and up to date — without you having to think about it.'
 }];
 
@@ -78,8 +73,8 @@ export default function ServicesSection() {
             onMouseLeave={(e) => e.currentTarget.style.background = 'var(--webik-cream)'}>
             
               <div className="aspect-[3/2] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80"
-
+                <img
+              src={service.image}
               alt={service.title}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90" />
               
