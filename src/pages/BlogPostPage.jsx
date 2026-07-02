@@ -103,9 +103,24 @@ export default function BlogPostPage() {
                       {section.heading}
                     </h2>
                     {section.body && (
-                      <p className="font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
+                      <ReactMarkdown
+                        components={{
+                          p: ({ children }) => (
+                            <p className="font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
+                              {children}
+                            </p>
+                          ),
+                          a: ({ children, href }) => (
+                            <a href={href} target="_blank" rel="noopener noreferrer" className="underline transition-colors" style={{ color: 'var(--webik-dark)' }}
+                              onMouseEnter={e => e.currentTarget.style.color = 'var(--webik-lime)'}
+                              onMouseLeave={e => e.currentTarget.style.color = 'var(--webik-dark)'}>
+                              {children}
+                            </a>
+                          ),
+                        }}
+                      >
                         {section.body}
-                      </p>
+                      </ReactMarkdown>
                     )}
                   </div>
                 );
