@@ -21,8 +21,8 @@ export default function AnnouncementBar() {
           <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.15em] mr-2" style={{ color: 'var(--webik-lime)' }}>
             Special Launch Offer
           </span>
-          <span className="hidden sm:inline">50% off for the first 10 signed Philippine clients. </span>
-          <span className="sm:hidden">50% off first 10 PH clients. </span>
+          <span className="hidden sm:inline">50% off for the first 10 signed clients. </span>
+          <span className="sm:hidden">50% off first 10 clients. </span>
           <Link
             to="/contact"
             className="inline-flex items-center gap-1 font-semibold underline decoration-2 underline-offset-2 transition-colors hover:opacity-80"

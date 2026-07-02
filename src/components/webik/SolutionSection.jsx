@@ -26,7 +26,7 @@ export default function SolutionSection() {
               We are not a one-person freelance shop. We are not an agency that hands you a finished product and disappears.
             </p>
             <p className="font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'rgba(245,243,236,0.65)' }}>
-              We are Webik Corp — a full-service digital agency built by a team of senior practitioners who have spent years doing this work at the highest level. Designers, developers, strategists, and operations leads who have sat in the room with business owners, built over 100 websites across industries, and worked with brands from Cebu to the international market.
+              We are Webik Corp — a full-service digital agency built by a team of senior practitioners who have spent years doing this work at the highest level. Designers, developers, strategists, and operations leads who have sat in the room with business owners, built over 100 websites across industries, and worked with brands across the globe.
             </p>
             <p className="font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'rgba(245,243,236,0.65)' }}>
               We started this company because we believed growing businesses deserve the same digital foundation that big brands are built on — and that it should not cost a fortune to get there.

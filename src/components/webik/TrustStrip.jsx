@@ -4,7 +4,7 @@ const stats = [
 { number: '100+', label: 'Websites Built' },
 { number: '25+', label: 'Years Combined Experience' },
 { number: "Global", label: "Clients Worldwide" },
-{ number: 'SEC', label: "SEC-Registered Business" }];
+{ number: 'Senior', label: "Practitioner-Led Team" }];
 
 
 export default function TrustStrip() {

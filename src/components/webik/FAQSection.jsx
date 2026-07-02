@@ -5,7 +5,7 @@ import { Plus } from 'lucide-react';
 const faqs = [
   {
     q: 'What is Webik Corp?',
-    a: 'Webik Corp is an SEC-registered digital agency based in Cebu, Philippines. We design, build, and grow digital presences for businesses that are serious about owning their corner of the internet. Our team combines senior-level experience across web design, development, sales, and operations. We serve clients locally in the Philippines and internationally.',
+    a: 'Webik Corp is a full-service digital agency. We design, build, and grow digital presences for businesses that are serious about owning their corner of the internet. Our team combines senior-level experience across web design, development, sales, and operations. We serve clients globally.',
   },
   {
     q: 'Why do you call yourselves "a digital team, not just an agency"?',
@@ -24,12 +24,12 @@ const faqs = [
     a: 'Web design and development, email marketing design, branding and logo design, SEO and Answer Engine Optimization (AEO), graphic design, and ongoing website maintenance. Every service is scoped around your business, not a one-size-fits-all package.',
   },
   {
-    q: 'Do you work with clients outside the Philippines?',
-    a: 'Yes. Webik Corp serves clients in the Philippines and in English-speaking international markets. Time zone differences are not a barrier — we work across them regularly. Our international work funds and sharpens what we do; our local work in the Philippines is the long game.',
+    q: 'Do you work with international clients?',
+    a: 'Yes. Webik Corp serves clients across English-speaking markets worldwide. Time zone differences are not a barrier — we work across them regularly. Every partnership gets the same senior-level attention, regardless of location.',
   },
   {
     q: 'Is Webik Corp a registered company?',
-    a: 'Yes. Webik Corp is a corporation registered with the Securities and Exchange Commission (SEC) of the Philippines. This means clients have legal recourse, contractual protection, and the assurance of working with a legitimate business — not a freelancer who can disappear.',
+    a: 'Yes. Webik Corp is a registered corporation. This means clients have legal recourse, contractual protection, and the assurance of working with a legitimate business — not a freelancer who can disappear.',
   },
   {
     q: 'What happens after my website launches?',

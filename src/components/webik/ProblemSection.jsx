@@ -37,7 +37,7 @@ export default function ProblemSection() {
 
         <div className="mt-10 space-y-6 max-w-[680px]">
           <p className="font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-dark)', fontWeight: 500 }}>
-            Most businesses in the Philippines are pouring time, energy, and money into platforms they do not own. Facebook pages. Instagram profiles. Rented space on someone else's platform.
+            Most businesses are pouring time, energy, and money into platforms they do not own. Facebook pages. Instagram profiles. Rented space on someone else's platform.
           </p>
           <p className="font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
             One algorithm change. One suspended account. One platform shift — and the audience you spent years building is gone.

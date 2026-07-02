@@ -77,7 +77,7 @@ export default function Footer() {
               <li><a href="mailto:pryce@webikdigital.com" className="hover:text-[var(--webik-cream)] transition-colors">pryce@webikdigital.com</a></li>
               
               <li><a href="tel:+639273532498" className="hover:text-[var(--webik-cream)] transition-colors">+63 927 353 2498</a></li>
-              <li className="leading-relaxed">Suite 110 Centro Maximo Bldg.,<br />Dionisio Jakosalem St.,<br />Cebu City, Philippines</li>
+              <li className="leading-relaxed">Suite 110 Centro Maximo Bldg.,<br />Dionisio Jakosalem St.,<br />Cebu City</li>
             </ul>
           </div>
         </div>
@@ -88,14 +88,14 @@ export default function Footer() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="text-center sm:text-left">
             <p className="text-[var(--webik-muted)] font-inter text-xs">
-              © 2026 Webik Corp. All rights reserved. SEC-Registered Philippines.
+              © 2026 Webik Corp. All rights reserved.
             </p>
             <p className="text-xs mt-1 [font-family:'Host_Grotesk',_'system-ui',_sans-serif] not-italic" style={{ color: 'rgba(245,243,236,0.25)' }}>
               SEC-registered. Built on experience. Here for the long game.
             </p>
           </div>
           <p className="font-mono text-[10px] uppercase tracking-[0.15em]" style={{ color: 'rgba(245,243,236,0.2)' }}>
-            webikdigital.com · Cebu, Philippines · Serving clients globally
+            webikdigital.com · Serving clients globally
           </p>
         </div>
       </div>

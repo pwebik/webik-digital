@@ -60,7 +60,7 @@ export default function HeroSection() {
             className="font-mono text-[11px] uppercase tracking-[0.25em] mb-8"
             style={{ color: 'var(--webik-lime)' }}
           >
-            Webik Corp · Cebu, Philippines
+            Webik Corp · Global Digital Team
           </p>
 
           {/* Headline */}
@@ -122,7 +122,7 @@ export default function HeroSection() {
           className="mt-16 lg:mt-24 font-mono text-[10px] uppercase tracking-[0.25em]"
           style={{ color: 'rgba(245,243,236,0.25)' }}
         >
-          Trusted by businesses in the Philippines and across the globe.
+          Trusted by businesses across the globe.
         </p>
       </div>
     </section>
