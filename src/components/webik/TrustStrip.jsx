@@ -3,7 +3,7 @@ import React from 'react';
 const stats = [
 { number: '100+', label: 'Websites Built' },
 { number: '25+', label: 'Years Combined Experience' },
-{ number: "Global", label: "Clients\xA0" },
+{ number: "Global", label: "Clients Worldwioe" },
 { number: 'SEC', label: 'SEC-Registered Agency' }];
 
 
