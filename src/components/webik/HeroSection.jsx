@@ -32,6 +32,21 @@ export default function HeroSection() {
     >
       <GrainOverlay />
 
+      {/* Subtle team photo background */}
+      <div
+        className="absolute inset-0 pointer-events-none z-[1]"
+        style={{
+          backgroundImage: 'url("https://media.base44.com/images/public/69ecce3288377cd246349884/d1ec6f132_731390377_993630656793503_7810397738374090698_n.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'right center',
+          opacity: 0.12,
+        }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none z-[1]"
+        style={{ background: 'linear-gradient(to right, var(--webik-dark) 20%, transparent 70%), linear-gradient(to top, var(--webik-dark), transparent 60%)' }}
+      />
+
       {/* Big W background letter */}
       <div
         className="absolute right-[-6vw] top-1/2 -translate-y-1/2 select-none pointer-events-none"
