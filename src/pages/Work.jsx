@@ -59,7 +59,7 @@ const portfolioItems = [
     tags: 'Web Design · Web Development · Content Architecture',
     link: '/work/pnlt',
     internal: true,
-    image: 'https://media.base44.com/images/public/69f95de45f65220f9c4a6955/0f79f1a59_generated_image.png',
+    image: 'https://media.base44.com/images/public/69ecce3288377cd246349884/55d5199b9_generated_image.png',
   },
 ];
 
