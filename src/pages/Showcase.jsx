@@ -57,6 +57,13 @@ const projects = [
     url: 'https://conquerfitnessgym.base44.app',
     thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/a38150d2d_image.png',
   },
+  {
+    name: 'Ribs & Bibs',
+    initial: 'R',
+    description: 'A dark, moody restaurant hero with bold typography, orange brand accents, and a stats bar — slow-smoked ribs and flame-grilled steaks in the heart of CDO.',
+    url: 'https://ribs-and-bibs.base44.app',
+    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/c17c5f646_image.png',
+  },
 ];
 
 export default function Showcase() {
