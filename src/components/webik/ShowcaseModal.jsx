@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { X, Monitor, Smartphone, Loader2, ExternalLink, AlertCircle } from 'lucide-react';
+import MacBookProFrame from '@/components/webik/MacBookProFrame';
+import IPhoneProFrame from '@/components/webik/IPhoneProFrame';
 
 const LOAD_TIMEOUT = 6000;
 
@@ -69,13 +71,42 @@ export default function ShowcaseModal({ project, onClose }) {
   const showToggle = !isMobileViewport;
   const currentDevice = isMobileViewport ? 'mobile' : device;
 
-  // Desktop view: render iframe at 1440px, scale to fit
-  const desktopScale = contentW > 0 ? contentW / 1440 : 1;
-  const desktopIframeH = desktopScale > 0 ? contentH / desktopScale : contentH;
+  // ── Desktop (MacBook Pro) sizing ──
+  // Reserve padding + laptop base/bezel
+  const macPadding = 32;
+  const macBaseReserve = 34; // base + bezel overhead
+  const macAvailW = contentW - macPadding * 2;
+  const macAvailH = contentH - macPadding * 2 - macBaseReserve;
+  // Screen width fits available width (cap at 1200 for readability)
+  const macScreenW = Math.min(macAvailW, 1200);
+  // iframe renders at 1440px native, scaled to screen width
+  const desktopScale = macScreenW > 0 ? macScreenW / 1440 : 1;
+  const macScreenH = macAvailH;
+  const desktopIframeH = desktopScale > 0 ? macScreenH / desktopScale : macScreenH;
 
-  // Mobile view: phone frame at 390px
-  const phoneW = 390;
-  const phoneH = contentH;
+  // ── Mobile (iPhone 17 Pro) sizing ──
+  const phonePadding = 32;
+  const phoneBezelOverhead = 14; // bezel on all sides
+  const phoneAvailW = contentW - phonePadding * 2;
+  const phoneAvailH = contentH - phonePadding * 2;
+  // iPhone 17 Pro aspect ratio ≈ 9:19.5 (screenH/screenW ≈ 2.165)
+  const phoneRatio = 19.5 / 9;
+  // Try height-constrained first
+  let phoneScreenH = phoneAvailH - phoneBezelOverhead;
+  let phoneScreenW = phoneScreenH / phoneRatio;
+  // If too wide, switch to width-constrained
+  if (phoneScreenW > phoneAvailW - phoneBezelOverhead) {
+    phoneScreenW = phoneAvailW - phoneBezelOverhead;
+    phoneScreenH = phoneScreenW * phoneRatio;
+  }
+  // Cap phone width to 440 (iPhone Pro Max width)
+  if (phoneScreenW > 440) {
+    phoneScreenW = 440;
+    phoneScreenH = phoneScreenW * phoneRatio;
+  }
+  const mobileScale = phoneScreenW > 0 ? phoneScreenW / 390 : 1;
+  const mobileIframeH = mobileScale > 0 ? phoneScreenH / mobileScale : phoneScreenH;
+
   const iframeKey = `${project.name}-${currentDevice}`;
 
   return (
@@ -150,7 +181,7 @@ export default function ShowcaseModal({ project, onClose }) {
         <div className="relative flex-1 overflow-hidden" style={{ background: 'var(--webik-cream-2)' }}>
           {/* Loading spinner */}
           {!iframeLoaded && !embedBlocked && (
-            <div className="absolute inset-0 flex items-center justify-center z-10">
+            <div className="absolute inset-0 flex items-center justify-center z-30">
               <div className="flex flex-col items-center gap-3">
                 <Loader2 size={32} className="animate-spin" style={{ color: 'var(--webik-dark)' }} />
                 <span className="font-mono text-[10px] uppercase tracking-[0.15em]" style={{ color: 'var(--webik-muted)' }}>
@@ -162,7 +193,7 @@ export default function ShowcaseModal({ project, onClose }) {
 
           {/* Embedding blocked fallback */}
           {embedBlocked && (
-            <div className="absolute inset-0 flex items-center justify-center z-20 p-6">
+            <div className="absolute inset-0 flex items-center justify-center z-40 p-6">
               <div className="flex flex-col items-center gap-4 max-w-sm text-center">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: 'rgba(14,26,10,0.08)' }}>
                   <AlertCircle size={24} style={{ color: 'var(--webik-dark)' }} />
@@ -187,53 +218,47 @@ export default function ShowcaseModal({ project, onClose }) {
             </div>
           )}
 
-          {/* Desktop view: iframe at 1440px, scaled to fit */}
+          {/* Desktop view: MacBook Pro frame */}
           {currentDevice === 'desktop' && !embedBlocked && (
-            <div style={{ width: `${contentW}px`, height: `${contentH}px`, overflow: 'hidden', position: 'relative' }}>
-              <iframe
-                key={iframeKey}
-                src={project.url}
-                title={project.name}
-                onLoad={handleIframeLoad}
-                style={{
-                  width: '1440px',
-                  height: `${desktopIframeH}px`,
-                  border: 'none',
-                  transform: `scale(${desktopScale})`,
-                  transformOrigin: 'top left',
-                  display: 'block',
-                }}
-              />
-            </div>
-          )}
-
-          {/* Mobile view: phone frame */}
-          {currentDevice === 'mobile' && !embedBlocked && (
             <div className="absolute inset-0 flex items-center justify-center p-4 overflow-hidden">
-              <div
-                className="relative rounded-[2rem] flex-shrink-0 overflow-hidden"
-                style={{
-                  width: `${phoneW}px`,
-                  height: `${phoneH}px`,
-                  maxWidth: '100%',
-                  border: '8px solid var(--webik-dark)',
-                  borderRadius: '2.5rem',
-                  boxShadow: '0 20px 60px rgba(14,26,10,0.35)',
-                }}
-              >
+              <MacBookProFrame screenW={macScreenW} screenH={macScreenH}>
                 <iframe
                   key={iframeKey}
                   src={project.url}
                   title={project.name}
                   onLoad={handleIframeLoad}
                   style={{
-                    width: '100%',
-                    height: '100%',
+                    width: '1440px',
+                    height: `${desktopIframeH}px`,
                     border: 'none',
+                    transform: `scale(${desktopScale})`,
+                    transformOrigin: 'top left',
                     display: 'block',
                   }}
                 />
-              </div>
+              </MacBookProFrame>
+            </div>
+          )}
+
+          {/* Mobile view: iPhone Pro frame */}
+          {currentDevice === 'mobile' && !embedBlocked && (
+            <div className="absolute inset-0 flex items-center justify-center p-4 overflow-hidden">
+              <IPhoneProFrame screenW={phoneScreenW} screenH={phoneScreenH}>
+                <iframe
+                  key={iframeKey}
+                  src={project.url}
+                  title={project.name}
+                  onLoad={handleIframeLoad}
+                  style={{
+                    width: '390px',
+                    height: `${mobileIframeH}px`,
+                    border: 'none',
+                    transform: `scale(${mobileScale})`,
+                    transformOrigin: 'top left',
+                    display: 'block',
+                  }}
+                />
+              </IPhoneProFrame>
             </div>
           )}
         </div>
