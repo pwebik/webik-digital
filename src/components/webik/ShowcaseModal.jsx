@@ -72,16 +72,21 @@ export default function ShowcaseModal({ project, onClose }) {
   const currentDevice = isMobileViewport ? 'mobile' : device;
 
   // ── Desktop (MacBook Pro) sizing ──
-  // Reserve padding + laptop base/bezel
+  // Real MacBook Pro screens are 16:10 aspect ratio
   const macPadding = 32;
   const macBaseReserve = 34; // base + bezel overhead
   const macAvailW = contentW - macPadding * 2;
   const macAvailH = contentH - macPadding * 2 - macBaseReserve;
-  // Screen width fits available width (cap at 1200 for readability)
-  const macScreenW = Math.min(macAvailW, 1200);
+  const macAspect = 16 / 10; // width / height
+  // Compute screen that fits within both width and height constraints at 16:10
+  let macScreenW = Math.min(macAvailW, 1100);
+  let macScreenH = macScreenW / macAspect;
+  if (macScreenH > macAvailH) {
+    macScreenH = macAvailH;
+    macScreenW = macScreenH * macAspect;
+  }
   // iframe renders at 1440px native, scaled to screen width
   const desktopScale = macScreenW > 0 ? macScreenW / 1440 : 1;
-  const macScreenH = macAvailH;
   const desktopIframeH = desktopScale > 0 ? macScreenH / desktopScale : macScreenH;
 
   // ── Mobile (iPhone 17 Pro) sizing ──
