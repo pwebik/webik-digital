@@ -1,22 +1,39 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { X, Monitor, Smartphone, Loader2 } from 'lucide-react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { X, Monitor, Smartphone, Loader2, ExternalLink, AlertCircle } from 'lucide-react';
+
+const LOAD_TIMEOUT = 6000;
 
 export default function ShowcaseModal({ project, onClose }) {
   const [device, setDevice] = useState('desktop');
   const [iframeLoaded, setIframeLoaded] = useState(false);
+  const [embedBlocked, setEmbedBlocked] = useState(false);
   const [dims, setDims] = useState({
     w: typeof window !== 'undefined' ? window.innerWidth : 1280,
     h: typeof window !== 'undefined' ? window.innerHeight : 800,
   });
+  const timeoutRef = useRef(null);
 
   // Reset state when project changes + lock body scroll
   useEffect(() => {
     if (!project) return;
     setDevice('desktop');
     setIframeLoaded(false);
+    setEmbedBlocked(false);
     document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = ''; };
+    // If iframe doesn't report onLoad within the timeout, assume embedding is blocked
+    timeoutRef.current = setTimeout(() => {
+      setEmbedBlocked(true);
+    }, LOAD_TIMEOUT);
+    return () => {
+      document.body.style.overflow = '';
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
   }, [project]);
+
+  const handleIframeLoad = useCallback(() => {
+    setIframeLoaded(true);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+  }, []);
 
   // Escape to close
   useEffect(() => {
@@ -36,6 +53,9 @@ export default function ShowcaseModal({ project, onClose }) {
   const switchDevice = useCallback((d) => {
     setDevice(d);
     setIframeLoaded(false);
+    setEmbedBlocked(false);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => setEmbedBlocked(true), LOAD_TIMEOUT);
   }, []);
 
   if (!project) return null;
@@ -129,7 +149,7 @@ export default function ShowcaseModal({ project, onClose }) {
         {/* Content area */}
         <div className="relative flex-1 overflow-hidden" style={{ background: 'var(--webik-cream-2)' }}>
           {/* Loading spinner */}
-          {!iframeLoaded && (
+          {!iframeLoaded && !embedBlocked && (
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="flex flex-col items-center gap-3">
                 <Loader2 size={32} className="animate-spin" style={{ color: 'var(--webik-dark)' }} />
@@ -140,14 +160,41 @@ export default function ShowcaseModal({ project, onClose }) {
             </div>
           )}
 
+          {/* Embedding blocked fallback */}
+          {embedBlocked && (
+            <div className="absolute inset-0 flex items-center justify-center z-20 p-6">
+              <div className="flex flex-col items-center gap-4 max-w-sm text-center">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: 'rgba(14,26,10,0.08)' }}>
+                  <AlertCircle size={24} style={{ color: 'var(--webik-dark)' }} />
+                </div>
+                <h3 className="font-grotesk text-lg font-medium" style={{ color: 'var(--webik-dark)' }}>
+                  Preview unavailable
+                </h3>
+                <p className="font-inter text-sm leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
+                  {project.name} can't be embedded here, but you can explore the full site in a new tab.
+                </p>
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-inter font-semibold transition-all duration-300 hover:-translate-y-0.5"
+                  style={{ background: 'var(--webik-dark)', color: 'var(--webik-cream)' }}
+                >
+                  <ExternalLink size={15} />
+                  Open {project.name} in new tab
+                </a>
+              </div>
+            </div>
+          )}
+
           {/* Desktop view: iframe at 1440px, scaled to fit */}
-          {currentDevice === 'desktop' && (
+          {currentDevice === 'desktop' && !embedBlocked && (
             <div style={{ width: `${contentW}px`, height: `${contentH}px`, overflow: 'hidden', position: 'relative' }}>
               <iframe
                 key={iframeKey}
                 src={project.url}
                 title={project.name}
-                onLoad={() => setIframeLoaded(true)}
+                onLoad={handleIframeLoad}
                 style={{
                   width: '1440px',
                   height: `${desktopIframeH}px`,
@@ -161,7 +208,7 @@ export default function ShowcaseModal({ project, onClose }) {
           )}
 
           {/* Mobile view: phone frame */}
-          {currentDevice === 'mobile' && (
+          {currentDevice === 'mobile' && !embedBlocked && (
             <div className="absolute inset-0 flex items-center justify-center p-4 overflow-hidden">
               <div
                 className="relative rounded-[2rem] flex-shrink-0 overflow-hidden"
@@ -178,7 +225,7 @@ export default function ShowcaseModal({ project, onClose }) {
                   key={iframeKey}
                   src={project.url}
                   title={project.name}
-                  onLoad={() => setIframeLoaded(true)}
+                  onLoad={handleIframeLoad}
                   style={{
                     width: '100%',
                     height: '100%',
