@@ -6,6 +6,7 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
+import PageTransition from './components/webik/PageTransition';
 import Home from './pages/Home';
 import CaseStudy from './pages/CaseStudy';
 import Contact from './pages/Contact';
@@ -52,6 +53,7 @@ const AuthenticatedApp = () => {
   return (
     <>
     <ScrollToTop />
+    <PageTransition />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/work/:slug" element={<CaseStudy />} />
