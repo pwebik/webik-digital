@@ -85,7 +85,7 @@ Deno.serve(async (req) => {
       };
 
       const createRes = await fetch(
-        `https://www.googleapis.com/calendar/v3/calendars/primary/events?conferenceDataVersion=1&sendUpdates=none`,
+        `https://www.googleapis.com/calendar/v3/calendars/primary/events?conferenceDataVersion=1&sendUpdates=all`,
         {
           method: 'POST',
           headers: {
@@ -178,12 +178,16 @@ Deno.serve(async (req) => {
 </table>
 </body></html>`;
 
-      await base44.integrations.Core.SendEmail({
-        to: email,
-        subject: 'Your Discovery Call is Booked — Webik Corp',
-        body: clientHtml,
-        from_name: 'Webik Corp',
-      });
+      try {
+        await base44.integrations.Core.SendEmail({
+          to: email,
+          subject: 'Your Discovery Call is Booked — Webik Corp',
+          body: clientHtml,
+          from_name: 'Webik Corp',
+        });
+      } catch (emailErr) {
+        // SendEmail is restricted to app users — Google Calendar's own invite (sendUpdates=all) covers external emails
+      }
 
       // Notification email to the team — branded HTML
       const teamHtml = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;padding:0;background-color:#EBE8DD;font-family:'Inter Tight',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
@@ -214,12 +218,16 @@ Deno.serve(async (req) => {
 </table>
 </body></html>`;
 
-      await base44.integrations.Core.SendEmail({
-        to: 'pryce@webikdigital.com',
-        subject: `New Discovery Call — ${name}`,
-        body: teamHtml,
-        from_name: 'Webik Booking',
-      });
+      try {
+        await base44.asServiceRole.integrations.Core.SendEmail({
+          to: 'pryce@webikdigital.com',
+          subject: `New Discovery Call — ${name}`,
+          body: teamHtml,
+          from_name: 'Webik Booking',
+        });
+      } catch (teamEmailErr) {
+        // Non-critical — the calendar event is the source of truth
+      }
 
       return Response.json({ success: true, meetLink, startISO: startDate.toISOString() });
     }
