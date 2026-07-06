@@ -81,7 +81,7 @@ export default function Work() {
         <GrainOverlay />
         <HeroBackground />
         <div className="max-w-[1440px] mx-auto relative z-10">
-          <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Work )</span>
+          <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">Work</span>
           <h1
             className="font-grotesk font-light leading-[0.95] mt-4 tracking-tight"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(44px, 8vw, 112px)', letterSpacing: '-0.04em' }}

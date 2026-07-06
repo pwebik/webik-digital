@@ -26,7 +26,7 @@ export default function ProblemSection() {
         className="max-w-[900px] mx-auto reveal-on-scroll">
         
         <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>
-          ( Sound Familiar? )
+          Sound Familiar?
         </span>
         <h2
           className="font-grotesk font-light mt-5 leading-[1.05]"

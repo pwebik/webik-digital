@@ -29,7 +29,7 @@ export default function About() {
         <GrainOverlay />
         <HeroBackground />
         <div className="max-w-[1440px] mx-auto relative z-10">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( About Webik )</span>
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>About Webik</span>
           <h1
             className="font-grotesk font-light leading-[0.92] tracking-tight mt-6"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(48px, 8vw, 120px)', letterSpacing: '-0.04em' }}
@@ -67,7 +67,7 @@ export default function About() {
         <div className="max-w-[1440px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div>
-              <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( Our Story )</span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>Our Story</span>
               <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
                 Born in Cebu.<br />Built for <span style={{ color: 'var(--webik-lime)' }}>everyone.</span>
               </h2>
@@ -112,7 +112,7 @@ export default function About() {
               />
             </div>
             <div className="order-1 lg:order-2">
-              <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( The Team )</span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>The Team</span>
               <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
                 Small team.<br /><span style={{ color: 'var(--webik-lime)' }}>Big output.</span>
               </h2>
@@ -131,7 +131,7 @@ export default function About() {
       <section className="relative py-20 lg:py-28 px-6 lg:px-12" style={{ background: 'var(--webik-dark)' }}>
         <GrainOverlay />
         <div className="max-w-[1440px] mx-auto relative z-10">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Our Values )</span>
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>Our Values</span>
           <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-cream)', letterSpacing: '-0.03em' }}>
             What we stand for.
           </h2>

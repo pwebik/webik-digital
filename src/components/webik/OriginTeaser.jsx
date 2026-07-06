@@ -13,7 +13,7 @@ export default function OriginTeaser() {
         {/* Text */}
         <div>
           <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>
-            ( Why We Built This )
+            Why We Built This
           </span>
           <h2
             className="font-grotesk font-light mt-5 leading-[1.05]"

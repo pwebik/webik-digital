@@ -148,7 +148,7 @@ export default function LeadMagnet() {
       {/* Preview of signs */}
       <section className="py-20 lg:py-28 px-6 lg:px-12" style={{ background: 'var(--webik-cream)' }}>
         <div className="max-w-[1440px] mx-auto">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( What's Inside )</span>
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>What's Inside</span>
           <h2 className="font-fraunces italic font-light text-3xl lg:text-4xl mt-4 mb-12" style={{ color: 'var(--webik-dark)' }}>
             A quick look at what the guide covers.
           </h2>

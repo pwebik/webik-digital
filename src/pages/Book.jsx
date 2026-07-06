@@ -135,7 +135,7 @@ export default function Book() {
         <GrainOverlay />
         <HeroBackground />
         <div className="max-w-[1440px] mx-auto relative z-10">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Book a Call )</span>
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>Book a Call</span>
           <h1
             className="font-grotesk font-light leading-[1.0] mt-6 tracking-tight"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(42px, 7vw, 110px)', letterSpacing: '-0.04em' }}
@@ -168,7 +168,7 @@ export default function Book() {
               <div className="w-20 h-20 rounded-full flex items-center justify-center mb-8" style={{ background: 'var(--webik-dark)' }}>
                 <Check size={36} style={{ color: 'var(--webik-lime)' }} />
               </div>
-              <span className="font-mono text-[11px] uppercase tracking-[0.2em] mb-4" style={{ color: 'var(--webik-muted)' }}>( Confirmed )</span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em] mb-4" style={{ color: 'var(--webik-muted)' }}>Confirmed</span>
               <h2 className="font-grotesk font-light text-3xl lg:text-5xl mb-4" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>
                 You're booked in.
               </h2>

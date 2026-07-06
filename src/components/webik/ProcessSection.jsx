@@ -14,7 +14,7 @@ export default function ProcessSection() {
     >
       <div className="max-w-[1440px] mx-auto">
         <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>
-          ( How We Work )
+          How We Work
         </span>
         <h2
           className="font-grotesk font-light mt-5"

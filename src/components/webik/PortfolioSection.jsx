@@ -58,7 +58,7 @@ export default function PortfolioSection() {
   return (
     <section id="work" className="bg-[var(--webik-cream)] py-20 lg:py-32 px-6 lg:px-12">
       <div className="max-w-[1440px] mx-auto">
-        <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Work )</span>
+        <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">Work</span>
         <h2 className="font-grotesk text-[var(--webik-dark)] text-3xl sm:text-4xl lg:text-5xl font-light mt-4">
           Real clients. Real <span style={{ color: 'var(--webik-lime)' }}>results.</span>
         </h2>

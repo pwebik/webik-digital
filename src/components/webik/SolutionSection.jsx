@@ -11,7 +11,7 @@ export default function SolutionSection() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           <div>
             <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>
-              ( Who We Are )
+              Who We Are
             </span>
             <h2
               className="font-grotesk font-light mt-5 leading-[1.05]"

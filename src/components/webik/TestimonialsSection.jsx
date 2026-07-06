@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
         <div className="flex items-start justify-between gap-6 flex-wrap">
           <div>
             <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>
-              ( What Clients Say )
+              What Clients Say
             </span>
             <h2
               className="font-grotesk font-light mt-5"

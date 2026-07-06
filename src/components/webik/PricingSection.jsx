@@ -84,7 +84,7 @@ export default function PricingSection() {
   return (
     <section id="pricing" className="relative bg-[var(--webik-dark)] py-20 lg:py-32 px-6 lg:px-12">
       <div className="max-w-[1440px] mx-auto">
-        <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">( Pricing )</span>
+        <span className="text-[var(--webik-muted)] text-xs font-mono uppercase tracking-[0.2em]">Pricing</span>
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mt-4">
           <h2 className="font-grotesk text-[var(--webik-cream)] text-3xl sm:text-4xl lg:text-5xl font-light">
             Lower risk. Higher <span style={{ color: 'var(--webik-lime)' }}>partnership.</span>

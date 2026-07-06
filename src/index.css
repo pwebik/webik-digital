@@ -13,10 +13,10 @@
     --webik-cream-2: #EBE8DD;
     --webik-muted: #6B7560;
 
-    --font-fraunces: 'Fraunces', 'Georgia', serif;
+    --font-fraunces: 'Host Grotesk', 'system-ui', sans-serif;
     --font-grotesk: 'Host Grotesk', 'system-ui', sans-serif;
-    --font-inter: 'Inter Tight', 'system-ui', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    --font-inter: 'Host Grotesk', 'system-ui', sans-serif;
+    --font-mono: 'Host Grotesk', 'system-ui', sans-serif;
 
     --background: 45 30% 95%;
     --foreground: 100 40% 5%;
@@ -96,7 +96,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-inter);
+    font-family: var(--font-grotesk);
   }
 }
 

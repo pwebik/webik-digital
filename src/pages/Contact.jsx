@@ -65,7 +65,7 @@ export default function Contact() {
         <GrainOverlay />
         <HeroBackground />
         <div className="max-w-[1440px] mx-auto relative z-10">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Contact )</span>
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>Contact</span>
           <h1
             className="font-grotesk font-light leading-[1.0] mt-6 tracking-tight"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(42px, 7vw, 110px)', letterSpacing: '-0.04em' }}
@@ -211,7 +211,7 @@ export default function Contact() {
         <div className="max-w-[1440px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
             <div>
-              <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( What Happens Next )</span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>What Happens Next</span>
               <h2 className="font-grotesk font-light text-3xl lg:text-4xl mt-4" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>No Surprises. Here Is Exactly What to Expect.</h2>
               <div className="mt-10 space-y-6">
                 {nextSteps.map((step, i) => (
@@ -226,7 +226,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>( A Few Things Worth Knowing )</span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>A Few Things Worth Knowing</span>
               <h2 className="font-grotesk font-light text-3xl lg:text-4xl mt-4 mb-8" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>Worth reading before you reach out.</h2>
               <div className="space-y-6">
                 {[

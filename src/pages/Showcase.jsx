@@ -89,7 +89,7 @@ export default function Showcase() {
         <GrainOverlay />
         <HeroBackground />
         <div className="max-w-[1440px] mx-auto relative z-10">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Showcase )</span>
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>Showcase</span>
           <h1
             className="font-grotesk font-light leading-[0.92] tracking-tight mt-6"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(48px, 8vw, 120px)', letterSpacing: '-0.04em' }}

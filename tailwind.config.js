@@ -5,10 +5,10 @@ module.exports = {
   theme: {
   	extend: {
   		fontFamily: {
-  			fraunces: ['var(--font-fraunces)'],
+  			fraunces: ['var(--font-grotesk)'],
   			grotesk: ['var(--font-grotesk)'],
-  			inter: ['var(--font-inter)'],
-  			mono: ['var(--font-mono)'],
+  			inter: ['var(--font-grotesk)'],
+  			mono: ['var(--font-grotesk)'],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

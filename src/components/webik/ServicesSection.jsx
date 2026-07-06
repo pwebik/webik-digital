@@ -49,7 +49,7 @@ export default function ServicesSection() {
       
       <div className="max-w-[1440px] mx-auto">
         <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>
-          ( What We Build )
+          What We Build
         </span>
         <div className="mt-5 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <h2

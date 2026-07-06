@@ -301,7 +301,7 @@ export default function CaseStudy() {
           <GrainOverlay />
           <div className="max-w-[1440px] mx-auto relative z-10">
             <div className="cs-reveal mb-14">
-              <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>( Page Tour )</span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-lime)' }}>Page Tour</span>
               <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-cream)' }}>Inside the build.</h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px" style={{ background: 'rgba(245,243,236,0.1)' }}>
