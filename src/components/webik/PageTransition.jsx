@@ -61,12 +61,6 @@ export default function PageTransition() {
             style={{ animation: 'page-transition-pulse 0.8s ease-in-out infinite' }}
           />
         </div>
-        <span
-          className="font-mono text-[10px] uppercase tracking-[0.25em]"
-          style={{ color: 'rgba(245,243,236,0.4)', animation: 'page-transition-fade 0.4s ease-out' }}
-        >
-          Webik
-        </span>
       </div>
 
       <style>{`
