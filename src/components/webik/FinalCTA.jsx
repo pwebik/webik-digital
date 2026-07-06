@@ -35,13 +35,13 @@ export default function FinalCTA() {
 
         <div className="mt-10 flex flex-col items-center gap-4">
           <Link
-            to="/contact"
+            to="/book"
             className="inline-flex items-center gap-3 px-10 py-5 rounded-full font-inter font-medium text-base transition-all duration-400"
             style={{ background: 'var(--webik-lime)', color: 'var(--webik-dark)' }}
             onMouseEnter={e => { e.currentTarget.style.background = 'var(--webik-cream)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
             onMouseLeave={e => { e.currentTarget.style.background = 'var(--webik-lime)'; e.currentTarget.style.transform = 'translateY(0)'; }}
           >
-            See What We Can Do Together
+            Schedule a 20-Min Discovery Call
           </Link>
           <p className="font-inter italic text-sm" style={{ color: 'rgba(245,243,236,0.35)' }}>
             Not sure where to start? That is what the first call is for.

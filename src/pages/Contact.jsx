@@ -87,7 +87,12 @@ export default function Contact() {
               See What We Can Do Together
               <ArrowUpRight size={16} />
             </Link>
-            <p className="mt-3 font-inter italic text-sm" style={{ color: 'rgba(245,243,236,0.4)' }}>Book a free discovery call — no pitch, no pressure.</p>
+            <p className="mt-3 font-inter text-sm" style={{ color: 'rgba(245,243,236,0.55)' }}>
+              Prefer to pick a time yourself?{' '}
+              <Link to="/book" className="underline underline-offset-2 hover:text-[var(--webik-lime)] transition-colors" style={{ color: 'var(--webik-lime)' }}>
+                Book a 20-min discovery call →
+              </Link>
+            </p>
           </div>
         </div>
       </section>

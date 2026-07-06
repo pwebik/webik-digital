@@ -121,10 +121,10 @@ export default function StickyNav() {
           {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-4">
             <Link
-              to="/contact"
+              to="/book"
               className="hidden sm:inline-flex bg-[var(--webik-dark)] text-[var(--webik-cream)] px-5 py-2.5 rounded-full text-sm font-inter font-medium hover:bg-[var(--webik-dark-2)] transition-all duration-300 hover:-translate-y-0.5"
             >
-              See What We Can Do Together
+              Book a Discovery Call
             </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -218,12 +218,12 @@ export default function StickyNav() {
         </nav>
 
         <Link
-          to="/contact"
+          to="/book"
           onClick={() => setMobileOpen(false)}
           className="mb-12 inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-inter font-semibold"
           style={{ backgroundColor: 'var(--webik-lime)', color: 'var(--webik-dark)' }}
         >
-          See What We Can Do Together
+          Book a Discovery Call
         </Link>
       </div>
     </>

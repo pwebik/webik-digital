@@ -21,6 +21,7 @@ import Analytics from './pages/Analytics';
 import BlogDashboard from './pages/BlogDashboard';
 import BlogEditor from './pages/BlogEditor';
 import Showcase from './pages/Showcase';
+import Book from './pages/Book';
 import ProtectedRoute from '@/components/ProtectedRoute';
 // Add page imports here
 
@@ -60,6 +61,7 @@ const AuthenticatedApp = () => {
       <Route path="/team" element={<Team />} />
       <Route path="/work" element={<Work />} />
       <Route path="/showcase" element={<Showcase />} />
+      <Route path="/book" element={<Book />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<BlogPostPage />} />
       <Route path="/resources/5-signs-website-losing-clients" element={<LeadMagnet />} />
