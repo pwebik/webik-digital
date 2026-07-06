@@ -39,7 +39,7 @@ export default function PageTransition() {
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center pointer-events-none transition-opacity duration-300"
       style={{
-        backgroundColor: 'var(--webik-cream)',
+        backgroundColor: 'var(--webik-dark)',
         opacity: fadingOut ? 0 : 1,
       }}
     >
@@ -63,7 +63,7 @@ export default function PageTransition() {
         </div>
         <span
           className="font-mono text-[10px] uppercase tracking-[0.25em]"
-          style={{ color: 'var(--webik-muted)', animation: 'page-transition-fade 0.4s ease-out' }}
+          style={{ color: 'rgba(245,243,236,0.4)', animation: 'page-transition-fade 0.4s ease-out' }}
         >
           Webik
         </span>
