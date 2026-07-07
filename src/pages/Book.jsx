@@ -27,7 +27,7 @@ function toDateStr(date) {
 
 function generateSlots(dateStr) {
   const slots = [];
-  for (let hour = 9; hour < 17; hour++) {
+  for (let hour = 0; hour < 24; hour++) {
     for (let min = 0; min < 60; min += 20) {
       const dt = new Date(`${dateStr}T${String(hour).padStart(2, '0')}:${String(min).padStart(2, '0')}:00`);
       slots.push(dt);
@@ -153,7 +153,7 @@ export default function Book() {
               <Video size={16} style={{ color: 'var(--webik-lime)' }} /> Google Meet
             </div>
             <div className="flex items-center gap-2.5 font-inter text-sm" style={{ color: 'rgba(245,243,236,0.5)' }}>
-              <Calendar size={16} style={{ color: 'var(--webik-lime)' }} /> Mon–Fri, 9 AM – 5 PM {timezone ? `(${timezone.split('/').pop().replace(/_/g, ' ')})` : ''}
+              <Calendar size={16} style={{ color: 'var(--webik-lime)' }} /> 24/7 Availability {timezone ? `(${timezone.split('/').pop().replace(/_/g, ' ')})` : ''}
             </div>
           </div>
         </div>

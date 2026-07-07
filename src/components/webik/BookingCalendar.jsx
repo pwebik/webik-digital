@@ -13,8 +13,7 @@ function isSelectable(date, maxDays) {
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const maxDate = new Date(today);
   maxDate.setDate(maxDate.getDate() + maxDays);
-  const day = date.getDay();
-  return date >= today && date <= maxDate && day !== 0 && day !== 6;
+  return date >= today && date <= maxDate;
 }
 
 export default function BookingCalendar({ selectedDate, onSelect, maxDays = 14 }) {
