@@ -73,8 +73,8 @@ Deno.serve(async (req) => {
       const event = {
         summary: `Discovery Call — ${name}`,
         description: `Booked by ${name} (${email})${notes ? `\n\nNotes:\n${notes}` : ''}`,
-        start: { dateTime: startDate.toISOString() },
-        end: { dateTime: endDate.toISOString() },
+        start: { dateTime: startDate.toISOString(), timeZone: 'Asia/Manila' },
+        end: { dateTime: endDate.toISOString(), timeZone: 'Asia/Manila' },
         attendees: [{ email }],
         conferenceData: {
           createRequest: {
@@ -122,7 +122,7 @@ Deno.serve(async (req) => {
         weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
         hour: 'numeric', minute: '2-digit',
       };
-      if (timezone) fmtOpts.timeZone = timezone;
+      fmtOpts.timeZone = 'Asia/Manila';
       const formattedDate = startDate.toLocaleString('en-US', fmtOpts);
 
       // Confirmation email to the client — branded HTML

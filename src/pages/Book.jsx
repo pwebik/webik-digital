@@ -25,11 +25,13 @@ function toDateStr(date) {
   return `${y}-${m}-${d}`;
 }
 
+const PH_TZ = 'Asia/Manila';
+
 function generateSlots(dateStr) {
   const slots = [];
   for (let hour = 0; hour < 24; hour++) {
     for (let min = 0; min < 60; min += 20) {
-      const dt = new Date(`${dateStr}T${String(hour).padStart(2, '0')}:${String(min).padStart(2, '0')}:00`);
+      const dt = new Date(`${dateStr}T${String(hour).padStart(2, '0')}:${String(min).padStart(2, '0')}:00+08:00`);
       slots.push(dt);
     }
   }
@@ -61,9 +63,7 @@ export default function Book() {
   const [error, setError] = useState(null);
   const [form, setForm] = useState({ name: '', email: '', notes: '' });
 
-  const timezone = useMemo(() => {
-    try { return Intl.DateTimeFormat().resolvedOptions().timeZone; } catch { return null; }
-  }, []);
+  const timezone = PH_TZ;
 
   const handleDateSelect = async (date) => {
     setSelectedDate(date);
@@ -72,8 +72,8 @@ export default function Book() {
     setLoadingSlots(true);
 
     const dateStr = toDateStr(date);
-    const timeMin = new Date(`${dateStr}T00:00:00`).toISOString();
-    const timeMax = new Date(`${dateStr}T23:59:59`).toISOString();
+    const timeMin = new Date(`${dateStr}T00:00:00+08:00`).toISOString();
+    const timeMax = new Date(`${dateStr}T23:59:59+08:00`).toISOString();
 
     try {
       const res = await base44.functions.invoke('manageBooking', {
@@ -123,7 +123,7 @@ export default function Book() {
   };
 
   const formatSlot = (date) =>
-    date.toLocaleString('en-US', { weekday: 'long', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+    date.toLocaleString('en-US', { weekday: 'long', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: PH_TZ });
 
   return (
     <div style={pageVars}>
@@ -256,7 +256,7 @@ export default function Book() {
                             onMouseEnter={e => { e.currentTarget.style.background = 'var(--webik-dark)'; e.currentTarget.style.color = 'var(--webik-cream)'; }}
                             onMouseLeave={e => { e.currentTarget.style.background = 'var(--webik-cream-2)'; e.currentTarget.style.color = 'var(--webik-dark)'; }}
                           >
-                            {slot.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}
+                            {slot.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: PH_TZ })}
                           </button>
                         ))}
                       </div>
