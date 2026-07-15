@@ -98,8 +98,8 @@ export default function BlogPostPage() {
             {(post.sections || []).map((section, i) => {
               if (section.type === 'heading') {
                 return (
-                  <div key={i} className="[&+*]:!mt-3">
-                    <h2 className="font-grotesk font-light text-2xl lg:text-3xl" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>
+                  <div key={i} className={!section.body ? "[&+*]:!mt-3" : ""}>
+                    <h2 className="font-grotesk font-light text-2xl lg:text-3xl mb-2" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.02em' }}>
                       {section.heading}
                     </h2>
                     {section.body && (
