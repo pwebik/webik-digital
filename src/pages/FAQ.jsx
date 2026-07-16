@@ -15,11 +15,11 @@ const faqCategories = [
       },
       {
         q: 'Why do you call yourselves "a digital team, not just an agency"?',
-        a: 'Most agencies hand you a deliverable and move on. We do not. We act as a long-term partner — staying in after launch, treating your business goals like our own, and making ourselves available as your digital team. The relationship does not end at handoff.',
+        a: 'Your website launch is just the beginning. At Webik, we believe great website development goes beyond delivering a finished site. We become your long-term digital partner, providing ongoing website support, maintenance, and strategic guidance to help your business grow. As your goals evolve, we\'re here to ensure your online presence continues to perform, improve, and deliver results.',
       },
       {
         q: 'Is Webik Corp a registered company?',
-        a: 'Yes. Webik Corp is a corporation registered with the Securities and Exchange Commission (SEC) of the Philippines. This means clients have legal recourse, contractual protection, and the assurance of working with a legitimate business — not a freelancer who can disappear.',
+        a: 'Yes. Webik Corp is a corporation registered with the Securities and Exchange Commission (SEC) of the Philippines, giving you the confidence of partnering with a legitimate digital agency backed by contracts, accountability, and long-term support.',
       },
     ],
   },
@@ -28,11 +28,11 @@ const faqCategories = [
     faqs: [
       {
         q: 'What does it mean to "own your digital presence"?',
-        a: 'It means building your business on a foundation you actually control — your website, your domain, your audience — instead of renting space on Facebook, Instagram, or another platform that could change its rules or suspend your account overnight. Social media is a powerful channel. It is a terrible foundation.',
+        a: 'Owning your digital presence means owning your online home. A professional business website gives you full control over your brand, domain, content, and customer experience. While social media is a powerful way to connect with your audience, platform rules and algorithms can change overnight. Your website remains the one digital asset you truly own. It is a trusted destination where customers can always find your business and a strong foundation for sustainable business growth.',
       },
       {
         q: 'Do you work with clients outside the Philippines?',
-        a: 'Yes. Webik Corp serves clients in the Philippines and in English-speaking international markets. Time zone differences are not a barrier — we work across them regularly. Our international work funds and sharpens what we do; our local work in the Philippines is the long game.',
+        a: 'Yes. Webik Corp proudly serves clients in the Philippines and across the globe. Every project, whether local or international, expands our experience and strengthens our expertise. That means every client benefits from proven strategies, global insights, and digital solutions built to help businesses grow.',
       },
     ],
   },
@@ -40,8 +40,8 @@ const faqCategories = [
     category: 'Services & Pricing',
     faqs: [
       {
-        q: 'Do you publish your prices?',
-        a: 'No — and not because we are hiding anything. Every project is genuinely different, and pricing on a website forces businesses to fit themselves into a package. The discovery call is where we figure out together what makes sense for your specific situation. There is no pressure and no obligation.',
+        q: 'How much does it cost to work with Webik?',
+        a: 'Your investment depends on your business goals, project scope, and requirements. We don\'t believe in one-size-fits-all pricing because every business deserves a solution tailored to its needs.\nWe start with a free discovery call, then provide a transparent, customized proposal with no hidden fees, no pressure, and no obligation.',
       },
       {
         q: 'What services do you actually offer?',
@@ -54,11 +54,11 @@ const faqCategories = [
     faqs: [
       {
         q: 'What happens after my website launches?',
-        a: 'We do not disappear after launch. Our maintenance plans cover ongoing updates, security patches, performance monitoring, and content edits as your business evolves. If you would rather not subscribe to maintenance, we still respond to issues as a former client — but most of our clients stay on because owning a website is a long-term commitment, not a one-time event.',
+        a: 'Your website launch is just the beginning. We continue to support your business with website maintenance, security updates, performance monitoring, content edits, and technical assistance as your business grows. While our maintenance plans provide the best long-term value and peace of mind, we\'re always here to help our past clients whenever they need us. A successful website isn\'t a one-time project, it\'s an ongoing investment, and we\'re committed to helping it perform at its best.',
       },
       {
         q: 'How does the discovery call work?',
-        a: 'It is a free, no-pressure conversation — usually 20 to 30 minutes. We ask about your business, your goals, and what is not working right now. No pitch. From there, we send a clear proposal scoped to exactly what you need. You decide with no pressure and no follow-up calls if you are not ready.',
+        a: 'It is a free, no-obligation conversation that usually lasts 20 to 30 minutes. We\'ll learn about your business, your goals, and how we can help you grow. Afterward, we\'ll send a clear, customized proposal built around your business goals. You can review everything at your own pace and move forward whenever you\'re ready.',
       },
     ],
   },
