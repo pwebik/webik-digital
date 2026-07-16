@@ -24,8 +24,8 @@ const faqs = [
     a: 'Web design and development, email marketing design, branding and logo design, SEO and Answer Engine Optimization (AEO), graphic design, and ongoing website maintenance. Every service is scoped around your business, not a one-size-fits-all package.',
   },
   {
-    q: 'Do you work with international clients?',
-    a: 'Yes. Webik Corp serves clients across English-speaking markets worldwide. Time zone differences are not a barrier — we work across them regularly. Every partnership gets the same senior-level attention, regardless of location.',
+    q: 'Do you work with clients outside the Philippines?',
+    a: 'Yes. Webik Corp proudly serves clients in the Philippines and across the globe. Every project, whether local or international, expands our experience and strengthens our expertise. That means every client benefits from proven strategies, global insights, and digital solutions built to help businesses grow.',
   },
   {
     q: 'Is Webik Corp a registered company?',
