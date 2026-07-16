@@ -3,7 +3,7 @@ import React from 'react';
 const steps = [
   { num: '01', title: 'Discovery Call', desc: 'We learn about your business, your goals, and what success looks like for you. No pitch. Just a real conversation.' },
   { num: '02', title: 'Design and Build', desc: 'You stay informed at every stage. Clear proposals, no surprises, and revisions until it is right.' },
-  { num: '03', title: 'Launch and Stay', desc: 'Your new digital home goes live. And we do not disappear after this — we stay in as your ongoing digital team.' },
+  { num: '03', title: 'Launch and Stay', desc: 'Your new digital home goes live. But our work doesn\'t end there. We stay with you as your ongoing digital team.' },
 ];
 
 export default function ProcessSection() {
