@@ -19,7 +19,7 @@ export default function OriginTeaser() {
             className="font-grotesk font-light mt-5 leading-[1.05]"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(28px, 4vw, 56px)', letterSpacing: '-0.03em' }}
           >
-            It Started with a Conversation. It Became a Mission.
+            It Started with a Conversation.<br />It Became a Mission.
           </h2>
 
           <div className="mt-8 space-y-5">
