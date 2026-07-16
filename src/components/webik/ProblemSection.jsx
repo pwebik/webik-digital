@@ -32,7 +32,7 @@ export default function ProblemSection() {
           className="font-grotesk font-light mt-5 leading-[1.05]"
           style={{ color: 'var(--webik-dark)', fontSize: 'clamp(32px, 5vw, 64px)', letterSpacing: '-0.03em' }}>
           
-          You Built a Business. Your Digital Presence Should Reflect That.
+          Build a Digital Presence You Truly Own
         </h2>
 
         <div className="mt-10 space-y-6 max-w-[680px]">
