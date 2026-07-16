@@ -37,19 +37,19 @@ export default function ProblemSection() {
 
         <div className="mt-10 space-y-6 max-w-[680px]">
           <p className="font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-dark)', fontWeight: 500 }}>
-            Most businesses are pouring time, energy, and money into platforms they do not own. Facebook pages. Instagram profiles. Rented space on someone else's platform.
+            Most businesses are pouring time, energy, and money into platforms they don't own, such as Facebook pages, Instagram profiles, and other rented digital spaces.
           </p>
           <p className="font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
-            One algorithm change. One suspended account. One platform shift — and the audience you spent years building is gone.
+            One algorithm change, one suspended account, or one platform update can significantly impact the audience you've worked hard to build.
           </p>
           <p className="font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
-            You deserve better than that. You deserve a digital presence that is yours — built to convert, built to last, and built to grow with you.
+            Your business deserves better than that. It deserves a digital presence that's truly yours, built to convert, built to last, and built to grow with you.
           </p>
           <p
             className="text-xl lg:text-2xl [font-family:'Host_Grotesk',_'system-ui',_sans-serif] not-italic"
             style={{ color: 'var(--webik-dark)' }}>
             
-            That is what we do at Webik Corp.
+            That's what we do at Webik Corp.
           </p>
         </div>
       </div>
