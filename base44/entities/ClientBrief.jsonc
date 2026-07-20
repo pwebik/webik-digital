@@ -102,6 +102,10 @@
         "flagged_spam"
       ],
       "default": "submitted"
+    },
+    "follow_up_notes": {
+      "type": "string",
+      "description": "Internal notes for follow-up on this brief"
     }
   },
   "required": [
@@ -110,5 +114,23 @@
     "target_audience",
     "brand_personality",
     "goals"
-  ]
+  ],
+  "rls": {
+    "create": true,
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
 }
