@@ -1,0 +1,114 @@
+{
+  "name": "ClientBrief",
+  "type": "object",
+  "properties": {
+    "business_name": {
+      "type": "string",
+      "description": "Name of the client's business"
+    },
+    "industry": {
+      "type": "string",
+      "description": "Business industry category",
+      "enum": [
+        "Restaurant / Food & Beverage",
+        "Law Firm / Legal",
+        "E-commerce / Retail",
+        "Healthcare / Medical",
+        "Fitness / Wellness",
+        "Real Estate",
+        "Creative Agency / Studio",
+        "Education",
+        "SaaS / Tech",
+        "Nonprofit",
+        "Barbershop / Salon",
+        "Other"
+      ]
+    },
+    "target_audience": {
+      "type": "string",
+      "description": "Description of the ideal customer base"
+    },
+    "brand_personality": {
+      "type": "string",
+      "description": "Desired brand tone and personality",
+      "enum": [
+        "Bold & Energetic",
+        "Calm & Trustworthy",
+        "Luxurious & Minimal",
+        "Playful & Approachable",
+        "Corporate & Authoritative",
+        "Creative & Expressive",
+        "Warm & Friendly",
+        "Edgy & Unconventional"
+      ]
+    },
+    "color_preferences": {
+      "type": "string",
+      "description": "Preferred colors or colors to avoid"
+    },
+    "design_inspiration": {
+      "type": "string",
+      "description": "Websites or designs the client admires"
+    },
+    "pages_needed": {
+      "type": "array",
+      "description": "List of pages the client wants on their website",
+      "items": {
+        "type": "string"
+      }
+    },
+    "content_status": {
+      "type": "string",
+      "description": "Readiness of the client's content",
+      "enum": [
+        "I have everything ready",
+        "I have some content but need help",
+        "I need content created from scratch"
+      ]
+    },
+    "competitors": {
+      "type": "string",
+      "description": "Competitors or similar businesses"
+    },
+    "goals": {
+      "type": "string",
+      "description": "Primary goals the website should achieve"
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date",
+      "description": "Target launch deadline"
+    },
+    "budget_range": {
+      "type": "string",
+      "description": "Client's budget range",
+      "enum": [
+        "Under $500",
+        "$500 \u2013 $1,000",
+        "$1,000 \u2013 $2,500",
+        "$2,500 \u2013 $5,000",
+        "$5,000+",
+        "Not sure yet"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "description": "Processing status of the brief",
+      "enum": [
+        "submitted",
+        "in_review",
+        "generated",
+        "archived",
+        "flagged_spam"
+      ],
+      "default": "submitted"
+    }
+  },
+  "required": [
+    "business_name",
+    "industry",
+    "target_audience",
+    "brand_personality",
+    "goals"
+  ]
+}

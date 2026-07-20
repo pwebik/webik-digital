@@ -1,0 +1,26 @@
+{
+  "name": "WebsiteBrief",
+  "type": "object",
+  "properties": {
+    "client_brief_id": {
+      "type": "string",
+      "description": "ID of the linked ClientBrief record"
+    },
+    "generated_prompt": {
+      "type": "string",
+      "description": "AI-generated website brief prompt based on the client intake"
+    },
+    "status": {
+      "type": "string",
+      "description": "Status of the generated brief",
+      "enum": [
+        "draft",
+        "final"
+      ],
+      "default": "draft"
+    }
+  },
+  "required": [
+    "client_brief_id"
+  ]
+}

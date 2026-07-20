@@ -23,6 +23,8 @@ import BlogDashboard from './pages/BlogDashboard';
 import BlogEditor from './pages/BlogEditor';
 import Showcase from './pages/Showcase';
 import Book from './pages/Book';
+import GetYourBrief from './pages/GetYourBrief';
+import BriefInbox from './pages/BriefInbox';
 import ProtectedRoute from '@/components/ProtectedRoute';
 // Add page imports here
 
@@ -64,6 +66,7 @@ const AuthenticatedApp = () => {
       <Route path="/work" element={<Work />} />
       <Route path="/showcase" element={<Showcase />} />
       <Route path="/book" element={<Book />} />
+      <Route path="/get-your-brief" element={<GetYourBrief />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<BlogPostPage />} />
       <Route path="/resources/5-signs-website-losing-clients" element={<LeadMagnet />} />
@@ -72,6 +75,7 @@ const AuthenticatedApp = () => {
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/blog-dashboard" element={<BlogDashboard />} />
         <Route path="/blog-editor" element={<BlogEditor />} />
+        <Route path="/brief-inbox" element={<BriefInbox />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
