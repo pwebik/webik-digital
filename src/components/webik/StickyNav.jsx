@@ -56,7 +56,7 @@ export default function StickyNav() {
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <img
-              src="https://media.base44.com/images/public/69ecce3288377cd246349884/35800a971_Webikprimarylogo.png"
+              src="https://media.base44.com/images/public/69ecce3288377cd246349884/192e70da4_Webikprimarylogogradient1.svg"
               alt="Webik Corp"
               className="h-8 lg:h-9 w-auto object-contain group-hover:opacity-85 transition-opacity"
             />
@@ -123,7 +123,7 @@ export default function StickyNav() {
           <div className="flex items-center gap-4">
             <Link
               to="/book"
-              className="hidden sm:inline-flex bg-[var(--webik-dark)] text-[var(--webik-cream)] px-5 py-2.5 rounded-full text-sm font-inter font-medium hover:bg-[var(--webik-dark-2)] transition-all duration-300 hover:-translate-y-0.5"
+              className="hidden sm:inline-flex bg-[#C9E625] text-[var(--webik-dark)] px-5 py-2.5 rounded-full text-sm font-inter font-medium hover:opacity-90 transition-all duration-300 hover:-translate-y-0.5"
             >
               Book a Discovery Call
             </Link>
