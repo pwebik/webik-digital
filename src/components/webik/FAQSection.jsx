@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: 'Why do you call yourselves "a digital team, not just an agency"?',
-    a: 'Your website launch is just the beginning. At Webik, we believe great website development goes beyond delivering a finished site. We become your long-term digital partner, providing ongoing website support, maintenance, and strategic guidance to help your business grow. As your goals evolve, we\'re here to ensure your online presence continues to perform, improve, and deliver results.',
+    a: 'We believe great website development goes beyond delivering a finished site. We become your long-term digital partner, providing ongoing website support, maintenance, and strategic guidance to help your business grow. As your goals evolve, we\'re here to ensure your online presence continues to perform, improve, and deliver results.',
   },
   {
     q: 'What does it mean to "own your digital presence"?',
