@@ -17,7 +17,6 @@ const navLinks = [
   { label: 'Team', href: '/team' },
   { label: 'Blog', href: '/blog' },
   { label: 'Showcase', href: '/showcase' },
-  { label: 'Get Your Brief', href: '/get-your-brief' },
   { label: 'Contact', href: '/contact' },
 ];
 
