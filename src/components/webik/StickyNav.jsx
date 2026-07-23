@@ -12,9 +12,7 @@ const workItems = [
 ];
 
 const navLinks = [
-  { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
-  { label: 'Team', href: '/team' },
   { label: 'Blog', href: '/blog' },
   { label: 'Showcase', href: '/showcase' },
   { label: 'Contact', href: '/contact' },
@@ -24,8 +22,11 @@ export default function StickyNav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [workOpen, setWorkOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const [mobileWorkOpen, setMobileWorkOpen] = useState(false);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const aboutDropdownRef = useRef(null);
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40);
@@ -42,6 +43,9 @@ export default function StickyNav() {
     const handler = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setWorkOpen(false);
+      }
+      if (aboutDropdownRef.current && !aboutDropdownRef.current.contains(e.target)) {
+        setAboutOpen(false);
       }
     };
     document.addEventListener('mousedown', handler);
@@ -104,6 +108,47 @@ export default function StickyNav() {
                       <span className="font-mono text-[9px] px-2 py-0.5 rounded-full" style={{ background: 'rgba(200,240,72,0.12)', color: 'var(--webik-lime)' }}>{item.tag}</span>
                     </Link>
                   ))}
+                </div>
+              )}
+            </div>
+            {/* About dropdown */}
+            <div className="relative" ref={aboutDropdownRef} onMouseEnter={() => setAboutOpen(true)} onMouseLeave={() => setAboutOpen(false)}>
+              <Link
+                to="/about"
+                className="flex items-center gap-1 text-[var(--webik-muted)] hover:text-[var(--webik-dark)] text-sm font-inter font-medium transition-colors"
+              >
+                About
+                <ChevronDown size={14} className={`transition-transform duration-200 ${aboutOpen ? 'rotate-180' : ''}`} />
+              </Link>
+              {/* Invisible bridge to prevent gap from closing dropdown */}
+              <div className="absolute top-full left-0 w-full h-3" />
+              {aboutOpen && (
+                <div
+                  className="absolute top-full left-1/2 -translate-x-1/2 w-64 rounded-2xl overflow-hidden shadow-xl z-50"
+                  style={{ marginTop: '8px', background: 'var(--webik-dark)', border: '1px solid rgba(245,243,236,0.1)' }}
+                >
+                  <Link
+                    to="/about"
+                    onClick={() => setAboutOpen(false)}
+                    className="flex items-center justify-between px-5 py-3.5 border-b font-inter text-sm transition-colors"
+                    style={{ color: 'var(--webik-lime)', borderColor: 'rgba(245,243,236,0.08)' }}
+                    onMouseEnter={e => e.currentTarget.style.background = 'rgba(245,243,236,0.05)'}
+                    onMouseLeave={e => e.currentTarget.style.background = ''}
+                  >
+                    Our Story
+                    <span className="font-mono text-[10px]" style={{ color: 'var(--webik-muted)' }}>→</span>
+                  </Link>
+                  <Link
+                    to="/team"
+                    onClick={() => setAboutOpen(false)}
+                    className="flex items-center justify-between px-5 py-3.5 font-inter text-sm transition-colors"
+                    style={{ color: 'rgba(245,243,236,0.85)' }}
+                    onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245,243,236,0.05)'; e.currentTarget.style.color = 'var(--webik-cream)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.background = ''; e.currentTarget.style.color = 'rgba(245,243,236,0.85)'; }}
+                  >
+                    The Team
+                    <span className="font-mono text-[9px] px-2 py-0.5 rounded-full" style={{ background: 'rgba(200,240,72,0.12)', color: 'var(--webik-lime)' }}>People</span>
+                  </Link>
                 </div>
               )}
             </div>
@@ -194,6 +239,39 @@ export default function StickyNav() {
                     {item.label}
                   </Link>
                 ))}
+              </div>
+            )}
+          </div>
+          {/* About expandable */}
+          <div className="w-full text-center">
+            <button
+              onClick={() => setMobileAboutOpen(v => !v)}
+              className="font-grotesk font-light text-5xl sm:text-6xl leading-tight flex items-center gap-3 mx-auto transition-colors"
+              style={{ color: 'var(--webik-cream)' }}
+              onMouseEnter={e => e.currentTarget.style.color = 'var(--webik-lime)'}
+              onMouseLeave={e => e.currentTarget.style.color = mobileAboutOpen ? 'var(--webik-lime)' : 'var(--webik-cream)'}
+            >
+              About
+              <ChevronDown size={28} className={`transition-transform duration-200 ${mobileAboutOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {mobileAboutOpen && (
+              <div className="mt-4 space-y-2">
+                <Link
+                  to="/about"
+                  onClick={() => setMobileOpen(false)}
+                  className="block font-inter text-base py-2 transition-colors"
+                  style={{ color: 'var(--webik-lime)' }}
+                >
+                  Our Story
+                </Link>
+                <Link
+                  to="/team"
+                  onClick={() => setMobileOpen(false)}
+                  className="block font-inter text-base py-2 transition-colors"
+                  style={{ color: 'rgba(245,243,236,0.7)' }}
+                >
+                  The Team
+                </Link>
               </div>
             )}
           </div>
