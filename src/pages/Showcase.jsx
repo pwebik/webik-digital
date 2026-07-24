@@ -9,6 +9,27 @@ import ShowcaseModal from '@/components/webik/ShowcaseModal';
 
 const projects = [
   {
+    name: 'Sovereign Advisory',
+    initial: 'S',
+    description: 'A refined, two-column wealth advisory hero with serif typography, a forest-green primary button, and a full-height professional portrait — generational wealth management.',
+    url: 'https://fintech-webik.base44.app/',
+    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/b21959820_fintech.png',
+  },
+  {
+    name: 'Meridian Clinic',
+    initial: 'M',
+    description: 'A clean medical clinic layout with a utility bar, a blue-accented hero, a specialist-care subheading, and a flush-right "Next Available" appointment card.',
+    url: 'https://medical-webik.base44.app/',
+    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/bacb8019d_medical.png',
+  },
+  {
+    name: 'Halyard',
+    initial: 'H',
+    description: 'A minimalist SaaS landing page with bold headline typography, a terminal command block, a sweeping purple accent line, and a "Trusted by" social proof row.',
+    url: 'https://techsaas-webik.base44.app/',
+    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/8067acf13_techsaas.png',
+  },
+  {
     name: 'Ribs & Bibs',
     initial: 'R',
     description: 'A dark, moody restaurant hero with bold typography, orange brand accents, and a stats bar — slow-smoked ribs and flame-grilled steaks in the heart of CDO.',
@@ -63,27 +84,6 @@ const projects = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
     url: 'https://conquerfitnessgym.base44.app',
     thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/a38150d2d_image.png',
-  },
-  {
-    name: 'Sovereign Advisory',
-    initial: 'S',
-    description: 'A refined, two-column wealth advisory hero with serif typography, a forest-green primary button, and a full-height professional portrait — generational wealth management.',
-    url: 'https://fintech-webik.base44.app/',
-    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/b21959820_fintech.png',
-  },
-  {
-    name: 'Meridian Clinic',
-    initial: 'M',
-    description: 'A clean medical clinic layout with a utility bar, a blue-accented hero, a specialist-care subheading, and a flush-right "Next Available" appointment card.',
-    url: 'https://medical-webik.base44.app/',
-    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/bacb8019d_medical.png',
-  },
-  {
-    name: 'Halyard',
-    initial: 'H',
-    description: 'A minimalist SaaS landing page with bold headline typography, a terminal command block, a sweeping purple accent line, and a "Trusted by" social proof row.',
-    url: 'https://techsaas-webik.base44.app/',
-    thumbnail: 'https://media.base44.com/images/public/69ecce3288377cd246349884/8067acf13_techsaas.png',
   },
 ];
 
