@@ -45,7 +45,7 @@ export default function Blog() {
             Insights From the Team.
           </h1>
           <p className="mt-8 font-inter text-base lg:text-lg leading-relaxed max-w-[580px]" style={{ color: 'rgba(245,243,236,0.65)' }}>
-            We write about what we know — digital presence, web design, and what it actually takes to build a business online. No fluff, no keyword stuffing. Just useful content from a team that has been doing this work for years.
+            Master your digital presence and web design with strategies that actually scale your business online. Get practical insights straight from a team with years of proven experience.
           </p>
         </div>
       </section>
@@ -62,14 +62,14 @@ export default function Blog() {
               <p className="col-span-full text-center font-inter text-sm py-20" style={{ color: 'var(--webik-muted)' }}>No blog posts yet.</p>
             ) : blogPosts.map((post, i) => (
               <article key={post.id || i} className="flex flex-col group">
-                <div className="aspect-[16/9] rounded-xl mb-6 relative overflow-hidden">
+                <Link to={`/blog/${post.slug}`} className="aspect-[16/9] rounded-xl mb-6 relative overflow-hidden block">
                   <img
                     src={post.coverImage || 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80'}
                     alt={post.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(14,26,10,0.5), transparent)' }} />
-                </div>
+                </Link>
 
                 <span className="inline-block font-mono text-[10px] uppercase tracking-[0.2em] px-3 py-1 rounded-full mb-4 self-start" style={{ background: 'rgba(200,240,72,0.15)', color: 'var(--webik-dark)' }}>
                   {post.category}

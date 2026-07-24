@@ -34,10 +34,10 @@ export default function About() {
             className="font-grotesk font-light leading-[0.92] tracking-tight mt-6"
             style={{ color: 'var(--webik-cream)', fontSize: 'clamp(48px, 8vw, 120px)', letterSpacing: '-0.04em' }}
           >
-            We exist to end<br />the impossible <span style={{ color: 'var(--webik-lime)' }}>choice.</span>
+            We Exist to Make<br />Digital Growth <span style={{ color: 'var(--webik-lime)' }}>Easier.</span>
           </h1>
           <p className="mt-8 font-inter text-base lg:text-lg leading-relaxed max-w-[580px]" style={{ color: 'rgba(245,243,236,0.7)' }}>
-            Most Cebu SMEs are stuck between a ₱50,000 agency gamble or a freelancer who ghosts them. We built a third option.
+            Building a strong online presence shouldn't feel complicated or out of reach. We believe every business has the potential to grow online, and Webik exists to help make that growth possible.
           </p>
         </div>
       </section>
@@ -69,17 +69,14 @@ export default function About() {
             <div>
               <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>Our Story</span>
               <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
-                Born in Cebu.<br />Built for <span style={{ color: 'var(--webik-lime)' }}>everyone.</span>
+                Local Roots.<br />Global <span style={{ color: 'var(--webik-lime)' }}>Reach.</span>
               </h2>
               <div className="mt-8 space-y-5 font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-dark)' }}>
                 <p>
-                  Most Cebu SMEs face the same impossible choice: pay an agency ₱50,000 upfront and pray, or hire a freelancer who might ghost you halfway through.
+                  Growing businesses, from emerging startups to established brands, deserve a digital partner they can count on. We built Webik to make high-impact digital solutions accessible, replacing high risks, delays, and heavy overhead with flexible options, guaranteed reliability, and smart search strategy.
                 </p>
                 <p>
-                  We built Webik to end that. As a SEC-registered corporation, we're contractually obligated to your success — not just your invoice. We combine premium design with cutting-edge Answer Engine Optimization (AEO) so your business shows up when customers ask Siri, ChatGPT, or Google for recommendations.
-                </p>
-                <p>
-                  We're AI-accelerated, human-perfected. Our team uses modern AI tools to ship faster, but every site is reviewed, optimized, and maintained by real developers and designers.
+                  Through our AI-accelerated, human-perfected workflow, we deliver premium design, web development, and digital marketing faster and more cost-effectively. Every project is expertly crafted, tailored to your goals, and continuously supported without the corporate price tag.
                 </p>
               </div>
             </div>
@@ -90,10 +87,7 @@ export default function About() {
                 className="w-full rounded-2xl object-cover"
                 style={{ boxShadow: '0 32px 64px rgba(14,26,10,0.18)' }}
               />
-              <div className="absolute -bottom-6 -left-6 hidden lg:block rounded-xl px-6 py-4" style={{ background: 'var(--webik-lime)' }}>
-                <p className="font-grotesk font-light text-2xl" style={{ color: 'var(--webik-dark)' }}>SEC-Registered</p>
-                <p className="font-mono text-[11px] uppercase tracking-wider mt-1" style={{ color: 'rgba(14,26,10,0.6)' }}>Philippines Corporation</p>
-              </div>
+
             </div>
           </div>
         </div>
@@ -114,13 +108,13 @@ export default function About() {
             <div className="order-1 lg:order-2">
               <span className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--webik-muted)' }}>The Team</span>
               <h2 className="font-grotesk font-light text-4xl lg:text-5xl mt-4 leading-tight" style={{ color: 'var(--webik-dark)', letterSpacing: '-0.03em' }}>
-                Small team.<br /><span style={{ color: 'var(--webik-lime)' }}>Big output.</span>
+                Core Team.<br /><span style={{ color: 'var(--webik-lime)' }}>Big Output.</span>
               </h2>
               <p className="mt-6 font-inter text-base lg:text-lg leading-relaxed" style={{ color: 'var(--webik-dark)' }}>
-                We're a focused team of 5 specialists — designers, developers, and strategists — based entirely in Cebu City. No outsourcing, no offshoring. When you work with Webik, you work with the people who actually build your site.
+                We're a focused team of 5 specialists: designers, developers, and strategists. No outsourcing, no offshoring. When you work with Webik, you work directly with the experts building your site.
               </p>
               <p className="mt-4 font-inter text-base leading-relaxed" style={{ color: 'var(--webik-muted)' }}>
-                We keep our team small intentionally. It means every project gets real attention, real accountability, and real craftsmanship.
+                We keep our team small intentionally. Every project gets total focus, real accountability, and top-tier craftsmanship.
               </p>
             </div>
           </div>
