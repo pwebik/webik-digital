@@ -169,6 +169,19 @@ export default function ShowcaseModal({ project, onClose }) {
                 </button>
               </div>
             )}
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-inter font-medium transition-colors flex-shrink-0"
+              style={{ color: 'var(--webik-cream)', background: 'rgba(245,243,236,0.08)' }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(245,243,236,0.15)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(245,243,236,0.08)'; }}
+              title={`Open ${project.name} in a new tab`}
+            >
+              <ExternalLink size={13} />
+              Open in new tab
+            </a>
             <button
               onClick={onClose}
               aria-label="Close preview"
