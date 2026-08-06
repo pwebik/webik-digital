@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Calendar, Clock, Video, Check, ArrowLeft, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import AnnouncementBar from '@/components/webik/AnnouncementBar';
 import StickyNav from '@/components/webik/StickyNav';
 import Footer from '@/components/webik/Footer';
 import GrainOverlay from '@/components/webik/GrainOverlay';
@@ -127,7 +126,6 @@ export default function Book() {
 
   return (
     <div style={pageVars}>
-      <AnnouncementBar />
       <StickyNav />
 
       {/* Hero */}

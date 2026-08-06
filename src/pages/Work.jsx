@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AnnouncementBar from '../components/webik/AnnouncementBar';
 import StickyNav from '../components/webik/StickyNav';
 import Footer from '../components/webik/Footer';
 import GrainOverlay from '../components/webik/GrainOverlay';
@@ -73,7 +72,6 @@ export default function Work() {
       '--webik-cream-2': '#EBE8DD',
       '--webik-muted': '#6B7560',
     }}>
-      <AnnouncementBar />
       <StickyNav />
 
       {/* Hero */}

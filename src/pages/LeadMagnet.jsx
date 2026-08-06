@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ArrowUpRight, CheckCircle } from 'lucide-react';
-import AnnouncementBar from '../components/webik/AnnouncementBar';
 import StickyNav from '../components/webik/StickyNav';
 import Footer from '../components/webik/Footer';
 import GrainOverlay from '../components/webik/GrainOverlay';
@@ -43,7 +42,6 @@ export default function LeadMagnet() {
 
   return (
     <div style={pageVars}>
-      <AnnouncementBar />
       <StickyNav />
 
       {/* Hero */}

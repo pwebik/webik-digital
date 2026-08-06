@@ -1,5 +1,4 @@
 import React from 'react';
-import AnnouncementBar from '@/components/webik/AnnouncementBar';
 import StickyNav from '@/components/webik/StickyNav';
 import Footer from '@/components/webik/Footer';
 import HeroSection from '@/components/webik/HeroSection';
@@ -24,7 +23,6 @@ export default function Home() {
       '--webik-muted': '#6B7560',
       background: 'var(--webik-cream)'
     }}>
-      <AnnouncementBar />
       <StickyNav />
       <HeroSection />
       <TrustStrip />

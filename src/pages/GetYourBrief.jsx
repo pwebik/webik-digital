@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { base44 } from '@/api/base44Client';
 import StickyNav from '@/components/webik/StickyNav';
-import AnnouncementBar from '@/components/webik/AnnouncementBar';
 import Footer from '@/components/webik/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -131,7 +130,6 @@ export default function GetYourBrief() {
           '--webik-muted': '#6B7560',
         }}
       >
-        <AnnouncementBar />
         <StickyNav />
         <section
           className="min-h-[70vh] flex items-center justify-center px-6 py-20"
@@ -194,7 +192,6 @@ export default function GetYourBrief() {
         '--webik-muted': '#6B7560',
       }}
     >
-      <AnnouncementBar />
       <StickyNav />
 
       {/* Hero */}

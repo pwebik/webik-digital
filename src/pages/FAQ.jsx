@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import AnnouncementBar from '@/components/webik/AnnouncementBar';
 import StickyNav from '@/components/webik/StickyNav';
 import Footer from '@/components/webik/Footer';
 import GrainOverlay from '@/components/webik/GrainOverlay';
@@ -98,7 +97,6 @@ export default function FAQ() {
       '--webik-muted': '#6B7560',
       background: 'var(--webik-cream)'
     }}>
-      <AnnouncementBar />
       <StickyNav />
 
       <section className="relative py-24 lg:py-36 px-6 lg:px-12 overflow-hidden" style={{ background: 'var(--webik-dark)' }}>

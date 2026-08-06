@@ -1,5 +1,4 @@
 import React from 'react';
-import AnnouncementBar from '../components/webik/AnnouncementBar';
 import StickyNav from '../components/webik/StickyNav';
 import Footer from '../components/webik/Footer';
 import GrainOverlay from '../components/webik/GrainOverlay';
@@ -95,7 +94,6 @@ const pageVars = {
 export default function Team() {
   return (
     <div style={pageVars}>
-      <AnnouncementBar />
       <StickyNav />
 
       {/* Hero */}

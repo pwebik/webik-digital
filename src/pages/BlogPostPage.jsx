@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-import AnnouncementBar from '../components/webik/AnnouncementBar';
 import StickyNav from '../components/webik/StickyNav';
 import Footer from '../components/webik/Footer';
 import GrainOverlay from '../components/webik/GrainOverlay';
@@ -56,7 +55,6 @@ export default function BlogPostPage() {
 
   return (
     <div style={pageVars}>
-      <AnnouncementBar />
       <StickyNav />
 
       {/* Hero */}
